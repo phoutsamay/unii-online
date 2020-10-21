@@ -4,7 +4,7 @@
       <b-navbar toggleable="lg" type="dark" variant="light">
         <div class="container">
           <b-navbar-brand href="#"
-            ><img src="~/assets/imgs/logo.png" alt="Kitten"
+            ><img src="../assets/imgs/logo.png" alt="Kitten"
           /></b-navbar-brand>
 
           <b-navbar-toggle
@@ -42,7 +42,7 @@
     <section id="footer">
       <div class="jumbotron text-center" style="margin-bottom: 0">
         <!-- <p>Footer</p> -->
-        <img src="~/assets/imgs/head-unii.png" alt="" />
+        <img src="../assets/imgs/head-unii.png" alt="" />
         <p class="mt-3" style="color: white">Connect with us on</p>
         <a
           href="https://www.facebook.com/Unii.co.th"
