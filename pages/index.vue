@@ -29,7 +29,7 @@
 
           <!-- Slides with image only -->
           <b-carousel-slide
-            img-src="~/assets/imgs/banner.jpg"
+            img-src="../assets/imgs/banner.jpg"
           ></b-carousel-slide>
 
           <!-- Slides with img slot -->
@@ -70,7 +70,7 @@
     <section id="video">
       <div class="container">
         <div class="text-center mt-5">
-          <img src="~/assets/imgs/head-unii.png" alt="" />
+          <img src="../assets/imgs/head-unii.png" alt="" />
           <h1 class="py-3" style="color: #69197b; font-weight: 700">
             ทำความรู้จักกับยูนี่ ออนไลน์
           </h1>
@@ -113,16 +113,16 @@
         >
           <!-- Slides with image only -->
           <b-carousel-slide
-            img-src="~/assets/imgs/partner.jpg"
+            img-src="../assets/imgs/partner.jpg"
           ></b-carousel-slide>
           <!-- <b-carousel-slide
-            img-src="~/assets/imgs/trust-2.png"
+            img-src="../assets/imgs/trust-2.png"
           ></b-carousel-slide>
           <b-carousel-slide
-            img-src="~/assets/imgs/trust-3.png"
+            img-src="../assets/imgs/trust-3.png"
           ></b-carousel-slide>
           <b-carousel-slide
-            img-src="~/assets/imgs/trust-4.png"
+            img-src="../assets/imgs/trust-4.png"
           ></b-carousel-slide> -->
 
           <!-- Slides with img slot -->
@@ -154,7 +154,7 @@
               <div class="col-md-2"></div>
               <center>
                 <div class="col-md-2 mt-5">
-                  <img src="~/assets/imgs/mockup-register.png" alt="" />
+                  <img src="../assets/imgs/mockup-register.png" alt="" />
                 </div>
               </center>
             </div>
@@ -188,7 +188,7 @@
           <b-card-group deck>
             <b-card
               title="Unii Recycle"
-              img-src="~/assets/imgs/recycle-icon.png"
+              img-src="../assets/imgs/recycle-icon.png"
               img-alt="Image"
               img-top
               tag="article"
@@ -203,7 +203,7 @@
             </b-card>
             <b-card
               title="Unii Recycle"
-              img-src="~/assets/imgs/recycle-icon.png"
+              img-src="../assets/imgs/recycle-icon.png"
               img-alt="Image"
               img-top
               tag="article"
@@ -218,7 +218,7 @@
             </b-card>
             <b-card
               title="Unii Recycle"
-              img-src="~/assets/imgs/recycle-icon.png"
+              img-src="../assets/imgs/recycle-icon.png"
               img-alt="Image"
               img-top
               tag="article"
@@ -233,7 +233,7 @@
             </b-card>
             <b-card
               title="Unii Recycle"
-              img-src="~/assets/imgs/recycle-icon.png"
+              img-src="../assets/imgs/recycle-icon.png"
               img-alt="Image"
               img-top
               tag="article"
@@ -254,7 +254,7 @@
     <section id="about">
       <div class="container">
         <div class="text-center mt-5" style="padding-top: 100px">
-          <img src="~/assets/imgs/head-unii.png" alt="" />
+          <img src="../assets/imgs/head-unii.png" alt="" />
           <h3 class="py-3" style="color: #69197b; font-weight: 700">
             ทำความรู้จักกับยูนี่ ออนไลน์
           </h3>
@@ -272,7 +272,7 @@
           </center>
           <center>
             <div class="col-md-6 py-5">
-              <img src="~/assets/imgs/mockupIP.png" alt="" width="100%" />
+              <img src="../assets/imgs/mockupIP.png" alt="" width="100%" />
             </div>
           </center>
         </div>
@@ -290,12 +290,12 @@
           </div>
           <div>
             <b-card style="border: none">
-              <img src="~/assets/imgs/PTCF.png" alt="" width="100%" />
+              <img src="../assets/imgs/PTCF.png" alt="" width="100%" />
             </b-card>
             <!-- <b-card-group deck>
               <b-card
                 title="ผู้ขายทั่วไป"
-                img-src="~/assets/imgs/cycle-p.png"
+                img-src="../assets/imgs/cycle-p.png"
                 img-alt="Image"
                 img-top
                 tag="article"
@@ -305,7 +305,7 @@
               </b-card>
               <b-card
                 title="ผู้ขายทั่วไป"
-                img-src="~/assets/imgs/cycle-t.png"
+                img-src="../assets/imgs/cycle-t.png"
                 img-alt="Image"
                 img-top
                 tag="article"
@@ -315,7 +315,7 @@
               </b-card>
               <b-card
                 title="ผู้ขายทั่วไป"
-                img-src="~/assets/imgs/cycle-c.png"
+                img-src="../assets/imgs/cycle-c.png"
                 img-alt="Image"
                 img-top
                 tag="article"
@@ -325,7 +325,7 @@
               </b-card>
               <b-card
                 title="ผู้ขายทั่วไป"
-                img-src="~/assets/imgs/cycle-p.png"
+                img-src="../assets/imgs/cycle-p.png"
                 img-alt="Image"
                 img-top
                 tag="article"
@@ -398,12 +398,12 @@
 
           <div class="row">
             <div class="col-md-4 text-center mb-3">
-              <img src="~/assets/imgs/person-1.png" alt />
+              <img src="../assets/imgs/person-1.png" alt />
               <h5 class="pt-2">คุณพรนริศ ชวนไชยสิทธิ์</h5>
               <p>ประธานคณะกรรมการกลุ่มบริษัทยูนี่ ออนไลน์ จำกัด</p>
             </div>
             <div class="col-md-4 text-center">
-              <img src="~/assets//imgs/person-5.png" alt />
+              <img src="../assets//imgs/person-5.png" alt />
               <h5 class="pt-2">คุณธีระชัย จึงวิวัฒณาภรณ์</h5>
               <p>
                 รองประธานคณะกรรมการฝ่ายกิจการต่างประเทศกลุ่มบริษัทยูนี่ ออนไลน์
@@ -411,24 +411,24 @@
               </p>
             </div>
             <div class="col-md-4 text-center">
-              <img src="~/assets//imgs/person-4.png" alt />
+              <img src="../assets//imgs/person-4.png" alt />
               <h5 class="pt-2">ผศ.ดร.ปุ่น เที่ยงบูรณธรรม</h5>
               <p>คณะกรรมการกลุ่มบริษัทยูนี่ ออนไลน์ จำกัด</p>
             </div>
             <div class="col-md-4 text-center">
-              <img src="~/assets//imgs/person-2.png" alt />
+              <img src="../assets//imgs/person-2.png" alt />
               <h5 class="pt-2">คุณศิวัช ภูธนแสงทอง</h5>
               <p>ประธานเจ้าหน้าที่บริหารกลุ่มบริษัทยูนี่ ออนไลน์ จำกัด</p>
             </div>
             <div class="col-md-4 text-center">
-              <img src="~/assets//imgs/person-3.png" alt />
+              <img src="../assets//imgs/person-3.png" alt />
               <h5 class="pt-2">คุณเฟาซีย์ ออสันตินุตสกุล</h5>
               <p>
                 ประธานเจ้าหน้าที่ฝ่ายกลยุธองค์กรกลุ่มบริษัทยูนี่ ออนไลน์ จำกัด
               </p>
             </div>
             <div class="col-md-4 text-center">
-              <img src="~/assets//imgs/person-6.png" alt />
+              <img src="../assets//imgs/person-6.png" alt />
               <h5 class="pt-2">คุณทนงค์ มาถาวร</h5>
               <p>คณะกรรมการกลุ่มบริษัทยูนี่ ออนไลน์ จำกัด</p>
             </div>
@@ -442,7 +442,7 @@
         <div class="row py-5">
           <div class="col-sm-6 mt-5 mb-3">
             <b-embed type="video" aspect="4by3" controls>
-              <source src="~/assets/videos/video1.mp4" type="video/mp4" />
+              <source src="../assets/videos/video1.mp4" type="video/mp4" />
             </b-embed>
             <h4 style="color: aliceblue">
               #ฟังชัดๆ...!!! #วิสัยทัศน์นายกสมาคมซาเล้งและร้านรับซื้อของเก่า
@@ -469,7 +469,7 @@
                     <b-col md="6">
                       <b-card-img
                         height="200px"
-                        src="~/assets/imgs/fake1.jpg"
+                        src="../assets/imgs/fake1.jpg"
                         alt="Image"
                         class="rounded-0"
                       ></b-card-img>
@@ -509,7 +509,7 @@
                     <b-col md="6">
                       <b-card-img
                         height="200px"
-                        src="~/assets/imgs/fake1.jpg"
+                        src="../assets/imgs/fake1.jpg"
                         alt="Image"
                         class="rounded-0"
                       ></b-card-img>
@@ -552,7 +552,7 @@
         </div>
         <b-card-group deck>
           <b-card
-            img-src="~/assets/imgs/article-1.jpg"
+            img-src="../assets/imgs/article-1.jpg"
             img-alt="Image"
             img-top
             tag="article"
@@ -574,7 +574,7 @@
             <b-button href="#" variant="light">อ่านเพิ่มเติม</b-button>
           </b-card>
           <b-card
-            img-src="~/assets/imgs/article-2.jpg"
+            img-src="../assets/imgs/article-2.jpg"
             img-alt="Image"
             img-top
             tag="article"
@@ -596,7 +596,7 @@
             <b-button href="#" variant="light">อ่านเพิ่มเติม</b-button>
           </b-card>
           <b-card
-            img-src="~/assets/imgs/article-3.jpg"
+            img-src="../assets/imgs/article-3.jpg"
             img-alt="Image"
             img-top
             tag="article"
@@ -634,7 +634,7 @@
 
     <!-- <section id="contact">
       <div class="mt-5">
-        <b-card img-src="~/assets/imgs/bg-contact.jpg" img-alt="Image" overlay>
+        <b-card img-src="../assets/imgs/bg-contact.jpg" img-alt="Image" overlay>
           <div>
             <b-card-group deck>
               <b-card
