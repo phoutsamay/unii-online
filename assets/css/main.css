@@ -35,7 +35,7 @@ h5 {
 #overlay {
   background-color: black;
 }
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
   h1,
   h2,
   h3,
@@ -45,4 +45,32 @@ h5 {
     font-size: 18px;
     font-weight: 800;
   }
+} */
+
+/* // Extra small devices (portrait phones, less than 576px) */
+/* // No media query since this is the default in Bootstrap */
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: #69197b;
+    font-size: 18px;
+    font-weight: 800;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
 }
