@@ -1,223 +1,99 @@
 <template>
   <div>
-    <section id="navbar">
-      <div>
-        <b-navbar toggleable="lg" type="light" variant="light">
-          <div class="container">
-            <b-navbar-brand href="#"
-              ><img src="../assets/imgs/logo.png" alt="Kitten"
-            /></b-navbar-brand>
-
-            <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-
-            <b-collapse id="nav-collapse" is-nav>
-              <b-navbar-nav class="mx-auto topnav">
-                <b-nav-item class="px-3" href="#">หน้าแรก</b-nav-item>
-                <b-nav-item class="px-3" href="#">บริการของเรา</b-nav-item>
-                <b-nav-item class="px-3" href="#">เกี่ยวกับเรา</b-nav-item>
-                <b-nav-item class="px-3" href="#">วีดีโอ</b-nav-item>
-                <b-nav-item class="px-3" href="#">บทความ</b-nav-item>
-                <b-nav-item class="px-3" href="#">ติดต่อเรา</b-nav-item>
-              </b-navbar-nav>
-
-              <!-- Right aligned nav items -->
-              <b-navbar-nav class="ml-auto">
-                <b-button href="#" target="blank" class="btn btn-purple"
-                  >เข้าสู่ระบบ</b-button
-                >
-              </b-navbar-nav>
-            </b-collapse>
-          </div>
-        </b-navbar>
-      </div>
-    </section>
-
-    <!-- <div>
-      <b-navbar toggleable="lg" type="dark" variant="light">
+    <div>
+      <b-navbar toggleable="lg" type="light" variant="light">
         <div class="container">
           <b-navbar-brand href="#"
-            ><img src="../assets/imgs/logo.png" alt="Kitten"
+            ><img src="../assets/imgs/logo.png" alt=""
           /></b-navbar-brand>
 
-          <b-navbar-toggle
-            target="nav-collapse"
-            class="custom-toggler"
-          ></b-navbar-toggle>
+          <!-- <b-navbar-toggle target="nav-collapse"></b-navbar-toggle> -->
+
+          <div>
+            <b-navbar-toggle
+              v-b-toggle.sidebar-right
+              target="nav-collapse"
+            ></b-navbar-toggle>
+            <!-- <b-button v-b-toggle.sidebar-right>Toggle Sidebar</b-button> -->
+            <b-sidebar id="sidebar-right" target="nav-collapse" right shadow>
+              <div class="p-3">
+                <nav class="mb-3">
+                  <b-navbar-nav vertical>
+                    <b-nav-item href="#">หน้าแรก</b-nav-item>
+                    <b-nav-item href="#">บริการของเรา</b-nav-item>
+                    <b-nav-item href="#">เกี่ยวกับเรา</b-nav-item>
+                    <b-nav-item href="#">วีดีโอ</b-nav-item>
+                    <b-nav-item href="#">บทความ</b-nav-item>
+                    <b-nav-item href="#">ติดต่อเรา</b-nav-item>
+                  </b-navbar-nav>
+                  <hr />
+                  <b-button
+                    size="sm"
+                    class="btn btn-purple my-2 my-sm-0"
+                    type="submit"
+                    >เข้าสู่ระบบ</b-button
+                  >
+                </nav>
+              </div>
+            </b-sidebar>
+          </div>
 
           <b-collapse id="nav-collapse" is-nav>
             <b-navbar-nav class="mx-auto topnav">
-              <b-nav-item href="#">หน้าแรก</b-nav-item>
-              <b-nav-item class="pl-2" href="#">บริการของเรา</b-nav-item>
-              <b-nav-item class="pl-2" href="#">เกี่ยวกับเรา</b-nav-item>
-              <b-nav-item class="pl-2" href="#">วีดีโอ</b-nav-item>
-              <b-nav-item class="pl-2" href="#">บทความ</b-nav-item>
-              <b-nav-item class="pl-2" href="#">ติดต่อเรา</b-nav-item>
+              <b-nav-item class="px-3" href="#">หน้าแรก</b-nav-item>
+              <b-nav-item class="px-3" href="#">บริการของเรา</b-nav-item>
+              <b-nav-item class="px-3" href="#">เกี่ยวกับเรา</b-nav-item>
+              <b-nav-item class="px-3" href="#">วีดีโอ</b-nav-item>
+              <b-nav-item class="px-3" href="#">บทความ</b-nav-item>
+              <b-nav-item class="px-3" href="#">ติดต่อเรา</b-nav-item>
             </b-navbar-nav>
 
-            <b-navbar-nav class="">
-              <div>
+            <!-- Right aligned nav items -->
+            <b-navbar-nav class="ml-auto">
+              <b-nav-form>
                 <b-button
-                  href="#"
-                  target="blank"
-                  variant="light"
-                  class="btn btn-purple"
+                  size="sm"
+                  class="btn btn-purple my-2 my-sm-0"
+                  type="submit"
                   >เข้าสู่ระบบ</b-button
                 >
-              </div>
+              </b-nav-form>
             </b-navbar-nav>
           </b-collapse>
         </div>
       </b-navbar>
-    </div> -->
+    </div>
     <Nuxt />
     <section id="footer">
-      <footer>
-        <div class="container text-center pt-5">
-          <img src="../assets/imgs/head-unii.png" alt="" />
-          <p class="mt-3" style="color: aliceblue">Connect with us on</p>
-          <a href="https://www.facebook.com/Unii.co.th" target="blank"
-            ><i class="fab fa-facebook" style="color: aliceblue"></i
-          ></a>
-
-          <a
-            href="https://www.youtube.com/channel/UCpmnNygcabMF-KReKDXY56w"
-            target="blank"
-            ><i class="fab fa-youtube" style="color: aliceblue"></i
-          ></a>
-          <p class="mt-3" style="color: aliceblue">
-            Copyright&copy; 2020 Unii Online
-          </p>
-        </div>
-      </footer>
-    </section>
-    <!-- <section id="footer">
-      <div class="jumbotron text-center" style="margin-bottom: 0">
-        <img src="../assets/imgs/head-unii.png" alt="" />
-        <p class="mt-3" style="color: white">Connect with us on</p>
-        <a
-          href="https://www.facebook.com/Unii.co.th"
-          target="blank"
-          style="color: white"
+      <div class="container text-center py-4">
+        <img src="../assets/imgs/logo.png" alt="" />
+        <p>Connect with us</p>
+        <a href="https://www.facebook.com/Unii.co.th" target="blank"
           ><i class="fab fa-facebook"></i
         ></a>
+
         <a
           href="https://www.youtube.com/channel/UCpmnNygcabMF-KReKDXY56w"
           target="blank"
-          style="color: white"
           ><i class="fab fa-youtube"></i
         ></a>
-        <p class="mt-3" style="color: white">
-          Copyright&copy; 2020 Unii Online
-        </p>
+        <p class="mt-3">Copyright&copy; 2020 Unii Online</p>
       </div>
-    </section> -->
+    </section>
   </div>
 </template>
 
 <style scoped>
-footer {
-  background-color: black;
-}
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  border-bottom: 3px solid transparent;
-}
-
-.topnav a:hover {
-  border-bottom: 3px solid #69197b;
-}
-
-.topnav a.active {
-  border-bottom: 3px solid #69197b;
-}
-
-/* .navbar-dark .navbar-nav .nav-link {
-  color: black !important;
-}
-.jumbotron {
-  background-color: black;
-}
-.custom-toggler.navbar-toggler {
-  border-color: rgb(128, 128, 128);
-}
-.navbar-dark .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(128,128,128)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
 .btn-purple {
-  color: white;
-  background-color: #69197b;
-} */
-
-/* Style the links inside the navigation bar */
-/* .topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  border-bottom: 3px solid transparent;
+  background: transparent linear-gradient(180deg, #993a96 0%, #69197b 100%) 0%
+    0% no-repeat padding-box;
+  border-radius: 5px;
+  opacity: 1;
 }
-
-.topnav a:hover {
-  border-bottom: 3px solid #69197b;
+p {
+  color: #ffffff;
 }
-
-.topnav a.active {
-  border-bottom: 3px solid #69197b;
-} */
-/* html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
+i {
+  color: #ffffff;
 }
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-} */
 </style>
