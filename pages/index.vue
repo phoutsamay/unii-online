@@ -56,7 +56,7 @@
 
     <section id="partner">
       <div class="container py-5">
-        <p>ส่งสินค้ากลับสู่ผู้ผลิตทุกราย</p>
+        <h3 class="text-center mb-4">ส่งสินค้ากลับสู่ผู้ผลิตทุกราย</h3>
         <img src="../assets/imgs/partner.jpg" alt="" width="100%" />
       </div>
     </section>
@@ -234,69 +234,6 @@
       </div>
     </section>
 
-    <section id="team">
-      <div class="container py-4">
-        <h1>MEET OUR TEAM</h1>
-        <p>รายชื่อทีมผู่ก่อตั้ง UNII</p>
-        <div class="row">
-          <div class="col-sm-4 col-md-4 col-lg-4 text-center grid-container1">
-            <img src="../assets/imgs/person-1.png" alt="" />
-            <div class="grid-container2">
-              <h5 class="pt-2">คุณพรนริศ ชวนไชยสิทธิ์</h5>
-              <p>ผู้ร่วมก่อตั้ง</p>
-              <p>ประธานคณะกรรมการกลุ่มบริษัทยูนี่ ออนไลน์ จำกัด</p>
-            </div>
-          </div>
-          <div class="col-sm-4 col-md-4 col-lg-4 text-center grid-container1">
-            <img src="../assets//imgs/person-5.png" alt="" />
-            <div class="grid-container2">
-              <h5 class="pt-2">คุณธีระชัย จึงวิวัฒณาภรณ์</h5>
-              <p>ผู้ร่วมก่อตั้ง</p>
-              <p>
-                รองประธานคณะกรรมการฝ่ายกิจการต่างประเทศกลุ่มบริษัทยูนี่ ออนไลน์
-                จำกัด
-              </p>
-            </div>
-          </div>
-          <div class="col-sm-4 col-md-4 col-lg-4 text-center grid-container1">
-            <img src="../assets//imgs/person-4.png" alt="" />
-            <div class="grid-container2">
-              <h5 class="pt-2">ผศ.ดร.ปุ่น เที่ยงบูรณธรรม</h5>
-              <p>ผู้ร่วมก่อตั้ง</p>
-              <p>คณะกรรมการกลุ่มบริษัทยูนี่ ออนไลน์ จำกัด</p>
-            </div>
-          </div>
-
-          <div class="col-sm-4 col-md-4 col-lg-4 text-center grid-container1">
-            <img src="../assets//imgs/person-2.png" alt="" />
-            <div class="grid-container2">
-              <h5 class="pt-2">คุณศิวัช ภูธนแสงทอง</h5>
-              <p>ผู้ร่วมก่อตั้ง</p>
-              <p>ประธานเจ้าหน้าที่บริหารกลุ่มบริษัทยูนี่ ออนไลน์ จำกัด</p>
-            </div>
-          </div>
-          <div class="col-sm-4 col-md-4 col-lg-4 text-center grid-container1">
-            <img src="../assets//imgs/person-3.png" alt="" />
-            <div class="grid-container2">
-              <h5 class="pt-2">คุณเฟาซีย์ ออสันตินุตสกุล</h5>
-              <p>ผู้ร่วมก่อตั้ง</p>
-              <p>
-                ประธานเจ้าหน้าที่ฝ่ายกลยุธองค์กรกลุ่มบริษัทยูนี่ ออนไลน์ จำกัด
-              </p>
-            </div>
-          </div>
-          <div class="col-sm-4 col-md-4 col-lg-4 text-center grid-container1">
-            <img src="../assets//imgs/person-6.png" alt="" />
-            <div class="grid-container2">
-              <h5 class="pt-2">คุณทนงค์ มาถาวร</h5>
-              <p>ผู้ร่วมก่อตั้ง</p>
-              <p>คณะกรรมการกลุ่มบริษัทยูนี่ ออนไลน์ จำกัด</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section id="news">
       <div class="container my-5">
         <h1 class="pb-5">ข่าวสารที่น่่่าสนใจ จาก ยูนี่ ออนไลน์</h1>
@@ -419,6 +356,69 @@
             <b-button size="sm" class="btn btn-purple" type="submit"
               >ดูทั้งหมด</b-button
             >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="team">
+      <div class="container py-4">
+        <h1>MEET OUR TEAM</h1>
+        <p>รายชื่อทีมผู่ก่อตั้ง UNII</p>
+        <div class="row">
+          <div class="col-sm-4 col-md-4 col-lg-4 text-center grid-container1">
+            <img src="../assets/imgs/person-1.png" alt="" />
+            <div class="grid-container2">
+              <h5 class="pt-2">คุณพรนริศ ชวนไชยสิทธิ์</h5>
+              <p>ผู้ร่วมก่อตั้ง</p>
+              <p>ประธานคณะกรรมการกลุ่มบริษัทยูนี่ ออนไลน์ จำกัด</p>
+            </div>
+          </div>
+          <div class="col-sm-4 col-md-4 col-lg-4 text-center grid-container1">
+            <img src="../assets//imgs/person-5.png" alt="" />
+            <div class="grid-container2">
+              <h5 class="pt-2">คุณธีระชัย จึงวิวัฒณาภรณ์</h5>
+              <p>ผู้ร่วมก่อตั้ง</p>
+              <p>
+                รองประธานคณะกรรมการฝ่ายกิจการต่างประเทศกลุ่มบริษัทยูนี่ ออนไลน์
+                จำกัด
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-4 col-md-4 col-lg-4 text-center grid-container1">
+            <img src="../assets//imgs/person-4.png" alt="" />
+            <div class="grid-container2">
+              <h5 class="pt-2">ผศ.ดร.ปุ่น เที่ยงบูรณธรรม</h5>
+              <p>ผู้ร่วมก่อตั้ง</p>
+              <p>คณะกรรมการกลุ่มบริษัทยูนี่ ออนไลน์ จำกัด</p>
+            </div>
+          </div>
+
+          <div class="col-sm-4 col-md-4 col-lg-4 text-center grid-container1">
+            <img src="../assets//imgs/person-2.png" alt="" />
+            <div class="grid-container2">
+              <h5 class="pt-2">คุณศิวัช ภูธนแสงทอง</h5>
+              <p>ผู้ร่วมก่อตั้ง</p>
+              <p>ประธานเจ้าหน้าที่บริหารกลุ่มบริษัทยูนี่ ออนไลน์ จำกัด</p>
+            </div>
+          </div>
+          <div class="col-sm-4 col-md-4 col-lg-4 text-center grid-container1">
+            <img src="../assets//imgs/person-3.png" alt="" />
+            <div class="grid-container2">
+              <h5 class="pt-2">คุณเฟาซีย์ ออสันตินุตสกุล</h5>
+              <p>ผู้ร่วมก่อตั้ง</p>
+              <p>
+                ประธานเจ้าหน้าที่ฝ่ายกลยุธองค์กรกลุ่มบริษัทยูนี่ ออนไลน์ จำกัด
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-4 col-md-4 col-lg-4 text-center grid-container1">
+            <img src="../assets//imgs/person-6.png" alt="" />
+            <div class="grid-container2">
+              <h5 class="pt-2">คุณทนงค์ มาถาวร</h5>
+              <p>ผู้ร่วมก่อตั้ง</p>
+              <p>คณะกรรมการกลุ่มบริษัทยูนี่ ออนไลน์ จำกัด</p>
+            </div>
           </div>
         </div>
       </div>
