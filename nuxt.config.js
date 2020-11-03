@@ -18,11 +18,26 @@ export default {
         rel: 'stylesheet',
         href: 'https://use.fontawesome.com/releases/v5.7.0/css/all.css',
       },
+      {
+        rel: 'stylesheet',
+        href: 'https://unpkg.com/bootstrap/dist/css/bootstrap.min.css',
+      },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css',
+      },
     ],
     script: [
       {
+        src: 'https://unpkg.com/vue@latest/dist/vue.min.js',
+      },
+      {
+        src: 'https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js',
+      },
+      {
         src:
-          'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-vue/2.18.1/bootstrap-vue.min.js',
+          'https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue-icons.min.js',
       },
     ],
   },
