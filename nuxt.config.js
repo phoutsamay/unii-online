@@ -19,7 +19,12 @@ export default {
         href: 'https://use.fontawesome.com/releases/v5.7.0/css/all.css',
       },
     ],
-    script: [],
+    script: [
+      {
+        src:
+          'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-vue/2.18.1/bootstrap-vue.min.js',
+      },
+    ],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
