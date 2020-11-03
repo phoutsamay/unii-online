@@ -77,7 +77,7 @@
               size="sm"
               class="btn btn-purple my-2 my-sm-0"
               type="submit"
-              >เข้าสู่ระบบ</b-button
+              >สมัครอบรม</b-button
             >
           </div>
           <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center mt-4">
@@ -234,7 +234,7 @@
       </div>
     </section>
 
-    <section id="news">
+    <section id="news" class="mt-4">
       <div class="container my-5">
         <h1 class="pb-5">ข่าวสารที่น่่่าสนใจ จาก ยูนี่ ออนไลน์</h1>
         <div class="row">
@@ -251,7 +251,11 @@
             </p>
             <p>October 14,2020</p>
           </div>
-          <div class="col-xs-3 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+          <div
+            class="col-xs-3 col-sm-12 col-md-12 col-lg-12 col-xl-6"
+            style="margin-top: -20px"
+          >
+            <hr class="vl d-none d-xl-block" />
             <hr />
             <div class="row">
               <div class="col cut-text-multi">
@@ -352,7 +356,7 @@
               </b-card-text>
             </b-card>
           </b-card-group>
-          <div class="text-center">
+          <div class="text-center mt-3">
             <b-button size="sm" class="btn btn-purple" type="submit"
               >ดูทั้งหมด</b-button
             >

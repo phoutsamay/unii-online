@@ -60,11 +60,18 @@ h5 {
 #news hr {
   background-color: #ffffff;
 }
+
 #footer {
   background-color: #222222;
 }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  #video h1 {
+    font-size: 24px;
+  }
+  #partner h3 {
+    font-size: 16px;
+  }
   #service .card-deck .card {
     -ms-flex: 0 0 24%;
     flex: 0 0 24%;
@@ -73,6 +80,19 @@ h5 {
     font-size: 16px;
     text-align: center;
     color: #69197b;
+  }
+  #overley .btn-purple {
+    background: transparent linear-gradient(180deg, #993a96 0%, #69197b 100%) 0%
+      0% no-repeat padding-box;
+    border-radius: 5px;
+    opacity: 1;
+    padding: 10px 30px 10px 30px;
+  }
+  #overley h1 {
+    font-size: 24px;
+  }
+  #overley p {
+    font-size: 14px;
   }
   #team .grid-container1 {
     display: grid;
@@ -116,4 +136,12 @@ h5 {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  #news .vl {
+    border-left: 0.5px solid #ffffff;
+    height: 420px;
+    position: absolute;
+    left: 0%;
+    margin-left: -3px;
+    top: 0;
+  }
 }

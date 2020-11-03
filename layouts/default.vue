@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div>
-      <b-navbar toggleable="lg" type="light" variant="light">
+    <div class="sticky-top shadow-sm">
+      <b-navbar toggleable="lg" type="light" variant="white">
         <div class="container">
           <b-navbar-brand href="#"
             ><img src="../assets/imgs/logo.png" alt=""
