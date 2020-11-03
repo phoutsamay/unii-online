@@ -43,7 +43,7 @@
       </b-collapse>
     </b-navbar>
     <Nuxt />
-    <section id="footer">
+    <!-- <section id="footer">
       <div class="container text-center py-4">
         <img src="../assets/imgs/logo.png" alt="" />
         <p>Connect with us</p>
@@ -58,12 +58,12 @@
         ></a>
         <p class="mt-3">Copyright&copy; 2020 Unii Online</p>
       </div>
-    </section>
+    </section> -->
   </div>
 </template>
 
 <style scoped>
-.btn-purple {
+/* .btn-purple {
   background: transparent linear-gradient(180deg, #993a96 0%, #69197b 100%) 0%
     0% no-repeat padding-box;
   border-radius: 5px;
@@ -74,5 +74,5 @@ p {
 }
 i {
   color: #ffffff;
-}
+} */
 </style>
