@@ -3,5 +3,45 @@ body {
 }
 h1 {
   color: #69197b;
+  font-size: 35px;
   font-weight: 700;
+}
+#partner img {
+  max-width: 100%;
+}
+#overley {
+  background: transparent linear-gradient(180deg, #993a96 0%, #4d1d4b 100%) 0%
+    0% no-repeat padding-box;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  #video h1 {
+    font-size: 24px;
+  }
+  #partner h1 {
+    font-size: 16px;
+  }
+  #overley h1 {
+    font-size: 24px;
+  }
+  #overley p {
+    font-size: 14px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }

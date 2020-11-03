@@ -15,11 +15,11 @@
 
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav class="mx-auto">
-            <b-nav-item href="#">หน้าแรก</b-nav-item>
-            <b-nav-item href="#">บริการของเรา</b-nav-item>
-            <b-nav-item href="#">เกี่ยวกับเรา</b-nav-item>
-            <b-nav-item href="#">วีดีโอ</b-nav-item>
-            <b-nav-item href="#">ติดต่อเรา</b-nav-item>
+            <b-nav-item class="px-3" href="#">หน้าแรก</b-nav-item>
+            <b-nav-item class="px-3" href="#">บริการของเรา</b-nav-item>
+            <b-nav-item class="px-3" href="#">เกี่ยวกับเรา</b-nav-item>
+            <b-nav-item class="px-3" href="#">วีดีโอ</b-nav-item>
+            <b-nav-item class="px-3" href="#">ติดต่อเรา</b-nav-item>
           </b-navbar-nav>
 
           <!-- Right aligned nav items -->
