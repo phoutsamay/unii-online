@@ -79,6 +79,149 @@
         </div>
       </div>
     </section>
+
+    <section id="service">
+      <div class="container">
+        <div>
+          <b-card-group deck>
+            <div class="row">
+              <div class="col-6 col-sm-6 col-md-6 col-lg-3">
+                <b-card
+                  title="Unii Recycle"
+                  img-src="../assets/imgs/recycle-icon.png"
+                  img-alt="Image"
+                  img-top
+                >
+                  <b-card-text class="d-none d-md-block">
+                    ติดตามข้อมูลข่าวสารสำหรับ Unii Recylce
+                  </b-card-text>
+                </b-card>
+              </div>
+
+              <div class="col-6 col-sm-6 col-md-6 col-lg-3">
+                <b-card
+                  title="Unii Truck"
+                  img-src="../assets/imgs/recycle-icon.png"
+                  img-alt="Image"
+                  img-top
+                >
+                  <b-card-text class="d-none d-md-block">
+                    ติดตามข้อมูลข่าวสารสำหรับ Unii Recylce
+                  </b-card-text>
+                </b-card>
+              </div>
+
+              <div class="col-6 col-sm-6 col-md-6 col-lg-3">
+                <b-card
+                  title="Unii Center"
+                  img-src="../assets/imgs/recycle-icon.png"
+                  img-alt="Image"
+                  img-top
+                >
+                  <b-card-text class="d-none d-md-block">
+                    ติดตามข้อมูลข่าวสารสำหรับ Unii Recylce
+                  </b-card-text>
+                </b-card>
+              </div>
+
+              <div class="col-6 col-sm-6 col-md-6 col-lg-3">
+                <b-card
+                  title="Unii Truck"
+                  img-src="../assets/imgs/recycle-icon.png"
+                  img-alt="Image"
+                  img-top
+                >
+                  <b-card-text class="d-none d-md-block">
+                    ติดตามข้อมูลข่าวสารสำหรับ Unii Recylce
+                  </b-card-text>
+                </b-card>
+              </div>
+            </div>
+          </b-card-group>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container text-center">
+        <img src="../assets/imgs/head-unii.png" alt="" />
+        <h1>Why Recycle Business?</h1>
+        <p>
+          ธุรกิจรีไซเคิล คือ
+          ธุรกิจที่ดำเนินการเก็บรวบรวมเศษวัสดุและชิ้นส่วนโลหะและอโลหะที่ใช้แล้วและไม่เป็น
+          อันตราย เช่น ขยะจากครัวเรือน กระดาษ พลาสติก ชิ้นส่วนเครื่องใช้
+          คอมพิวเตอร์ และยานพาหนะต่างๆ และสิ่งของที่นำกลับมาใช้ใหม่ได้ เป็นต้น
+          เพื่อขายส่งโดยไม่มีกระบวนการเปลี่ยนรูป และธุรกิจที่ดำเนินการ
+          แปรรูปเพื่อนำมาเป็นวัสดุที่ใช้แล้วกลับมาใช้ใหม่
+          โดยกระบวนการแปรสภาพทางกลหรือทางเคมี
+        </p>
+        <img src="../assets/imgs/mockupIP.png" alt="" />
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="container mt-5">
+        <b-card style="border: 1px solid #69197b">
+          <!-- <div class="col-md-8">
+            <h3>
+              หลากหลายการบริการจาก ยูนี่ ออนไลน์
+              ที่พร้อมมอบบริการที่ดีที่สุดกับคุณ
+            </h3>
+          </div> -->
+          <div>
+            <h1>เส้นทางวงจรธุรกิจ รีไซเคิลของ Unii</h1>
+            <b-card style="border: none">
+              <img src="../assets/imgs/PTCF.png" alt="" width="100%" />
+            </b-card>
+          </div>
+          <div>
+            <b-card-group deck>
+              <b-card
+                style="border-radius: 5px; box-shadow: 0px 6px 10px #c1c1c133"
+              >
+                <b-card-title>
+                  <h3>เป้าหมาย ลดต้นทุน/ลดเวลา/เพิ่มรายได้</h3>
+                </b-card-title>
+                <b-card-text
+                  ><ul>
+                    <li>
+                      (ลดต้นทุนกว่า 71%) ให้ผู้รับซื้อทั่วไป (T) มากกว่า 120,000
+                      ล้านบาท/ปี
+                    </li>
+                    <li>
+                      เพิ่มเวลาว่าง (ลดวันทำงานไปกว่า 73%) ให้กับผู้ใช้ Unii
+                      เพื่อทำสิ่งอื่นๆ ได้อย่างมากมาย
+                    </li>
+                    <li>ช่วยรัฐจัดเก็บภาษีได้หลาย 10,000 ล้านบาท/ปี</li>
+                    <li>
+                      สร้างมาตรฐานให้ธุรกิจรีไซเคิลครบทั้งระบบจากต้นน้ำถึงปลายน้ำ
+                    </li>
+                    <li>สร้างมาตรฐานไทย เพื่อ ให้แข่งขันได้ในมาตรฐานโลก</li>
+                  </ul></b-card-text
+                >
+              </b-card>
+              <b-card
+                style="border-radius: 5px; box-shadow: 0px 6px 10px #c1c1c133"
+              >
+                <b-card-title>
+                  <h3>ลดต้นทุน/ลดเวลา/เพิ่มรายได้"</h3>
+                </b-card-title>
+                <b-card-text
+                  ><ul>
+                    <li>ลดต้นทุน 20,000 บาท/เดือน (กว่า 71%)</li>
+                    <li>
+                      ลดเวลาทำงานเหลือ 2 วัน/เที่ยว (กว่า 73%) เพิ่มรายได้
+                      20,000 บาท/เดือน 240,000 บาท/ปี ได้วันว่าง 22 วัน/เดือน
+                      264 วัน/ปี
+                    </li>
+                  </ul></b-card-text
+                >
+              </b-card>
+            </b-card-group>
+          </div>
+        </b-card>
+      </div>
+    </section>
   </div>
 </template>
 

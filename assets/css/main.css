@@ -13,6 +13,18 @@ h1 {
   background: transparent linear-gradient(180deg, #993a96 0%, #4d1d4b 100%) 0%
     0% no-repeat padding-box;
 }
+#service .card-title {
+  color: #69197b;
+  font-size: 20px;
+  font-weight: 700;
+}
+#about {
+  background-image: url('../imgs/bg-why.jpg');
+  background-size: cover;
+}
+#about img {
+  max-width: 100%;
+}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -27,6 +39,13 @@ h1 {
   }
   #overley p {
     font-size: 14px;
+  }
+  #service .card-title {
+    font-size: 16px;
+    text-align: center;
+  }
+  #about h1 {
+    font-size: 24px;
   }
 }
 
