@@ -51,7 +51,6 @@
             <!-- Right aligned nav items -->
             <b-navbar-nav class="ml-auto">
               <b-nav-form>
-                <NuxtLink to="navbar">navbar</NuxtLink>
                 <b-button
                   size="sm"
                   class="btn btn-purple my-2 my-sm-0"
