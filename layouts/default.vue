@@ -1,6 +1,11 @@
 <template>
   <div>
-    <b-navbar class="strick-top shadow" toggleable="lg" type="light">
+    <b-navbar
+      class="sticky-top shadow-sm"
+      toggleable="lg"
+      type="light"
+      variant="white"
+    >
       <div class="container">
         <b-navbar-brand href="#"
           ><img src="../assets/imgs/logo.png" alt=""
@@ -51,7 +56,7 @@
   </div>
 </template>
 
-<style scoped>
+<style>
 .btn-purple {
   background: transparent linear-gradient(180deg, #993a96 0%, #69197b 100%) 0%
     0% no-repeat padding-box;

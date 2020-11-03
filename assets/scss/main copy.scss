@@ -1,0 +1,147 @@
+body {
+  font-family: 'Prompt', sans-serif;
+}
+h1,
+h5 {
+  color: #69197b;
+  font-weight: 800;
+}
+.cut-text-multi {
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.btn-purple {
+  background: transparent linear-gradient(180deg, #993a96 0%, #69197b 100%) 0%
+    0% no-repeat padding-box;
+  border-radius: 5px;
+  opacity: 1;
+}
+#partner h3 {
+  color: #69197b;
+  font-weight: 800;
+}
+#overley {
+  background: transparent linear-gradient(180deg, #993a96 0%, #4d1d4b 100%) 0%
+    0% no-repeat padding-box;
+  border: 1px solid #707070;
+  opacity: 1;
+}
+#overley h1 {
+  color: #ffffff;
+}
+#overley p {
+  color: #ffffff;
+}
+#about {
+  background-image: url('../imgs/bg-why.jpg');
+}
+#team {
+  background: url('../imgs/bg-team.png');
+}
+
+#process h3 {
+  color: #69197b;
+}
+#news {
+  background: transparent linear-gradient(180deg, #993a96 0%, #4d1d4b 100%) 0%
+    0% no-repeat padding-box;
+  border: 1px solid #707070;
+  opacity: 1;
+}
+#news h1 {
+  color: #ffffff;
+}
+#news p {
+  color: #ffffff;
+}
+#news hr {
+  background-color: #ffffff;
+}
+
+#footer {
+  background-color: #222222;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  #video h1 {
+    font-size: 24px;
+  }
+  #partner h3 {
+    font-size: 16px;
+  }
+  #service .card-deck .card {
+    -ms-flex: 0 0 24%;
+    flex: 0 0 24%;
+  }
+  #service .card-title {
+    font-size: 16px;
+    text-align: center;
+    color: #69197b;
+  }
+  #overley .btn-purple {
+    background: transparent linear-gradient(180deg, #993a96 0%, #69197b 100%) 0%
+      0% no-repeat padding-box;
+    border-radius: 5px;
+    opacity: 1;
+    padding: 10px 30px 10px 30px;
+  }
+  #overley h1 {
+    font-size: 24px;
+  }
+  #overley p {
+    font-size: 14px;
+  }
+  #team .grid-container1 {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #team .grid-container2 {
+    display: grid;
+    grid-template-rows: auto;
+  }
+  #team img {
+    max-width: 110px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  #team h5 {
+    font-size: 18px;
+  }
+  #team p {
+    font-size: 14px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  #team img {
+    max-width: 50%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  #news .vl {
+    border-left: 0.5px solid #ffffff;
+    height: 420px;
+    position: absolute;
+    left: 0%;
+    margin-left: -3px;
+    top: 0;
+  }
+}

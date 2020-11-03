@@ -18,32 +18,12 @@ export default {
         rel: 'stylesheet',
         href: 'https://use.fontawesome.com/releases/v5.7.0/css/all.css',
       },
-      {
-        rel: 'stylesheet',
-        href: 'https://unpkg.com/bootstrap/dist/css/bootstrap.min.css',
-      },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css',
-      },
     ],
-    script: [
-      {
-        src: 'https://unpkg.com/vue@latest/dist/vue.min.js',
-      },
-      {
-        src: 'https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js',
-      },
-      {
-        src:
-          'https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue-icons.min.js',
-      },
-    ],
+    script: [],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [],
+  css: ['~/assets/css/main.css'],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [],
