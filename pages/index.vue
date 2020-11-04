@@ -165,7 +165,7 @@
       </div>
     </section>
 
-    <section id="process">
+    <!-- <section id="process">
       <div class="container mt-5">
         <b-card style="border: 1px solid #69197b">
           <div>
@@ -221,7 +221,7 @@
           </div>
         </b-card>
       </div>
-    </section>
+    </section> -->
 
     <section id="news" class="mt-4">
       <div class="container my-5">
