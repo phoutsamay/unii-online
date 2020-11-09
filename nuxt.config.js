@@ -18,8 +18,22 @@ export default {
         rel: 'stylesheet',
         href: 'https://use.fontawesome.com/releases/v5.7.0/css/all.css',
       },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css',
+      },
     ],
-    script: [],
+    script: [
+      {
+        src:
+          'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js',
+      },
+      {
+        src:
+          'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js',
+      },
+    ],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)

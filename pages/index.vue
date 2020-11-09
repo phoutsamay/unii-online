@@ -49,6 +49,63 @@
       </div>
     </section>
 
+    <div class="container my-4">
+      <div
+        id="recipeCarousel"
+        class="carousel slide w-100"
+        data-ride="carousel"
+      >
+        <div class="carousel-inner w-100" role="listbox">
+          <div class="carousel-item row no-gutters active">
+            <div class="col-3 float-left">
+              <img class="img-fluid" src="../assets/imgs/trust-1.png" />
+            </div>
+            <div class="col-3 float-left">
+              <img class="img-fluid" src="../assets/imgs/trust-2.png" />
+            </div>
+            <div class="col-3 float-left">
+              <img class="img-fluid" src="../assets/imgs/trust-3.png" />
+            </div>
+            <div class="col-3 float-left">
+              <img class="img-fluid" src="../assets/imgs/trust-4.png" />
+            </div>
+          </div>
+          <div class="carousel-item row no-gutters">
+            <div class="col-3 float-left">
+              <img class="img-fluid" src="../assets/imgs/trust-1.png" />
+            </div>
+            <div class="col-3 float-left">
+              <img class="img-fluid" src="../assets/imgs/trust-2.png" />
+            </div>
+            <div class="col-3 float-left">
+              <img class="img-fluid" src="../assets/imgs/trust-3.png" />
+            </div>
+            <div class="col-3 float-left">
+              <img class="img-fluid" src="../assets/imgs/trust-4.png" />
+            </div>
+          </div>
+        </div>
+        <a
+          class="carousel-control-prev"
+          href="#recipeCarousel"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#recipeCarousel"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+
     <section id="partner">
       <div class="container py-5">
         <h3 class="text-center mb-4">ส่งสินค้ากลับสู่ผู้ผลิตทุกราย</h3>
@@ -427,6 +484,23 @@ export default {
     return {
       slide: 0,
       sliding: null,
+      slides: [
+        [
+          'https://picsum.photos/1024/480/?image=45',
+          'https://picsum.photos/1024/480/?image=40',
+          'https://picsum.photos/1024/480/?image=47',
+        ],
+        [
+          'https://picsum.photos/1024/480/?image=48',
+          'https://picsum.photos/1024/480/?image=39',
+          'https://picsum.photos/1024/480/?image=55',
+        ],
+        [
+          'https://picsum.photos/1024/480/?image=51',
+          'https://picsum.photos/1024/480/?image=52',
+          'https://picsum.photos/1024/480/?image=53',
+        ],
+      ],
     }
   },
   methods: {
