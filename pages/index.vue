@@ -50,7 +50,7 @@
     </section>
 
     <section id="partner">
-      <div class="container my-4">
+      <div class="container my-5">
         <h3 class="text-center mb-4">ส่งสินค้ากลับสู่ผู้ผลิตทุกราย</h3>
         <div
           id="recipeCarousel"
@@ -128,14 +128,16 @@
               เวลา 8.30 - 17.00 น. อาคารพร้อมพันธุ์ 3 ลาดพร้าว ซอย 3
               (รับรองผลคืนเงิน 100% ถ้าไม่สามารถสร้างเงินได้)
             </p>
-            <b-button
-              size="sm"
-              class="btn btn-purple my-2 my-sm-0"
-              type="submit"
-              >สมัครอบรม</b-button
-            >
+            <div class="my-4">
+              <b-button
+                size="sm"
+                class="btn btn-purple my-2 my-sm-0"
+                type="submit"
+                >สมัครอบรม</b-button
+              >
+            </div>
           </div>
-          <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center mt-4">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center mt-5">
             <img src="../assets/imgs/mockup-register.png" alt="" />
           </div>
         </div>
@@ -219,7 +221,7 @@
             โดยกระบวนการแปรสภาพทางกลหรือทางเคมี
           </p>
         </div>
-        <div class="col-xs-3 col-sm-8 col-md-6 col-lg-6 mx-auto">
+        <div class="col-xs-3 col-sm-8 col-md-6 col-lg-6 mx-auto mymargin">
           <img src="../assets/imgs/mockupIP.png" alt="" width="100%" />
         </div>
       </div>
@@ -287,7 +289,7 @@
 
     <section id="news" class="mt-4">
       <div class="container my-5">
-        <h1 class="pb-5">ข่าวสารที่น่่่าสนใจ จาก ยูนี่ ออนไลน์</h1>
+        <h1 class="pb-5">ข่าวสารที่น่าสนใจ จาก ยูนี่ ออนไลน์</h1>
         <div class="row">
           <div class="col-xs-3 col-sm-12 col-md-12 col-lg-12 col-xl-6">
             <b-embed
@@ -309,19 +311,7 @@
             <hr class="vl d-none d-xl-block" />
             <hr />
             <div class="row">
-              <div class="col cut-text-multi">
-                <p>
-                  ธุรกิจรีไซเคิล คือ
-                  ธุรกิจที่ดำเนินการเก็บรวบรวมเศษวัสดุและชิ้นส่วนโลหะและอโลหะที่ใช้แล้วและไม่เป็น
-                  อันตราย เช่น ขยะจากครัวเรือน กระดาษ พลาสติก ชิ้นส่วนเครื่องใช้
-                  คอมพิวเตอร์ และยานพาหนะต่างๆ และสิ่งของที่นำกลับมาใช้ใหม่ได้
-                  เป็นต้น เพื่อขายส่งโดยไม่มีกระบวนการเปลี่ยนรูป
-                  และธุรกิจที่ดำเนินการ
-                  แปรรูปเพื่อนำมาเป็นวัสดุที่ใช้แล้วกลับมาใช้ใหม่
-                  โดยกระบวนการแปรสภาพทางกลหรือทางเคมี
-                </p>
-              </div>
-              <div class="col">
+              <div class="col-sm-6 col-md-6 col-lg-6">
                 <b-embed
                   type="iframe"
                   aspect="16by9"
@@ -329,10 +319,7 @@
                   allowfullscreen
                 ></b-embed>
               </div>
-            </div>
-            <hr />
-            <div class="row">
-              <div class="col cut-text-multi">
+              <div class="col-sm-6 col-md-6 col-lg-6 cut-text-multi">
                 <p>
                   ธุรกิจรีไซเคิล คือ
                   ธุรกิจที่ดำเนินการเก็บรวบรวมเศษวัสดุและชิ้นส่วนโลหะและอโลหะที่ใช้แล้วและไม่เป็น
@@ -344,13 +331,28 @@
                   โดยกระบวนการแปรสภาพทางกลหรือทางเคมี
                 </p>
               </div>
-              <div class="col">
+            </div>
+            <hr />
+            <div class="row">
+              <div class="col-sm-6 col-md-6 col-lg-6">
                 <b-embed
                   type="iframe"
                   aspect="16by9"
                   src="https://www.youtube.com/embed/59IH6cldhUw"
                   allowfullscreen
                 ></b-embed>
+              </div>
+              <div class="col-sm-6 col-md-6 col-lg-6 cut-text-multi">
+                <p>
+                  ธุรกิจรีไซเคิล คือ
+                  ธุรกิจที่ดำเนินการเก็บรวบรวมเศษวัสดุและชิ้นส่วนโลหะและอโลหะที่ใช้แล้วและไม่เป็น
+                  อันตราย เช่น ขยะจากครัวเรือน กระดาษ พลาสติก ชิ้นส่วนเครื่องใช้
+                  คอมพิวเตอร์ และยานพาหนะต่างๆ และสิ่งของที่นำกลับมาใช้ใหม่ได้
+                  เป็นต้น เพื่อขายส่งโดยไม่มีกระบวนการเปลี่ยนรูป
+                  และธุรกิจที่ดำเนินการ
+                  แปรรูปเพื่อนำมาเป็นวัสดุที่ใช้แล้วกลับมาใช้ใหม่
+                  โดยกระบวนการแปรสภาพทางกลหรือทางเคมี
+                </p>
               </div>
             </div>
             <hr />
@@ -417,7 +419,7 @@
     </section>
 
     <section id="team">
-      <div class="container py-4">
+      <div class="container py-5">
         <h1>MEET OUR TEAM</h1>
         <p>รายชื่อทีมผู่ก่อตั้ง UNII</p>
         <div class="row">
