@@ -51,6 +51,7 @@
 
     <section id="partner">
       <div class="container my-4">
+        <h3 class="text-center mb-4">ส่งสินค้ากลับสู่ผู้ผลิตทุกราย</h3>
         <div
           id="recipeCarousel"
           class="carousel slide w-100"
