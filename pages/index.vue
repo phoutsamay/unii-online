@@ -48,7 +48,7 @@
 
         <div class="mt-3">
           <div
-            id="recipeCarousel"
+            id="recipeCarousel1"
             class="carousel slide w-100"
             data-ride="carousel"
           >
@@ -120,7 +120,7 @@
             </div>
             <a
               class="carousel-control-prev"
-              href="#recipeCarousel"
+              href="#recipeCarousel1"
               role="button"
               data-slide="prev"
             >
@@ -132,7 +132,7 @@
             </a>
             <a
               class="carousel-control-next"
-              href="#recipeCarousel"
+              href="#recipeCarousel1"
               role="button"
               data-slide="next"
             >
@@ -217,7 +217,7 @@
     <section id="overley">
       <div class="container mt-5">
         <div class="row">
-          <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6 mt-5">
             <h1>สมัครอบรม Unii Mini Center #UMC</h1>
             <p>
               UNII Application Disrupt ต้นทุนธุรกิจรีไซเคิล ครั้งยิ่งใหญ่
@@ -235,7 +235,7 @@
               >
             </div>
           </div>
-          <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center mt-5">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center">
             <img src="../assets/imgs/mockup-register.png" alt="" />
           </div>
         </div>
@@ -393,12 +393,13 @@
             <b-embed
               type="iframe"
               aspect="16by9"
-              src="../assets/videos/video1.mp4"
+              src="https://www.youtube.com/embed/32cYYHLhZ2I"
               allowfullscreen
             ></b-embed>
             <p class="pt-2">
-              #ฟังชัดๆ...!!! #วิสัยทัศน์นายกสมาคมซาเล้งและร้านรับซื้อของเก่า
-              #ที่แสดงถึงภูมิความรู้
+              Unii ขอขอบคุณ FC ที่ติดตาม Unii ด้วยดีตลอดมามากๆนะครับ
+              วันนี้พอมีเวลาได้เขียนเรื่องนี้สัก 1 ชั่วโมงพอดีครับ
+              ที่จริงอยากเขียนมานานแล้วแต่ไม่มีเวลาเลยจริงๆครับ
             </p>
             <p>October 14,2020</p>
           </div>
