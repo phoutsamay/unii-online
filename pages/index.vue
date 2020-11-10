@@ -54,7 +54,7 @@
           >
             <div class="carousel-inner w-100" role="listbox">
               <div class="carousel-item row no-gutters active">
-                <div class="col-4 float-left">
+                <div class="col-4 px-2 float-left">
                   <div>
                     <b-embed
                       type="iframe"
@@ -64,7 +64,7 @@
                     ></b-embed>
                   </div>
                 </div>
-                <div class="col-4 float-left">
+                <div class="col-4 px-2 float-left">
                   <div>
                     <b-embed
                       type="iframe"
@@ -74,7 +74,7 @@
                     ></b-embed>
                   </div>
                 </div>
-                <div class="col-4 float-left">
+                <div class="col-4 px-2 float-left">
                   <div>
                     <b-embed
                       type="iframe"
@@ -86,7 +86,7 @@
                 </div>
               </div>
               <div class="carousel-item row no-gutters">
-                <div class="col-4 float-left">
+                <div class="col-4 px-2 float-left">
                   <div>
                     <b-embed
                       type="iframe"
@@ -96,7 +96,7 @@
                     ></b-embed>
                   </div>
                 </div>
-                <div class="col-4 float-left">
+                <div class="col-4 px-2 float-left">
                   <div>
                     <b-embed
                       type="iframe"
@@ -106,7 +106,7 @@
                     ></b-embed>
                   </div>
                 </div>
-                <div class="col-4 float-left">
+                <div class="col-4 px-2 float-left">
                   <div>
                     <b-embed
                       type="iframe"
