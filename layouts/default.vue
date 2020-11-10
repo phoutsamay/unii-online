@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="sticky-top shadow-sm">
+    <div id="navbar" class="sticky-top shadow-sm">
       <b-navbar toggleable="lg" type="light" variant="white">
         <div class="container">
           <b-navbar-brand href="#"
@@ -84,11 +84,13 @@
 </template>
 
 <style scoped>
-.btn-purple {
+#navbar .btn-purple {
   background: transparent linear-gradient(180deg, #993a96 0%, #69197b 100%) 0%
     0% no-repeat padding-box;
   border-radius: 5px;
   opacity: 1;
+  border: none;
+  padding: 5px 10px;
 }
 p {
   color: #ffffff;

@@ -18,13 +18,13 @@
           img-src="../assets/imgs/banner.jpg"
         ></b-carousel-slide>
         <!-- Slides with image only -->
-        <b-carousel-slide
+        <!-- <b-carousel-slide
           img-src="../assets/imgs/banner-1.jpg"
-        ></b-carousel-slide>
+        ></b-carousel-slide> -->
         <!-- Slides with image only -->
-        <b-carousel-slide
+        <!-- <b-carousel-slide
           img-src="../assets/imgs/banner-2.jpg"
-        ></b-carousel-slide>
+        ></b-carousel-slide> -->
       </b-carousel>
     </section>
 
@@ -520,7 +520,7 @@
             </b-card>
           </b-card-group>
           <div class="text-center mt-3">
-            <b-button size="sm" class="btn btn-purple" type="submit"
+            <b-button size="lg" class="btn btn-purple" type="submit"
               >ดูทั้งหมด</b-button
             >
           </div>
