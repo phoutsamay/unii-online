@@ -46,6 +46,105 @@
             allowfullscreen
           ></b-embed>
         </div>
+
+        <div class="mt-3">
+          <div
+            id="recipeCarousel"
+            class="carousel slide w-100"
+            data-ride="carousel"
+          >
+            <div class="carousel-inner w-100" role="listbox">
+              <div class="carousel-item row no-gutters active">
+                <div class="col-4 float-left">
+                  <div>
+                    <b-embed
+                      type="iframe"
+                      aspect="16by9"
+                      src="https://www.youtube.com/embed/eU1uoF14ve0"
+                      allowfullscreen
+                    ></b-embed>
+                  </div>
+                </div>
+                <div class="col-4 float-left">
+                  <div>
+                    <b-embed
+                      type="iframe"
+                      aspect="16by9"
+                      src="https://www.youtube.com/embed/eU1uoF14ve0"
+                      allowfullscreen
+                    ></b-embed>
+                  </div>
+                </div>
+                <div class="col-4 float-left">
+                  <div>
+                    <b-embed
+                      type="iframe"
+                      aspect="16by9"
+                      src="https://www.youtube.com/embed/eU1uoF14ve0"
+                      allowfullscreen
+                    ></b-embed>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item row no-gutters">
+                <div class="col-4 float-left">
+                  <div>
+                    <b-embed
+                      type="iframe"
+                      aspect="16by9"
+                      src="https://www.youtube.com/embed/eU1uoF14ve0"
+                      allowfullscreen
+                    ></b-embed>
+                  </div>
+                </div>
+                <div class="col-4 float-left">
+                  <div>
+                    <b-embed
+                      type="iframe"
+                      aspect="16by9"
+                      src="https://www.youtube.com/embed/eU1uoF14ve0"
+                      allowfullscreen
+                    ></b-embed>
+                  </div>
+                </div>
+                <div class="col-4 float-left">
+                  <div>
+                    <b-embed
+                      type="iframe"
+                      aspect="16by9"
+                      src="https://www.youtube.com/embed/eU1uoF14ve0"
+                      allowfullscreen
+                    ></b-embed>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a
+              class="carousel-control-prev"
+              href="#recipeCarousel"
+              role="button"
+              data-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#recipeCarousel"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
