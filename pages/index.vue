@@ -39,9 +39,9 @@
         </div>
         <div>
           <b-embed
-            type="iframe"
-            aspect="16by9"
-            src="https://www.youtube.com/embed/eU1uoF14ve0"
+            src="https://www.youtube.com/embed/32cYYHLhZ2I?controls=0"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></b-embed>
         </div>
@@ -59,7 +59,7 @@
                     <b-embed
                       type="iframe"
                       aspect="16by9"
-                      src="https://www.youtube.com/embed/eU1uoF14ve0"
+                      src="https://www.youtube.com/embed/YmGOn373ozU"
                       allowfullscreen
                     ></b-embed>
                   </div>
@@ -69,7 +69,7 @@
                     <b-embed
                       type="iframe"
                       aspect="16by9"
-                      src="https://www.youtube.com/embed/eU1uoF14ve0"
+                      src="https://www.youtube.com/embed/NMyEuLlbbWY"
                       allowfullscreen
                     ></b-embed>
                   </div>
@@ -79,7 +79,7 @@
                     <b-embed
                       type="iframe"
                       aspect="16by9"
-                      src="https://www.youtube.com/embed/eU1uoF14ve0"
+                      src="https://www.youtube.com/embed/yJHzs6VVRDw"
                       allowfullscreen
                     ></b-embed>
                   </div>
@@ -91,7 +91,7 @@
                     <b-embed
                       type="iframe"
                       aspect="16by9"
-                      src="https://www.youtube.com/embed/eU1uoF14ve0"
+                      src="https://www.youtube.com/embed/ayQ9KqMrslg"
                       allowfullscreen
                     ></b-embed>
                   </div>
@@ -111,7 +111,7 @@
                     <b-embed
                       type="iframe"
                       aspect="16by9"
-                      src="https://www.youtube.com/embed/eU1uoF14ve0"
+                      src="https://www.youtube.com/embed/iQ8VkAAWggg"
                       allowfullscreen
                     ></b-embed>
                   </div>
@@ -155,7 +155,7 @@
           class="carousel slide w-100"
           data-ride="carousel"
         >
-          <div class="carousel-inner w-100" role="listbox">
+          <div class="carousel-inner text-center" role="listbox">
             <div class="carousel-item row no-gutters active">
               <div class="col-3 float-left">
                 <img class="img-fluid" src="../assets/imgs/trust-1.png" />
@@ -166,7 +166,7 @@
               <div class="col-3 float-left">
                 <img class="img-fluid" src="../assets/imgs/trust-3.png" />
               </div>
-              <div class="col-3 float-left">
+              <div class="col-3 float-right">
                 <img class="img-fluid" src="../assets/imgs/trust-4.png" />
               </div>
             </div>
@@ -185,7 +185,7 @@
               </div>
             </div>
           </div>
-          <a
+          <!-- <a
             class="carousel-control-prev"
             href="#recipeCarousel"
             role="button"
@@ -202,7 +202,7 @@
           >
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
-          </a>
+          </a> -->
         </div>
       </div>
     </section>
@@ -308,7 +308,7 @@
       <div class="container py-5">
         <div class="text-center col-lg-8 mx-auto">
           <img src="../assets/imgs/head-unii.png" alt="" />
-          <h1>Why Recycle Business?</h1>
+          <h1 class="mt-3">Why Recycle Business?</h1>
           <p>
             ธุรกิจรีไซเคิล คือ
             ธุรกิจที่ดำเนินการเก็บรวบรวมเศษวัสดุและชิ้นส่วนโลหะและอโลหะที่ใช้แล้วและไม่เป็น
@@ -338,43 +338,49 @@
             <div>
               <b-card-group deck>
                 <b-card
+                  class="px-4"
                   style="border-radius: 5px; box-shadow: 0px 6px 10px #c1c1c133"
                 >
                   <b-card-title>
-                    <h3>เป้าหมาย ลดต้นทุน/ลดเวลา/เพิ่มรายได้</h3>
+                    <h3>เป้าหมาย ลดต้นทุน/ลดเวลา <br />/เพิ่มรายได้</h3>
                   </b-card-title>
                   <b-card-text
                     ><ul>
-                      <li>
-                        (ลดต้นทุนกว่า 71%) ให้ผู้รับซื้อทั่วไป (T) มากกว่า
-                        120,000 ล้านบาท/ปี
-                      </li>
-                      <li>
-                        เพิ่มเวลาว่าง (ลดวันทำงานไปกว่า 73%) ให้กับผู้ใช้ Unii
-                        เพื่อทำสิ่งอื่นๆ ได้อย่างมากมาย
-                      </li>
-                      <li>ช่วยรัฐจัดเก็บภาษีได้หลาย 10,000 ล้านบาท/ปี</li>
-                      <li>
-                        สร้างมาตรฐานให้ธุรกิจรีไซเคิลครบทั้งระบบจากต้นน้ำถึงปลายน้ำ
-                      </li>
-                      <li>สร้างมาตรฐานไทย เพื่อ ให้แข่งขันได้ในมาตรฐานโลก</li>
+                      <div class="myli">
+                        <li>
+                          (ลดต้นทุนกว่า 71%) ให้ผู้รับซื้อทั่วไป (T) มากกว่า
+                          120,000 ล้านบาท/ปี
+                        </li>
+                        <li>
+                          เพิ่มเวลาว่าง (ลดวันทำงานไปกว่า 73%) ให้กับผู้ใช้ Unii
+                          เพื่อทำสิ่งอื่นๆ ได้อย่างมากมาย
+                        </li>
+                        <li>ช่วยรัฐจัดเก็บภาษีได้หลาย 10,000 ล้านบาท/ปี</li>
+                        <li>
+                          สร้างมาตรฐานให้ธุรกิจรีไซเคิลครบทั้งระบบจากต้นน้ำถึงปลายน้ำ
+                        </li>
+                        <li>สร้างมาตรฐานไทย เพื่อ ให้แข่งขันได้ในมาตรฐานโลก</li>
+                      </div>
                     </ul></b-card-text
                   >
                 </b-card>
                 <b-card
+                  class="px-4"
                   style="border-radius: 5px; box-shadow: 0px 6px 10px #c1c1c133"
                 >
                   <b-card-title>
-                    <h3>ลดต้นทุน/ลดเวลา/เพิ่มรายได้"</h3>
+                    <h3>ลดต้นทุน/ลดเวลา/เพิ่มรายได้</h3>
                   </b-card-title>
                   <b-card-text
                     ><ul>
-                      <li>ลดต้นทุน 20,000 บาท/เดือน (กว่า 71%)</li>
-                      <li>
-                        ลดเวลาทำงานเหลือ 2 วัน/เที่ยว (กว่า 73%) เพิ่มรายได้
-                        20,000 บาท/เดือน 240,000 บาท/ปี ได้วันว่าง 22 วัน/เดือน
-                        264 วัน/ปี
-                      </li>
+                      <div class="myli">
+                        <li>ลดต้นทุน 20,000 บาท/เดือน (กว่า 71%)</li>
+                        <li>
+                          ลดเวลาทำงานเหลือ 2 วัน/เที่ยว (กว่า 73%) เพิ่มรายได้
+                          20,000 บาท/เดือน 240,000 บาท/ปี ได้วันว่าง 22
+                          วัน/เดือน 264 วัน/ปี
+                        </li>
+                      </div>
                     </ul></b-card-text
                   >
                 </b-card>

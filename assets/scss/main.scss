@@ -9,6 +9,9 @@ h5 {
 ul {
   padding-left: 20px;
 }
+.myli li {
+  line-height: 25px;
+}
 .btn-purple {
   background: transparent linear-gradient(180deg, #993a96 0%, #69197b 100%) 0%
     0% no-repeat padding-box;
@@ -40,7 +43,11 @@ ul {
   font-size: 14px;
 }
 #blog .card {
-  border: none;
+  border-radius: 5px;
+}
+#blog .card-img-top {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 #blog .shadow-sm {
   box-shadow: 0 0.125rem 1.25rem rgba(0, 0, 0, 0.075) !important;
