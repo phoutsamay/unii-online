@@ -43,6 +43,12 @@ ul {
 #blog .card-subtitle {
   font-size: 14px;
 }
+#blog .card {
+  border: none;
+}
+#blog .shadow-sm {
+  box-shadow: 0 0.125rem 1.25rem rgba(0, 0, 0, 0.075) !important;
+}
 #team {
   background: url('../imgs/bg-team.png');
 }
@@ -52,6 +58,12 @@ ul {
 }
 #process .border {
   border: 1px solid #69197b !important;
+}
+#process .card {
+  border: none;
+}
+#process .shadow-sm {
+  box-shadow: 0 0.125rem 1.25rem rgba(0, 0, 0, 0.075) !important;
 }
 #news {
   background: transparent linear-gradient(180deg, #993a96 0%, #4d1d4b 100%) 0%
@@ -72,6 +84,7 @@ ul {
 #footer {
   background-color: #222222;
 }
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   #video h1 {
@@ -109,20 +122,16 @@ ul {
     margin-left: auto;
     margin-right: auto;
   }
-  #team .grid-container2 {
-    display: grid;
-    grid-template-rows: auto;
-    grid-row-gap: 10px;
-  }
+
   #team img {
     max-width: 110px;
-    margin-left: auto;
+    margin-left: 0px;
     margin-right: auto;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin-top: 0px;
+    margin-bottom: 20px;
   }
   #team h5 {
-    font-size: 18px;
+    font-size: 16px;
   }
   #team p {
     font-size: 14px;

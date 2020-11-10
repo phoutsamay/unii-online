@@ -4,8 +4,7 @@
       <b-carousel
         id="carousel-1"
         v-model="slide"
-        :interval="4000"
-        controls
+        :interval="3000"
         indicators
         background="#ababab"
         img-width="1024"
@@ -419,7 +418,7 @@
                 ></b-embed>
               </div>
               <div class="col-sm-6 col-md-6 col-lg-6">
-                <p class="cut-text-multi">
+                <p class="cut-text-multi pt-2">
                   ธุรกิจรีไซเคิล คือ
                   ธุรกิจที่ดำเนินการเก็บรวบรวมเศษวัสดุและชิ้นส่วนโลหะและอโลหะที่ใช้แล้วและไม่เป็น
                   อันตราย เช่น ขยะจากครัวเรือน กระดาษ พลาสติก ชิ้นส่วนเครื่องใช้
@@ -443,7 +442,7 @@
                 ></b-embed>
               </div>
               <div class="col-sm-6 col-md-6 col-lg-6">
-                <p class="cut-text-multi">
+                <p class="cut-text-multi pt-2">
                   ธุรกิจรีไซเคิล คือ
                   ธุรกิจที่ดำเนินการเก็บรวบรวมเศษวัสดุและชิ้นส่วนโลหะและอโลหะที่ใช้แล้วและไม่เป็น
                   อันตราย เช่น ขยะจากครัวเรือน กระดาษ พลาสติก ชิ้นส่วนเครื่องใช้
@@ -477,6 +476,7 @@
               img-src="../assets/imgs/b1.jpg"
               img-alt="Image"
               img-top
+              class="shadow-sm"
             >
               <b-card-text>
                 ยิ่งเครือข่ายธุรกิจที่มีระบบออนไลน์ที่ดีสนับสนุน
@@ -490,6 +490,7 @@
               img-src="../assets/imgs/b2.jpg"
               img-alt="Image"
               img-top
+              class="shadow-sm"
             >
               <b-card-text>
                 ยิ่งเครือข่ายธุรกิจที่มีระบบออนไลน์ที่ดีสนับสนุน
@@ -503,6 +504,7 @@
               img-src="../assets/imgs/b3.jpg"
               img-alt="Image"
               img-top
+              class="shadow-sm"
             >
               <b-card-text>
                 ยิ่งเครือข่ายธุรกิจที่มีระบบออนไลน์ที่ดีสนับสนุน
@@ -524,10 +526,10 @@
         <h1>MEET OUR TEAM</h1>
         <p>รายชื่อทีมผู่ก่อตั้ง UNII</p>
         <div class="row">
-          <div class="col-sm-4 col-md-4 col-lg-4 text-center grid-container1">
+          <div class="col-sm-12 col-md-4 col-lg-4 text-center grid-container1">
             <img src="../assets/imgs/person-1.png" alt="" />
             <div class="grid-container2">
-              <h5 class="pt-2">คุณพรนริศ ชวนไชยสิทธิ์</h5>
+              <h5 class="pt-3 mb-0">คุณพรนริศ ชวนไชยสิทธิ์</h5>
               <p>
                 ผู้ร่วมก่อตั้ง
                 <br />
@@ -535,10 +537,10 @@
               </p>
             </div>
           </div>
-          <div class="col-sm-4 col-md-4 col-lg-4 text-center grid-container1">
+          <div class="col-sm-12 col-md-4 col-lg-4 text-center grid-container1">
             <img src="../assets//imgs/person-5.png" alt="" />
             <div class="grid-container2">
-              <h5 class="pt-2">คุณธีระชัย จึงวิวัฒณาภรณ์</h5>
+              <h5 class="pt-3 mb-0">คุณธีระชัย จึงวิวัฒณาภรณ์</h5>
               <p>
                 ผู้ร่วมก่อตั้ง
                 <br />
@@ -547,10 +549,10 @@
               </p>
             </div>
           </div>
-          <div class="col-sm-4 col-md-4 col-lg-4 text-center grid-container1">
+          <div class="col-sm-12 col-md-4 col-lg-4 text-center grid-container1">
             <img src="../assets//imgs/person-4.png" alt="" />
             <div class="grid-container2">
-              <h5 class="pt-2">ผศ.ดร.ปุ่น เที่ยงบูรณธรรม</h5>
+              <h5 class="pt-3 mb-0">ผศ.ดร.ปุ่น เที่ยงบูรณธรรม</h5>
               <p>
                 ผู้ร่วมก่อตั้ง
                 <br />
@@ -559,10 +561,10 @@
             </div>
           </div>
 
-          <div class="col-sm-4 col-md-4 col-lg-4 text-center grid-container1">
+          <div class="col-sm-12 col-md-4 col-lg-4 text-center grid-container1">
             <img src="../assets//imgs/person-2.png" alt="" />
             <div class="grid-container2">
-              <h5 class="pt-2">คุณศิวัช ภูธนแสงทอง</h5>
+              <h5 class="pt-3 mb-0">คุณศิวัช ภูธนแสงทอง</h5>
               <p>
                 ผู้ร่วมก่อตั้ง
                 <br />
@@ -570,10 +572,10 @@
               </p>
             </div>
           </div>
-          <div class="col-sm-4 col-md-4 col-lg-4 text-center grid-container1">
+          <div class="col-sm-12 col-md-4 col-lg-4 text-center grid-container1">
             <img src="../assets//imgs/person-3.png" alt="" />
             <div class="grid-container2">
-              <h5 class="pt-2">คุณเฟาซีย์ ออสันตินุตสกุล</h5>
+              <h5 class="pt-3 mb-0">คุณเฟาซีย์ ออสันตินุตสกุล</h5>
               <p>
                 ผู้ร่วมก่อตั้ง
                 <br />
@@ -581,10 +583,10 @@
               </p>
             </div>
           </div>
-          <div class="col-sm-4 col-md-4 col-lg-4 text-center grid-container1">
+          <div class="col-sm-12 col-md-4 col-lg-4 text-center grid-container1">
             <img src="../assets//imgs/person-6.png" alt="" />
             <div class="grid-container2">
-              <h5 class="pt-2">คุณทนงค์ มาถาวร</h5>
+              <h5 class="pt-3 mb-0">คุณทนงค์ มาถาวร</h5>
               <p>
                 ผู้ร่วมก่อตั้ง
                 <br />
