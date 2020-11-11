@@ -19,12 +19,12 @@
               <div class="p-3">
                 <nav class="mb-3">
                   <b-navbar-nav vertical>
-                    <b-nav-item href="#">หน้าแรก</b-nav-item>
+                    <b-nav-item href="#carousel">หน้าแรก</b-nav-item>
                     <b-nav-item href="#service">บริการของเรา</b-nav-item>
                     <b-nav-item href="#about">เกี่ยวกับเรา</b-nav-item>
                     <b-nav-item href="#video">วีดีโอ</b-nav-item>
                     <b-nav-item href="#blog">บทความ</b-nav-item>
-                    <b-nav-item href="#">ติดต่อเรา</b-nav-item>
+                    <b-nav-item href="#footer">ติดต่อเรา</b-nav-item>
                   </b-navbar-nav>
                   <hr />
                   <b-button
@@ -40,12 +40,12 @@
 
           <b-collapse id="nav-collapse" is-nav>
             <b-navbar-nav class="mx-auto topnav">
-              <b-nav-item class="px-3" href="#">หน้าแรก</b-nav-item>
+              <b-nav-item class="px-3" href="#carousel">หน้าแรก</b-nav-item>
               <b-nav-item class="px-3" href="#service">บริการของเรา</b-nav-item>
               <b-nav-item class="px-3" href="#about">เกี่ยวกับเรา</b-nav-item>
               <b-nav-item class="px-3" href="#video">วีดีโอ</b-nav-item>
               <b-nav-item class="px-3" href="#blog">บทความ</b-nav-item>
-              <b-nav-item class="px-3" href="#">ติดต่อเรา</b-nav-item>
+              <b-nav-item class="px-3" href="#footer">ติดต่อเรา</b-nav-item>
             </b-navbar-nav>
 
             <!-- Right aligned nav items -->
