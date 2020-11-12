@@ -319,6 +319,7 @@
             โดยกระบวนการแปรสภาพทางกลหรือทางเคมี
           </p>
         </div>
+
         <div class="col-xs-3 col-sm-8 col-md-6 col-lg-6 mx-auto mymargin">
           <img src="../assets/imgs/mockupIP.png" alt="" width="100%" />
         </div>
@@ -613,23 +614,6 @@ export default {
     return {
       slide: 0,
       sliding: null,
-      slides: [
-        [
-          'https://picsum.photos/1024/480/?image=45',
-          'https://picsum.photos/1024/480/?image=40',
-          'https://picsum.photos/1024/480/?image=47',
-        ],
-        [
-          'https://picsum.photos/1024/480/?image=48',
-          'https://picsum.photos/1024/480/?image=39',
-          'https://picsum.photos/1024/480/?image=55',
-        ],
-        [
-          'https://picsum.photos/1024/480/?image=51',
-          'https://picsum.photos/1024/480/?image=52',
-          'https://picsum.photos/1024/480/?image=53',
-        ],
-      ],
     }
   },
   methods: {
