@@ -23,6 +23,20 @@ export default {
         href:
           'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css',
       },
+      {
+        rel: 'stylesheet',
+        href: 'https://unpkg.com/tachyons/css/tachyons.min.css',
+      },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css',
+      },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/tachyons-animate.css',
+      },
     ],
     script: [
       {
