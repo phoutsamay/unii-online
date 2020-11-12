@@ -23,20 +23,6 @@ export default {
         href:
           'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css',
       },
-      {
-        rel: 'stylesheet',
-        href: 'https://unpkg.com/tachyons/css/tachyons.min.css',
-      },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css',
-      },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/tachyons-animate.css',
-      },
     ],
     script: [
       {
@@ -51,10 +37,10 @@ export default {
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [],
+  css: ['aos/dist/aos.css'],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [],
+  plugins: [{ src: '~/plugins/aos', ssr: false }],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -82,5 +68,7 @@ export default {
   axios: {},
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {},
+  build: {
+    vendor: ['aos'],
+  },
 }

@@ -153,38 +153,7 @@
         </b-card>
       </div>
     </client-only>
-    <main class="measure center tc sans-serif black-80 absolute absolute--fill">
-      <div class="flex flex-column justify-center items-center h-100">
-        <header>
-          <h1 class="animated fadeInUp ease-out-circ d2 a-1 f2 fw3">
-            <code class="db black-40">'tachyons-animate'</code>
-          </h1>
-          <h2 class="animated fadeInUp ease-out-circ d-1 a-2">
-            Designed for choreographing
-            <span class="nowrap">CSS animations</span>
-          </h2>
-          <div class="animated bounceIn ease-in-quad d-2 mt4">
-            <a
-              href="https://github.com/anater/tachyons-animate"
-              class="dib link bw1 b--solid b--dark-blue dark-blue fw9 pa3 br3 hover-white hover-bg-dark-blue"
-            >
-              View on Github
-            </a>
-          </div>
-        </header>
-        <footer
-          class="animated zoomInDown ease-out-quad d-2 a-1 absolute left-0 bottom-2 w-100"
-        >
-          <a
-            href="http://andrewnater.com"
-            class="link fw9 dark-blue"
-            target="_blank"
-          >
-            Made by Andrew Nater
-          </a>
-        </footer>
-      </div>
-    </main>
+    <h1 data-aos="fade-in">5555555555555555555</h1>
   </div>
 </template>
 
