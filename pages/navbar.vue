@@ -153,35 +153,55 @@
         </b-card>
       </div>
     </client-only>
-    <div class="item" data-aos="fade-up">1</div>
-    <div class="item" data-aos="fade-down">2</div>
-    <div class="item" data-aos="fade-right">3</div>
-    <div class="item" data-aos="fade-left">4</div>
+    <div>
+      <h1 data-aos="fade">AOS Demo</h1>
 
-    <div class="item" data-aos="zoom-in">5</div>
-    <div class="item" data-aos="zoom-out">6</div>
+      <p data-aos="flip-up" data-aos-duration="1000">
+        AOS is awesome! Thank you
+        <a class="anchor" href="https://twitter.com/michalsnik">
+          Michał Sajnóg
+        </a>
+        😄
+      </p>
 
-    <div class="item" data-aos="slide-up">7</div>
+      <p data-aos="slide-up" data-aos-easing="ease">
+        Paragraph with fade up animation and <code>ease</code> easing.
+      </p>
 
-    <div class="item" data-aos="flip-up">8</div>
-    <div class="item" data-aos="flip-down">9</div>
-    <div class="item" data-aos="flip-right">10</div>
-    <div class="item" data-aos="flip-left">11</div>
+      <p data-aos="zoom-in" data-aos-anchor=".anchor">
+        Paragraph with fade down animation with the above link as anchor. This
+        makes this paragraph animate before the previous paragraph starts
+        animating.
+      </p>
+
+      <hr class="my-5" />
+
+      <b-row class="list-unstyled">
+        <b-col
+          v-for="(item, index) in img"
+          :key="index"
+          data-aos="fade-up"
+          data-aos-delay="500"
+          data-aos-once="true"
+          sm="6"
+          class="align-items-center d-flex flex-column justify-content-center mb-5"
+        >
+          <b-img fluid :src="getImg(item)" class="mb-3 mr-3" />
+
+          <h2 class="h4">{{ item }}</h2>
+        </b-col>
+      </b-row>
+    </div>
   </div>
 </template>
 
 <script>
-import AOS from 'aos'
-if (typeof document !== 'undefined') {
-  AOS.init({
-    duration: 3000,
-  })
-}
 export default {
   data() {
     return {
       slide: 0,
       sliding: null,
+      img: ['Animals', 'Arch', 'Nature', 'People', 'Tech'],
     }
   },
   methods: {
@@ -191,22 +211,11 @@ export default {
     onSlideEnd(slide) {
       this.sliding = false
     },
+    getImg(name) {
+      return 'https://placeimg.com/400/225/' + name.toLowerCase()
+    },
   },
 }
 </script>
 
-<style>
-* {
-  box-sizing: border-box;
-}
-.item {
-  width: 200px;
-  height: 200px;
-  margin: 50px auto;
-  padding-top: 75px;
-  background: #ccc;
-  text-align: center;
-  color: #fff;
-  font-size: 3em;
-}
-</style>
+<style></style>
