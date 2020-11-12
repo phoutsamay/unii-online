@@ -175,22 +175,6 @@
       </p>
 
       <hr class="my-5" />
-
-      <b-row class="list-unstyled">
-        <b-col
-          v-for="(item, index) in img"
-          :key="index"
-          data-aos="fade-up"
-          data-aos-delay="500"
-          data-aos-once="true"
-          sm="6"
-          class="align-items-center d-flex flex-column justify-content-center mb-5"
-        >
-          <b-img fluid :src="getImg(item)" class="mb-3 mr-3" />
-
-          <h2 class="h4">{{ item }}</h2>
-        </b-col>
-      </b-row>
     </div>
   </div>
 </template>
@@ -201,7 +185,6 @@ export default {
     return {
       slide: 0,
       sliding: null,
-      img: ['Animals', 'Arch', 'Nature', 'People', 'Tech'],
     }
   },
   methods: {
@@ -210,9 +193,6 @@ export default {
     },
     onSlideEnd(slide) {
       this.sliding = false
-    },
-    getImg(name) {
-      return 'https://placeimg.com/400/225/' + name.toLowerCase()
     },
   },
 }
