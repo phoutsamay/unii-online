@@ -23,10 +23,6 @@ export default {
         href:
           'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css',
       },
-      {
-        rel: 'stylesheet',
-        href: 'https://unpkg.com/aos@2.3.1/dist/aos.css',
-      },
     ],
     script: [
       {
@@ -37,9 +33,6 @@ export default {
         src:
           'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js',
       },
-      {
-        src: 'https://unpkg.com/aos@2.3.1/dist/aos.js',
-      },
     ],
   },
 
@@ -47,7 +40,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: ['~/plugins/aos.client.js'],
+  plugins: [],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
