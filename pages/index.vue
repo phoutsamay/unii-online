@@ -398,7 +398,7 @@
       <div class="container my-5">
         <h1 class="pb-5">ข่าวสารที่น่าสนใจ จาก ยูนี่ ออนไลน์</h1>
         <div class="row">
-          <div class="col-xs-3 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+          <div class="zoom col-xs-3 col-sm-12 col-md-12 col-lg-12 col-xl-6">
             <b-embed
               type="iframe"
               aspect="16by9"

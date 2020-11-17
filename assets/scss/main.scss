@@ -48,13 +48,14 @@ ul {
 }
 #blog .card {
   border-radius: 5px;
+  border: none;
+}
+#blog .card:hover {
+  transform: scale(1.025);
 }
 #blog a {
   color: #212529;
   text-decoration: none;
-}
-#blog a:hover {
-  color: #69197b;
 }
 #blog .card-img-top {
   border-top-left-radius: 5px;
@@ -84,6 +85,9 @@ ul {
     0% no-repeat padding-box;
   border: 1px solid #707070;
   opacity: 1;
+}
+#news .zoom:hover {
+  transform: scale(1.025);
 }
 #news h1 {
   color: #ffffff;

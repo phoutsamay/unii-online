@@ -3,18 +3,27 @@
     <div class="row">
       <div class="leftcolumn mx-auto">
         <div class="card">
-          <h2>การสร้างเครือข่ายธุรกิจสำคัญอย่างยิ่ง</h2>
+          <h2>
+            Unii ขอขอบคุณ FC ที่ติดตาม Unii ด้วยดีตลอดมามากๆนะครับ
+            วันนี้พอมีเวลาได้เขียนเรื่องนี้สัก 1 ชั่วโมงพอดีครับ
+            ที่จริงอยากเขียนมานานแล้วแต่ไม่มีเวลาเลยจริงๆครับ
+          </h2>
           <h5>3 กันยายน 2563 | ข่าวสารองค์กร</h5>
           <div>
-            <img src="../assets/imgs/b1.jpg" alt="" width="100%" />
+            <b-embed
+              type="iframe"
+              aspect="16by9"
+              src="https://www.youtube.com/embed/32cYYHLhZ2I"
+              allowfullscreen
+            ></b-embed>
           </div>
           <br />
-          <p>
+          <!-- <p>
             Sunt in culpa qui officia deserunt mollit anim id est laborum
             consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
             exercitation ullamco.
-          </p>
+          </p> -->
         </div>
         <!-- <div class="card">
           <h2>TITLE HEADING</h2>

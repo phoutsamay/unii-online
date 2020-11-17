@@ -3,18 +3,31 @@
     <div class="row">
       <div class="leftcolumn mx-auto">
         <div class="card">
-          <h2>การสร้างเครือข่ายธุรกิจสำคัญอย่างยิ่ง</h2>
-          <h5>3 กันยายน 2563 | ข่าวสารองค์กร</h5>
+          <h2>
+            ธุรกิจรีไซเคิล คือ
+            ธุรกิจที่ดำเนินการเก็บรวบรวมเศษวัสดุและชิ้นส่วนโลหะและอโลหะที่ใช้แล้วและไม่เป็น
+            อันตราย เช่น ขยะจากครัวเรือน กระดาษ พลาสติก ชิ้นส่วนเครื่องใช้
+            คอมพิวเตอร์ และยานพาหนะต่างๆ และสิ่งของที่นำกลับมาใช้ใหม่ได้ เป็นต้น
+            เพื่อขายส่งโดยไม่มีกระบวนการเปลี่ยนรูป และธุรกิจที่ดำเนินการ
+            แปรรูปเพื่อนำมาเป็นวัสดุที่ใช้แล้วกลับมาใช้ใหม่
+            โดยกระบวนการแปรสภาพทางกลหรือทางเคมี
+          </h2>
+          <p>3 กันยายน 2563 | ข่าวสารองค์กร</p>
           <div>
-            <img src="../assets/imgs/b1.jpg" alt="" width="100%" />
+            <b-embed
+              type="iframe"
+              aspect="16by9"
+              src="https://www.youtube.com/embed/59IH6cldhUw"
+              allowfullscreen
+            ></b-embed>
           </div>
           <br />
-          <p>
+          <!-- <p>
             Sunt in culpa qui officia deserunt mollit anim id est laborum
             consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
             exercitation ullamco.
-          </p>
+          </p> -->
         </div>
         <!-- <div class="card">
           <h2>TITLE HEADING</h2>
