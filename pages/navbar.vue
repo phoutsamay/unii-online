@@ -153,7 +153,6 @@
         </b-card>
       </div>
     </client-only>
-    <h1 data-aos="fade-in">5555555555555555555</h1>
   </div>
 </template>
 
