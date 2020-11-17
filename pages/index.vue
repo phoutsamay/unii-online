@@ -218,22 +218,24 @@
       <div class="container mt-5">
         <div class="row">
           <div class="col-12 col-sm-12 col-md-12 col-lg-6 mt-5">
-            <h1>สมัครอบรม Unii Mini Center #UMC</h1>
+            <h1>
+              เปิดรับสมัครผู้สนใจมาร่วมเป็นส่วนหนึ่งกับเรา Unii Mini Center #UMC
+            </h1>
             <p>
-              UNII Application Disrupt ต้นทุนธุรกิจรีไซเคิล ครั้งยิ่งใหญ่
-              ครั้งแรกของประเทศไทยคืนทุนไว ได้กำไรแน่นอน สมัครด่วนเพียง 8,888
-              บาท/ท่าน เฉพาะ 88 ท่าน เท่านั้นอบรมวันที่ 13 - 14 พฤศจิกายน 2562
-              เวลา 8.30 - 17.00 น. อาคารพร้อมพันธุ์ 3 ลาดพร้าว ซอย 3
-              (รับรองผลคืนเงิน 100% ถ้าไม่สามารถสร้างเงินได้)
+              UNII Online จำกัด การ Disrupt ต้นทุนธุรกิจรีไซเคิล ครั้งยิ่งใหญ่
+              ครั้งแรกของประเทศไทยคืนทุนไว ได้กำไรแน่นอน
+              ถ้าท่านสนใจติดต่อเข้ามาได้เลย แล้วมาร่วมเป็นส่วนหนึ่งกับเรา #Unii
+              family (โปรดติดตามข่าวสารการเปิดอบรมต่างๆ เกี่ยวกับ ยูนี่
+              ออนไลน์ได้ที่เว็บไซต์ ในเร็วๆนี้)
             </p>
-            <div class="my-4">
+            <!-- <div class="my-4">
               <b-button
                 size="sm"
                 class="btn btn-purple my-2 my-sm-0"
                 type="submit"
                 >สมัครอบรม</b-button
               >
-            </div>
+            </div> -->
           </div>
           <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center">
             <img src="../assets/imgs/mockup-register.png" alt="" />

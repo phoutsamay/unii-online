@@ -51,6 +51,11 @@
             exercitation ullamco.
           </p>
         </div> -->
+        <div class="my-3">
+          <nuxt-link to="/" class="previous back-buttom"
+            >&laquo; กลับสู่หน้าหลัก</nuxt-link
+          >
+        </div>
       </div>
       <!-- <div class="rightcolumn">
         <div class="card">
@@ -80,6 +85,13 @@ export default {}
 </script>
 
 <style scoped>
+a {
+  color: #212529;
+  text-decoration: none;
+}
+a:hover {
+  color: #69197b;
+}
 /* Header/Blog Title */
 .header {
   padding: 30px;
@@ -136,6 +148,9 @@ export default {}
   .rightcolumn {
     width: 100%;
     padding: 0;
+  }
+  .back-buttom {
+    padding-left: 20px;
   }
 }
 </style>
