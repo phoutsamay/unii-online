@@ -49,6 +49,13 @@ ul {
 #blog .card {
   border-radius: 5px;
 }
+#blog a {
+  color: #212529;
+  text-decoration: none;
+}
+#blog a:hover {
+  color: #69197b;
+}
 #blog .card-img-top {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
