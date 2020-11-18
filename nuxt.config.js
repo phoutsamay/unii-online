@@ -5,7 +5,11 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'Unii Online',
+        name: 'Unii Online',
+        content: 'Unii Online บริษัท ยูนี่ ออนไลน์',
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/logo.ico' },
