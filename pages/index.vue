@@ -218,16 +218,36 @@
       <div class="container mt-5">
         <div class="row">
           <div class="col-12 col-sm-12 col-md-12 col-lg-6 mt-5">
-            <h1>
-              เปิดรับสมัครผู้สนใจมาร่วมเป็นส่วนหนึ่งกับเรา Unii Mini Center #UMC
-            </h1>
+            <h2>
+              รุ่น 2 พร้อมเปิดรับ..!!! <br />
+              Unii Mini Center #UMC รุ่น 2 <br />
+              นักธุรกิจรุ่นใหม่ของคนรีไซเคิลออนไลน์
+              <!-- เปิดรับสมัครผู้สนใจมาร่วมเป็นส่วนหนึ่งกับเรา Unii Mini Center #UMC -->
+            </h2>
             <p>
-              UNII Online เป็นการ Disrupt ต้นทุนธุรกิจรีไซเคิล ครั้งยิ่งใหญ่
+              ถ้าคุณพร้อมมาร่วมเป็น..!!! #หนึ่งใน 500 UMC ทั่วไทย <br />
+              #ค่าอบรม 9,500 บาท/คน (ที่พัก 3 คืนพร้อมอาหาร) พัก 2 คน<br />
+              คนที่ 2 ชำระ 5,000 บาท #คนUniiค่าอบรม 5,000 บาท
+              <!-- UNII Online เป็นการ Disrupt ต้นทุนธุรกิจรีไซเคิล ครั้งยิ่งใหญ่
               ครั้งแรกของประเทศไทยคืนทุนไว ได้กำไรแน่นอน
               ถ้าท่านสนใจติดต่อเข้ามาได้เลย แล้วมาร่วมเป็นส่วนหนึ่งกับเรา #Unii
               family (โปรดติดตามข่าวสารการเปิดอบรมต่างๆ เกี่ยวกับ ยูนี่
-              ออนไลน์ได้ที่เว็บไซต์ ในเร็วๆนี้)
+              ออนไลน์ได้ที่เว็บไซต์ ในเร็วๆนี้) -->
             </p>
+            <p>
+              ***พิเศษสุด รุ่นนี้ ร่วมฉลองงานเลี้ยง <br />
+              Birthday Unii & Happy Newyear 2021 <br />
+              คืนที่ 18/12/2563..!!
+            </p>
+            <p>
+              รับสมัครวันนี้ - 8/12/2563 เท่านั้น..!!! ลิ้งค์สมัคร Unii Mini
+              Center รุ่น 2
+            </p>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSe5_5rTBMUoOGAcB4_u56nwZ_31FgIEmN5P9ZkQT24C3gZLvg/viewform"
+              target="_blank"
+              ><b-button class="outline-purple">สมัครอบรม คลิ๊ก!!!</b-button></a
+            >
             <!-- <div class="my-4">
               <b-button
                 size="sm"
@@ -238,7 +258,8 @@
             </div> -->
           </div>
           <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center">
-            <img src="../assets/imgs/mockup-register.png" alt="" />
+            <!-- <img src="../assets/imgs/mockup-register.png" alt="" /> -->
+            <img src="../assets/imgs/reg.jpg" alt="" width="75%" />
           </div>
         </div>
       </div>
@@ -647,4 +668,12 @@ export default {
 
 <style>
 @import '../assets/scss/main.scss';
+.outline-purple {
+  color: #69197b;
+  background-color: #ffd700;
+  border-color: #ffd700;
+}
+.outline-purple:hover {
+  background-color: #69197b;
+}
 </style>
