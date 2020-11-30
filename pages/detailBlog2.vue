@@ -10,7 +10,7 @@
           </h2>
           <h5>3 กันยายน 2563 | ข่าวสารองค์กร</h5>
           <div>
-            <img src="../assets/imgs/b1.jpg" alt="" width="100%" />
+            <img src="../assets/imgs/b5.jpg" alt="" width="100%" />
           </div>
           <br />
           <p>
