@@ -39,7 +39,7 @@
         </div>
         <div>
           <b-embed
-            src="https://www.youtube.com/embed/32cYYHLhZ2I?controls=0"
+            src="https://www.youtube.com/embed/CMQOxxgvgi8?controls=0"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
@@ -423,7 +423,7 @@
             <b-embed
               type="iframe"
               aspect="16by9"
-              src="https://www.youtube.com/embed/32cYYHLhZ2I"
+              src="https://www.youtube.com/embed/CMQOxxgvgi8"
               allowfullscreen
             ></b-embed>
             <p class="pt-2">
