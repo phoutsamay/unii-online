@@ -673,13 +673,13 @@
 
 <script>
 export default {
-  async asyncData({ $axios }) {
-    const posts = await $axios.$get('http://127.0.0.1:5000/api/posts')
-    return { posts }
-  },
+  // async asyncData({ $axios }) {
+  //   const posts = await $axios.$get('http://127.0.0.1:5000/api/posts')
+  //   return { posts }
+  // },
   data() {
     return {
-      posts: [],
+      // posts: [],
       slide: 0,
       sliding: null,
     }
