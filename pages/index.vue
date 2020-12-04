@@ -158,7 +158,7 @@
           <div class="carousel-inner text-center" role="listbox">
             <div class="carousel-item row no-gutters active">
               <div class="col-3 float-left">
-                <img class="img-fluid" src="../assets/imgs/trust-1.png" />
+                <img class="img-fluid" src="../assets/imgs/trust-5.png" />
               </div>
               <div class="col-3 float-left">
                 <img class="img-fluid" src="../assets/imgs/trust-2.png" />
@@ -172,7 +172,7 @@
             </div>
             <div class="carousel-item row no-gutters">
               <div class="col-3 float-left">
-                <img class="img-fluid" src="../assets/imgs/trust-1.png" />
+                <img class="img-fluid" src="../assets/imgs/trust-5.png" />
               </div>
               <div class="col-3 float-left">
                 <img class="img-fluid" src="../assets/imgs/trust-2.png" />
@@ -504,6 +504,30 @@
 
     <section id="blog">
       <div class="container py-5">
+        <!-- <div class="row row-cols-1 row-cols-md-3">
+          <div v-for="(post, index) in posts" :key="index" class="col mb-4">
+            <div class="card h-100 shadow-sm">
+              <img
+                :src="`http://localhost:5000/api/uploads/${post.image}`"
+                class="card-img-top"
+                alt=""
+              />
+              <div class="card-body">
+                <h5 class="card-title">{{ post.title }}</h5>
+                eslint-disable-next-line vue/no-v-html
+                <p class="card-text" v-html="post.description">
+                  {{ post.description }}
+                </p>
+                <nuxt-link to="../blogs/_id" class="stretched-link"></nuxt-link>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-3">
+          <b-button size="lg" class="btn btn-purple" type="submit"
+            >ดูทั้งหมด</b-button
+          >
+        </div> -->
         <div>
           <b-card-group deck>
             <b-card
@@ -649,8 +673,13 @@
 
 <script>
 export default {
+  async asyncData({ $axios }) {
+    const posts = await $axios.$get('http://127.0.0.1:5000/api/posts')
+    return { posts }
+  },
   data() {
     return {
+      posts: [],
       slide: 0,
       sliding: null,
     }

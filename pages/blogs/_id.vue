@@ -1,8 +1,16 @@
 <template>
   <div class="container">
-    <div class="row">
+    <div v-for="(post, index) in posts" :key="index" class="card">
+      <h2>{{ post.title }}</h2>
+      <p>3 กันยายน 2563 | ข่าวสารองค์กร</p>
+      <img :src="`http://localhost:5000/api/uploads/${post.image}`" alt="" />
+      <br />
+      <!-- eslint-disable-next-line vue/no-v-html -->
+      <p v-html="post.description">{{ post.description }}</p>
+    </div>
+    <!-- <div class="row">
       <div class="leftcolumn mx-auto">
-        <div v-for="post in posts" :key="post.id" class="card">
+        <div v-for="(post, index) in posts" :key="index" class="card">
           <h2>
             {{ post.title }}
           </h2>
@@ -11,7 +19,7 @@
             <img src="../../assets/imgs/b1.jpg" alt="" width="100%" />
           </div>
           <br />
-          <!-- eslint-disable-next-line vue/no-v-html -->
+          eslint-disable-next-line vue/no-v-html
           <p v-html="post.description">
             {{ post.description }}
           </p>
@@ -23,14 +31,14 @@
           >
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
 export default {
   async asyncData({ $axios }) {
-    const posts = await $axios.$get(`http://127.0.0.1:5000/api/post`)
+    const posts = await $axios.$get(`http://127.0.0.1:5000/api/posts`)
     return { posts }
   },
   data() {
