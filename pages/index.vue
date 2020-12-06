@@ -518,6 +518,10 @@
                 <p class="card-text" v-html="post.description">
                   {{ post.description }}
                 </p>
+                <nuxt-link
+                  :to="{ name: 'blogs-id', params: { id: post._id } }"
+                  class="stretched-link"
+                ></nuxt-link>
                 <nuxt-link to="../blogs/_id" class="stretched-link"></nuxt-link>
               </div>
             </div>
@@ -673,13 +677,13 @@
 
 <script>
 export default {
-  // async asyncData({ $axios }) {
-  //   const posts = await $axios.$get('http://127.0.0.1:5000/api/posts')
-  //   return { posts }
-  // },
+  async asyncData({ $axios }) {
+    const posts = await $axios.$get('http://127.0.0.1:5000/api/posts')
+    return { posts }
+  },
   data() {
     return {
-      // posts: [],
+      posts: [],
       slide: 0,
       sliding: null,
     }
