@@ -14,13 +14,13 @@
         @sliding-end="onSlideEnd"
       >
         <!-- Slides with image only -->
-        <b-carousel-slide
-          img-src="../assets/imgs/banner.jpg"
-        ></b-carousel-slide>
-        <!-- Slides with image only -->
         <!-- <b-carousel-slide
-          img-src="../assets/imgs/banner-1.jpg"
+          img-src="../assets/imgs/banner.jpg"
         ></b-carousel-slide> -->
+        <!-- Slides with image only -->
+        <b-carousel-slide
+          img-src="../assets/imgs/banner-3.jpg"
+        ></b-carousel-slide>
         <!-- Slides with image only -->
         <!-- <b-carousel-slide
           img-src="../assets/imgs/banner-2.jpg"
@@ -158,30 +158,30 @@
           <div class="carousel-inner text-center" role="listbox">
             <div class="carousel-item row no-gutters active">
               <div class="col-3 float-left">
-                <img class="img-fluid" src="../assets/imgs/trust-5.png" />
+                <img class="img-fluid" src="../assets/imgs/Group-4674.png" />
               </div>
               <div class="col-3 float-left">
-                <img class="img-fluid" src="../assets/imgs/trust-2.png" />
+                <img class="img-fluid" src="../assets/imgs/Group-4673.png" />
               </div>
               <div class="col-3 float-left">
-                <img class="img-fluid" src="../assets/imgs/trust-3.png" />
+                <img class="img-fluid" src="../assets/imgs/Group-4672.png" />
               </div>
               <div class="col-3 float-right">
-                <img class="img-fluid" src="../assets/imgs/trust-4.png" />
+                <img class="img-fluid" src="../assets/imgs/Group-4671.png" />
               </div>
             </div>
             <div class="carousel-item row no-gutters">
               <div class="col-3 float-left">
-                <img class="img-fluid" src="../assets/imgs/trust-5.png" />
+                <img class="img-fluid" src="../assets/imgs/Group-4674.png" />
               </div>
               <div class="col-3 float-left">
-                <img class="img-fluid" src="../assets/imgs/trust-2.png" />
+                <img class="img-fluid" src="../assets/imgs/Group-4673.png" />
               </div>
               <div class="col-3 float-left">
-                <img class="img-fluid" src="../assets/imgs/trust-3.png" />
+                <img class="img-fluid" src="../assets/imgs/Group-4672.png" />
               </div>
               <div class="col-3 float-left">
-                <img class="img-fluid" src="../assets/imgs/trust-4.png" />
+                <img class="img-fluid" src="../assets/imgs/Group-4671.png" />
               </div>
             </div>
           </div>
@@ -502,6 +502,20 @@
       </div>
     </section>
 
+    <!-- <section id="blog">
+      <div class="container">
+        <h1>บทความดีๆจาก ยูนี่ ออนไลน์</h1>
+        <div class="row row-cols-1 row-cols-md-3">
+          <Card v-for="post in posts" :key="post.id" :post="post" />
+        </div>
+        <div class="text-center">
+          <b-button size="lg" class="btn btn-purple" type="submit"
+            >ดูทั้งหมด</b-button
+          >
+        </div>
+      </div>
+    </section> -->
+
     <section id="blog">
       <div class="container py-5">
         <!-- <div class="row row-cols-1 row-cols-md-3">
@@ -514,7 +528,7 @@
               />
               <div class="card-body">
                 <h5 class="card-title">{{ post.title }}</h5>
-                eslint-disable-next-line vue/no-v-html
+
                 <p class="card-text" v-html="post.description">
                   {{ post.description }}
                 </p>
@@ -522,7 +536,6 @@
                   :to="{ name: 'blogs-id', params: { id: post._id } }"
                   class="stretched-link"
                 ></nuxt-link>
-                <nuxt-link to="../blogs/_id" class="stretched-link"></nuxt-link>
               </div>
             </div>
           </div>
