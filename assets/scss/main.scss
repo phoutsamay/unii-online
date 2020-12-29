@@ -28,6 +28,13 @@ ul {
   font-weight: 800;
 }
 
+#overley {
+  background: transparent linear-gradient(180deg, #e62ae0 0%, #4a1e61 100%) 0%
+    0% no-repeat padding-box;
+  border: 1px solid #707070;
+  opacity: 1;
+}
+
 #overley .btn-purple {
   padding: 10px 30px 10px 30px;
 }
@@ -100,7 +107,7 @@ ul {
   box-shadow: 0 0.125rem 1.25rem rgba(0, 0, 0, 0.075) !important;
 }
 #news {
-  background: transparent linear-gradient(180deg, #993a96 0%, #4d1d4b 100%) 0%
+  background: transparent linear-gradient(180deg, #e62ae0 0%, #4a1e61 100%) 0%
     0% no-repeat padding-box;
   border: 1px solid #707070;
   opacity: 1;
@@ -153,9 +160,6 @@ ul {
     font-size: 14px;
   }
   #overley {
-    background: transparent linear-gradient(180deg, #993a96 0%, #4d1d4b 100%) 0%
-      0% no-repeat padding-box;
-    opacity: 1;
     padding-bottom: 360px;
   }
   #overley img {
@@ -208,9 +212,6 @@ ul {
     -webkit-box-orient: vertical;
   }
   #overley {
-    background: transparent linear-gradient(180deg, #993a96 0%, #4d1d4b 100%) 0%
-      0% no-repeat padding-box;
-    opacity: 1;
     padding-bottom: 450px;
   }
   #overley img {
@@ -230,9 +231,6 @@ ul {
     -webkit-box-orient: vertical;
   }
   #overley {
-    background: transparent linear-gradient(180deg, #993a96 0%, #4d1d4b 100%) 0%
-      0% no-repeat padding-box;
-    opacity: 1;
     padding-bottom: 410px;
   }
   #overley img {
@@ -253,9 +251,6 @@ ul {
     -webkit-box-orient: vertical;
   }
   #overley {
-    background: transparent linear-gradient(180deg, #993a96 0%, #4d1d4b 100%) 0%
-      0% no-repeat padding-box;
-    opacity: 1;
     padding-bottom: 33px;
   }
   #overley img {
@@ -284,9 +279,6 @@ ul {
     -webkit-box-orient: vertical;
   }
   #overley {
-    background: transparent linear-gradient(180deg, #993a96 0%, #4d1d4b 100%) 0%
-      0% no-repeat padding-box;
-    opacity: 1;
     padding-bottom: 57px;
   }
   #overley img {
