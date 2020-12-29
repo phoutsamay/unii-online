@@ -4,21 +4,22 @@
       <div class="leftcolumn mx-auto">
         <div class="card">
           <h2>
-            Unii ขอขอบคุณ FC ที่ติดตาม Unii ด้วยดีตลอดมามากๆนะครับ
-            วันนี้พอมีเวลาได้เขียนเรื่องนี้สัก 1 ชั่วโมงพอดีครับ
-            ที่จริงอยากเขียนมานานแล้วแต่ไม่มีเวลาเลยจริงๆครับ
+            ตัวจริง เสียงจริง Unii Center Thailand.!!! ฟังชัดๆ จาก Unii Center
+            Thailand ตัวแทนในระดับโซนและภูมิภาคของ Unii Recycle Online.!!! Unii
+            เพื่อยกระดับผู้ประกอบการ นักธุรกิจรีไซเคิลทั่วไทย
+            ไปสู่ระดับสากล...!!!
           </h2>
           <h5>3 กันยายน 2563 | ข่าวสารองค์กร</h5>
           <div>
             <b-embed
               type="iframe"
               aspect="16by9"
-              src="https://www.youtube.com/embed/CMQOxxgvgi8"
+              src="https://www.youtube.com/embed/lX8LTpBilAM"
               allowfullscreen
             ></b-embed>
           </div>
           <br />
-          <p>
+          <!-- <p>
             #เมื่อAIได้ประโยชน์จากเรา <br />
             #เราจึงต้องได้ประโยชน์จากAI <br />
             โลกใบใหม่ของคนทำธุรกิจด้วย Internet..!!! ทุกวันนี้
@@ -31,7 +32,7 @@
             แล้วถ้าเราอยากได้ประโยชน์จาก AI เหล่านี้ เราจะทำอย่างไรดี..? <br />
             #Uniiเทคโนโลยีเพื่อคนรีไซเคิล <br />
             #Unii
-          </p>
+          </p> -->
           <!-- <p>
             Sunt in culpa qui officia deserunt mollit anim id est laborum
             consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
