@@ -2,7 +2,7 @@
   <div class="col mb-4">
     <div class="card h-100 shadow-sm">
       <img
-        :src="`http://localhost:5000/api/uploads/${post.image}`"
+        :src="`https://api.unii.co.th/api/uploads/${post.image}`"
         class="card-img-top"
         alt=""
       />

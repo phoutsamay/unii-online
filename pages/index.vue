@@ -2,8 +2,6 @@
   <div>
     <section id="carousel">
       <b-carousel
-        id="carousel-1"
-        v-model="slide"
         :interval="3000"
         indicators
         background="#ababab"
@@ -15,15 +13,19 @@
       >
         <!-- Slides with image only -->
         <!-- <b-carousel-slide
-          img-src="../assets/imgs/banner.jpg"
+          img-src="../assets/imgs/HNY_banner.jpg"
         ></b-carousel-slide> -->
+
         <!-- Slides with image only -->
         <b-carousel-slide
-          img-src="../assets/imgs/Custom Size2.jpg"
+          v-for="banner in banners"
+          id="carousel-1"
+          :key="banner.id"
+          v-model="slide"
+          :banner="banner"
+          :img-src="`https://api.unii.co.th/api/uploads/${banner.image}`"
         ></b-carousel-slide>
-        <b-carousel-slide
-          img-src="../assets/imgs/Custom Size1.jpg"
-        ></b-carousel-slide>
+
         <!-- Slides with image only -->
         <!-- <b-carousel-slide
           img-src="../assets/imgs/banner-2.jpg"
@@ -160,10 +162,18 @@
         >
           <div class="carousel-inner text-center" role="listbox">
             <div class="carousel-item row no-gutters active">
-              <div class="col-3 float-left">
-                <img class="img-fluid" src="../assets/imgs/Group-4674.png" />
+              <div
+                v-for="partner in partners"
+                :key="partner.id"
+                :partner="partner"
+                class="col-3 float-left"
+              >
+                <img
+                  class="img-fluid"
+                  :src="`https://api.unii.co.th/api/uploads/${partner.image}`"
+                />
               </div>
-              <div class="col-3 float-left">
+              <!-- <div class="col-3 float-left">
                 <img class="img-fluid" src="../assets/imgs/Group-4673.png" />
               </div>
               <div class="col-3 float-left">
@@ -171,22 +181,22 @@
               </div>
               <div class="col-3 float-right">
                 <img class="img-fluid" src="../assets/imgs/Group-4671.png" />
-              </div>
+              </div> -->
             </div>
-            <div class="carousel-item row no-gutters">
+            <!-- <div class="carousel-item row no-gutters">
               <div class="col-3 float-left">
-                <img class="img-fluid" src="../assets/imgs/Group-4674.png" />
+                <img class="img-fluid" src="../assets/imgs/metalcom.png" />
               </div>
               <div class="col-3 float-left">
-                <img class="img-fluid" src="../assets/imgs/Group-4673.png" />
+                <img class="img-fluid" src="../assets/imgs/newsolution.png" />
               </div>
               <div class="col-3 float-left">
-                <img class="img-fluid" src="../assets/imgs/Group-4672.png" />
+                <img class="img-fluid" src="../assets/imgs/osotspa.png" />
               </div>
               <div class="col-3 float-left">
                 <img class="img-fluid" src="../assets/imgs/Group-4671.png" />
               </div>
-            </div>
+            </div> -->
           </div>
           <!-- <a
             class="carousel-control-prev"
@@ -219,21 +229,23 @@
 
     <section id="overley">
       <div class="container mt-5">
-        <div class="row">
+        <div
+          v-for="noticeboard in noticeboards"
+          :key="noticeboard.id"
+          :noticeboard="noticeboard"
+          class="row"
+        >
           <div class="col-12 col-sm-12 col-md-12 col-lg-6 mt-5">
             <h2>
-              #UMC3 พร้อมรับสมัคร..!!! <br />
-              Unii Mini Center 2 หลักสูตรอบรมนัก <br />
-              ธุรกิจรีไซเคิลออนไลน์ โดย Unii Academy
+              {{ noticeboard.title }}
+              <!-- รุ่น 2 พร้อมเปิดรับ..!!! <br />
+              Unii Mini Center #UMC รุ่น 2 <br />
+              นักธุรกิจรุ่นใหม่ของคนรีไซเคิลออนไลน์ -->
               <!-- เปิดรับสมัครผู้สนใจมาร่วมเป็นส่วนหนึ่งกับเรา Unii Mini Center #UMC -->
             </h2>
-            <p>
-              เป็นรุ่นที่มีความเข้มข้นในเนื้อหาเพื่อเรียนจบแล้วทำธุรกิจหาเงินได้เลยทันที
-              จัดเต็มที่กว่ารุ่น 1 ด้วยประสบการณ์ที่อัดแน่นเพิ่มขึ้นในทุกๆวัน
-              เป้าหมายเพื่อให้คนรุ่นใหม่ใช้ประกอบอาชีพได้จริง
-              และเป็นนักธุรกิจในระดับ 100, 1,000 ล้านได้อย่างไม่ยากเกินจริง.!!!
-              Unii กำลังสร้างนักธุรกิจดิจิทัลไทย
-              เพื่อให้ยิ่งใหญ่ไปแข่งขันได้จริงในระดับสากล
+            <!-- eslint-disable-next-line vue/no-v-html -->
+            <p v-html="noticeboard.description">
+              {{ noticeboard.description }}
               <!-- ถ้าคุณพร้อมมาร่วมเป็น..!!! #หนึ่งใน 500 UMC ทั่วไทย <br />
               #ค่าอบรม 9,500 บาท/คน (ที่พัก 3 คืนพร้อมอาหาร) พัก 2 คน<br />
               คนที่ 2 ชำระ 5,000 บาท #คนUniiค่าอบรม 5,000 บาท -->
@@ -243,14 +255,12 @@
               family (โปรดติดตามข่าวสารการเปิดอบรมต่างๆ เกี่ยวกับ ยูนี่
               ออนไลน์ได้ที่เว็บไซต์ ในเร็วๆนี้) -->
             </p>
-            <p>
-              UMC3 กำลังจะเปิดรับแล้วครับ อบรมเดือน มกราคม 2564
-              เตรียมพร้อมรอสมัครได้เลยครับ.!!!
-              <!-- ***พิเศษสุด รุ่นนี้ ร่วมฉลองงานเลี้ยง <br />
-              Birthday Unii & Happy Newyear 2021 <br />
-              คืนที่ 18/12/2563..!! -->
-            </p>
             <!-- <p>
+              ***พิเศษสุด รุ่นนี้ ร่วมฉลองงานเลี้ยง <br />
+              Birthday Unii & Happy Newyear 2021 <br />
+              คืนที่ 18/12/2563..!!
+            </p>
+            <p>
               รับสมัครวันนี้ - 8/12/2563 เท่านั้น..!!! ลิ้งค์สมัคร Unii Mini
               Center รุ่น 2
             </p> -->
@@ -270,7 +280,11 @@
           </div>
           <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center">
             <!-- <img src="../assets/imgs/mockup-register.png" alt="" /> -->
-            <img src="../assets/imgs/reg.jpg" alt="" width="75%" />
+            <img
+              :src="`https://api.unii.co.th/api/uploads/${noticeboard.image}`"
+              alt=""
+              width="75%"
+            />
           </div>
         </div>
       </div>
@@ -509,8 +523,8 @@
       </div>
     </section>
 
-    <!-- <section id="blog">
-      <div class="container">
+    <section id="blog">
+      <div class="container mt-5">
         <h1>บทความดีๆจาก ยูนี่ ออนไลน์</h1>
         <div class="row row-cols-1 row-cols-md-3">
           <Card v-for="post in posts" :key="post.id" :post="post" />
@@ -521,11 +535,11 @@
           >
         </div>
       </div>
-    </section> -->
+    </section>
 
-    <section id="blog">
+    <!-- <section id="blog">
       <div class="container py-5">
-        <!-- <div class="row row-cols-1 row-cols-md-3">
+        <div class="row row-cols-1 row-cols-md-3">
           <div v-for="(post, index) in posts" :key="index" class="col mb-4">
             <div class="card h-100 shadow-sm">
               <img
@@ -551,7 +565,7 @@
           <b-button size="lg" class="btn btn-purple" type="submit"
             >ดูทั้งหมด</b-button
           >
-        </div> -->
+        </div>
         <div>
           <b-card-group deck>
             <b-card
@@ -614,7 +628,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section id="team">
       <div class="container py-5">
@@ -697,13 +711,21 @@
 
 <script>
 export default {
-  // async asyncData({ $axios }) {
-  //   const posts = await $axios.$get('http://127.0.0.1:5000/api/posts')
-  //   return { posts }
-  // },
+  async asyncData({ $axios }) {
+    const posts = await $axios.$get('https://api.unii.co.th/api/posts')
+    const partners = await $axios.$get('https://api.unii.co.th/api/partners')
+    const banners = await $axios.$get('https://api.unii.co.th/api/banners')
+    const noticeboards = await $axios.$get(
+      'https://api.unii.co.th/api/noticeboards'
+    )
+
+    return { posts, partners, banners, noticeboards }
+  },
   data() {
     return {
-      // posts: [],
+      posts: [],
+      partners: [],
+      noticeboards: [],
       slide: 0,
       sliding: null,
     }
