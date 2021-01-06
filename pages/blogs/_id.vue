@@ -3,7 +3,7 @@
     <div class="card">
       <h2>{{ posts.title }}</h2>
       <p>3 กันยายน 2563 | ข่าวสารองค์กร</p>
-      <img :src="`http://localhost:5000/api/uploads/${posts.image}`" alt="" />
+      <img :src="`https://api.unii.co.th/api/uploads/${posts.image}`" alt="" />
       <br />
       <!-- eslint-disable-next-line vue/no-v-html -->
       <p v-html="posts.description">{{ posts.description }}</p>
@@ -39,7 +39,7 @@
 export default {
   async asyncData({ $axios, params }) {
     const posts = await $axios.$get(
-      `http://127.0.0.1:5000/api/post/${params.id}`
+      `https://api.unii.co.th/api/post/${params.id}`
     )
     return { posts }
   },

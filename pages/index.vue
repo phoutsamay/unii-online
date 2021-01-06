@@ -1,39 +1,37 @@
 <template>
   <div>
-    <client-only>
-      <section id="carousel">
-        <b-carousel
-          :interval="3000"
-          indicators
-          background="#ababab"
-          img-width="1024"
-          img-height="480"
-          style="text-shadow: 1px 1px 2px #333"
-          @sliding-start="onSlideStart"
-          @sliding-end="onSlideEnd"
-        >
-          <!-- Slides with image only -->
-          <!-- <b-carousel-slide
+    <section id="carousel">
+      <b-carousel
+        :interval="3000"
+        indicators
+        background="#ababab"
+        img-width="1024"
+        img-height="480"
+        style="text-shadow: 1px 1px 2px #333"
+        @sliding-start="onSlideStart"
+        @sliding-end="onSlideEnd"
+      >
+        <!-- Slides with image only -->
+        <!-- <b-carousel-slide
           img-src="../assets/imgs/HNY_banner.jpg"
         ></b-carousel-slide> -->
 
-          <!-- Slides with image only -->
-          <b-carousel-slide
-            v-for="banner in banners"
-            id="carousel-1"
-            :key="banner.id"
-            v-model="slide"
-            :banner="banner"
-            :img-src="`https://api.unii.co.th/api/uploads/${banner.image}`"
-          ></b-carousel-slide>
+        <!-- Slides with image only -->
+        <b-carousel-slide
+          v-for="banner in banners"
+          id="carousel-1"
+          :key="banner.id"
+          v-model="slide"
+          :banner="banner"
+          :img-src="`https://api.unii.co.th/api/uploads/${banner.image}`"
+        ></b-carousel-slide>
 
-          <!-- Slides with image only -->
-          <!-- <b-carousel-slide
+        <!-- Slides with image only -->
+        <!-- <b-carousel-slide
           img-src="../assets/imgs/banner-2.jpg"
         ></b-carousel-slide> -->
-        </b-carousel>
-      </section>
-    </client-only>
+      </b-carousel>
+    </section>
 
     <section id="video">
       <div class="container pt-5">
