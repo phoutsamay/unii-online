@@ -11,7 +11,7 @@
         <small class="text-muted">Last updated 3 mins ago</small>
         <!-- eslint-disable-next-line vue/no-v-html -->
         <p class="card-text" v-html="post.description">
-          {{ post.description }}
+          <!-- {{ post.description }} -->
         </p>
         <nuxt-link
           :to="{ name: 'blogs-id', params: { id: post._id } }"
