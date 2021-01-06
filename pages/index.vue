@@ -527,7 +527,11 @@
       <div class="container mt-5">
         <h1>บทความดีๆจาก ยูนี่ ออนไลน์</h1>
         <div class="row row-cols-1 row-cols-md-3">
-          <Card v-for="post in posts" :key="post.id" :post="post" />
+          <Card
+            v-for="post in [posts[0], posts[1], posts[2]]"
+            :key="post.id"
+            :post="post"
+          />
         </div>
         <div class="text-center">
           <b-button size="lg" class="btn btn-purple" type="submit"
