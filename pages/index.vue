@@ -1,9 +1,10 @@
 /* eslint-disable vue/attribute-hyphenation */
 <template>
-  <div>
+  <div v-if="banners">
     <div class="555555555"></div>
     <section id="carousel">
       <carousel
+        v-if="banners"
         class="sectioncarousel"
         :autoplay="true"
         :autoHeight="true"
@@ -693,18 +694,6 @@
 
 <script>
 export default {
-  async asyncData({ $axios }) {
-    const posts = await $axios.$get('https://api.unii.co.th/api/posts')
-    const partners = await $axios.$get('https://api.unii.co.th/api/partners')
-    const banners = await $axios.$get('https://api.unii.co.th/api/banners')
-    const noticeboards = await $axios.$get(
-      'https://api.unii.co.th/api/noticeboards'
-    )
-    console.log('Banner', banners)
-    console.log('Notice', noticeboards)
-
-    return { posts, partners, banners, noticeboards }
-  },
   data() {
     return {
       posts: [],
@@ -712,6 +701,7 @@ export default {
       noticeboards: [],
       slide: 0,
       sliding: null,
+      banners: null,
     }
   },
   methods: {
@@ -721,6 +711,28 @@ export default {
     onSlideEnd(slide) {
       this.sliding = false
     },
+    async getData() {
+      const posts = await this.$axios.$get('https://api.unii.co.th/api/posts')
+      const partners = await this.$axios.$get(
+        'https://api.unii.co.th/api/partners'
+      )
+      const banners = await this.$axios.$get(
+        'https://api.unii.co.th/api/banners'
+      )
+      const noticeboards = await this.$axios.$get(
+        'https://api.unii.co.th/api/noticeboards'
+      )
+      console.log('Banner', banners)
+      console.log('Notice', noticeboards)
+
+      this.posts = posts
+      this.partners = partners
+      this.banners = banners
+      this.noticeboards = noticeboards
+    },
+  },
+  async mounted() {
+    await this.getData()
   },
 }
 </script>
