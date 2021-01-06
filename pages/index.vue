@@ -1,8 +1,25 @@
+/* eslint-disable vue/attribute-hyphenation */
 <template>
   <div>
+    <carousel
+      class="sectioncarousel"
+      :autoplay="true"
+      :autoHeight="true"
+      :loop="true"
+      :items="1"
+      :center="true"
+      :nav="false"
+    >
+      <img
+        v-for="banner in banners"
+        :key="banner.id"
+        :src="`https://api.unii.co.th/api/uploads/${banner.image}`"
+        width="100%"
+      />
+    </carousel>
     <div class="555555555"></div>
-    <section id="carousel">
-      <b-carousel
+    <section class="sectioncarousel" id="carousel">
+      <!-- <b-carousel
         v-if="banners"
         :interval="3000"
         indicators
@@ -13,12 +30,6 @@
         @sliding-start="onSlideStart"
         @sliding-end="onSlideEnd"
       >
-        <!-- Slides with image only -->
-        <!-- <b-carousel-slide
-          img-src="../assets/imgs/HNY_banner.jpg"
-        ></b-carousel-slide> -->
-
-        <!-- Slides with image only -->
         <b-carousel-slide
           v-for="banner in banners"
           id="carousel-1"
@@ -27,12 +38,7 @@
           :banner="banner"
           :img-src="`https://api.unii.co.th/api/uploads/${banner.image}`"
         ></b-carousel-slide>
-
-        <!-- Slides with image only -->
-        <!-- <b-carousel-slide
-          img-src="../assets/imgs/banner-2.jpg"
-        ></b-carousel-slide> -->
-      </b-carousel>
+      </b-carousel> -->
     </section>
 
     <section id="video">
@@ -712,6 +718,8 @@ export default {
     const noticeboards = await $axios.$get(
       'https://api.unii.co.th/api/noticeboards'
     )
+    console.log('Banner', banners)
+    console.log('Notice', noticeboards)
 
     return { posts, partners, banners, noticeboards }
   },
@@ -744,5 +752,10 @@ export default {
 }
 .outline-purple:hover {
   background-color: #69197b;
+}
+
+.sectioncarousel {
+  /* position: absolute; */
+  width: 100%;
 }
 </style>
