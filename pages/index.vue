@@ -716,8 +716,6 @@ export default {
       const partners = await this.$axios.$get('/api/partners')
       const banners = await this.$axios.$get('/api/banners')
       const noticeboards = await this.$axios.$get('/api/noticeboards')
-      console.log('Banner', banners)
-      console.log('Notice', noticeboards)
 
       this.posts = posts
       this.partners = partners
