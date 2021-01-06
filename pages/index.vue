@@ -712,6 +712,7 @@ export default {
       noticeboards: [],
       slide: 0,
       sliding: null,
+      banners: null,
     }
   },
   methods: {
