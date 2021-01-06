@@ -17,11 +17,13 @@
         ></b-carousel-slide> -->
 
         <!-- Slides with image only -->
-
         <b-carousel-slide
+          v-for="banner in banners"
           id="carousel-1"
+          :key="banner.id"
           v-model="slide"
-          :img-src="`https://api.unii.co.th/api/uploads/1609216101885-custom%20size%20%E2%80%93%202.jpg`"
+          :banner="banner"
+          :img-src="`https://api.unii.co.th/api/uploads/${banner.image}`"
         ></b-carousel-slide>
 
         <!-- Slides with image only -->
@@ -236,7 +238,7 @@
           <div class="col-12 col-sm-12 col-md-12 col-lg-6 mt-5">
             <!-- eslint-disable-next-line vue/no-v-html -->
             <p v-html="noticeboard.description">
-              <!-- {{ noticeboard.description }} -->
+              {{ noticeboard.description }}
               <!-- ถ้าคุณพร้อมมาร่วมเป็น..!!! #หนึ่งใน 500 UMC ทั่วไทย <br />
               #ค่าอบรม 9,500 บาท/คน (ที่พัก 3 คืนพร้อมอาหาร) พัก 2 คน<br />
               คนที่ 2 ชำระ 5,000 บาท #คนUniiค่าอบรม 5,000 บาท -->
