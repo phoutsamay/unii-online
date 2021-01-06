@@ -3,6 +3,7 @@
     <div class="555555555"></div>
     <section id="carousel">
       <b-carousel
+        v-if="banners"
         :interval="3000"
         indicators
         background="#ababab"
@@ -239,7 +240,6 @@
           <div class="col-12 col-sm-12 col-md-12 col-lg-6 mt-5">
             <!-- eslint-disable-next-line vue/no-v-html -->
             <p v-html="noticeboard.description">
-              {{ noticeboard.description }}
               <!-- ถ้าคุณพร้อมมาร่วมเป็น..!!! #หนึ่งใน 500 UMC ทั่วไทย <br />
               #ค่าอบรม 9,500 บาท/คน (ที่พัก 3 คืนพร้อมอาหาร) พัก 2 คน<br />
               คนที่ 2 ชำระ 5,000 บาท #คนUniiค่าอบรม 5,000 บาท -->
