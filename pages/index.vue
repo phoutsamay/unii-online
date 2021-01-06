@@ -17,16 +17,12 @@
         ></b-carousel-slide> -->
 
         <!-- Slides with image only -->
-        <div v-if="banners">
-          <b-carousel-slide
-            v-for="banner in banners"
-            id="carousel-1"
-            :key="banner.id"
-            v-model="slide"
-            :banner="banner"
-            :img-src="`https://api.unii.co.th/api/uploads/${banner.image}`"
-          ></b-carousel-slide>
-        </div>
+
+        <b-carousel-slide
+          id="carousel-1"
+          v-model="slide"
+          :img-src="`https://api.unii.co.th/api/uploads/1609216101885-custom%20size%20%E2%80%93%202.jpg`"
+        ></b-carousel-slide>
 
         <!-- Slides with image only -->
         <!-- <b-carousel-slide
