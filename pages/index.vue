@@ -712,16 +712,10 @@ export default {
       this.sliding = false
     },
     async getData() {
-      const posts = await this.$axios.$get('https://api.unii.co.th/api/posts')
-      const partners = await this.$axios.$get(
-        'https://api.unii.co.th/api/partners'
-      )
-      const banners = await this.$axios.$get(
-        'https://api.unii.co.th/api/banners'
-      )
-      const noticeboards = await this.$axios.$get(
-        'https://api.unii.co.th/api/noticeboards'
-      )
+      const posts = await this.$axios.$get('/api/posts')
+      const partners = await this.$axios.$get('/api/partners')
+      const banners = await this.$axios.$get('/api/banners')
+      const noticeboards = await this.$axios.$get('/api/noticeboards')
       console.log('Banner', banners)
       console.log('Notice', noticeboards)
 
