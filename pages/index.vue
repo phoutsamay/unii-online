@@ -236,13 +236,6 @@
           class="row"
         >
           <div class="col-12 col-sm-12 col-md-12 col-lg-6 mt-5">
-            <h2>
-              {{ noticeboard.title }}
-              <!-- รุ่น 2 พร้อมเปิดรับ..!!! <br />
-              Unii Mini Center #UMC รุ่น 2 <br />
-              นักธุรกิจรุ่นใหม่ของคนรีไซเคิลออนไลน์ -->
-              <!-- เปิดรับสมัครผู้สนใจมาร่วมเป็นส่วนหนึ่งกับเรา Unii Mini Center #UMC -->
-            </h2>
             <!-- eslint-disable-next-line vue/no-v-html -->
             <p v-html="noticeboard.description">
               {{ noticeboard.description }}
