@@ -715,6 +715,9 @@ export default {
       banners: null,
     }
   },
+  // async created() {
+  //   await this.asyncData()
+  // },
   methods: {
     onSlideStart(slide) {
       this.sliding = true
@@ -722,6 +725,25 @@ export default {
     onSlideEnd(slide) {
       this.sliding = false
     },
+    // async asyncData() {
+    //   const posts = await this.$axios.get('https://api.unii.co.th/api/posts')
+    //   const partners = await this.$axios.get(
+    //     'https://api.unii.co.th/api/partners'
+    //   )
+    //   const banners = await this.$axios.get(
+    //     'https://api.unii.co.th/api/banners'
+    //   )
+    //   const noticeboards = await this.$axios.get(
+    //     'https://api.unii.co.th/api/noticeboards'
+    //   )
+    //   console.log('Banner', banners)
+    //   console.log('Notice', noticeboards)
+
+    //   this.posts = posts
+    //   this.partners = partners
+    //   this.banners = banners
+    //   this.noticeboards = noticeboards
+    // },
   },
 }
 </script>
