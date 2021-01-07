@@ -1,44 +1,25 @@
 /* eslint-disable vue/attribute-hyphenation */
 <template>
   <div>
-    <carousel
-      class="sectioncarousel"
-      :autoplay="true"
-      :autoHeight="true"
-      :loop="true"
-      :items="1"
-      :center="true"
-      :nav="false"
-    >
-      <img
-        v-for="banner in banners"
-        :key="banner.id"
-        :src="`https://api.unii.co.th/api/uploads/${banner.image}`"
-        width="100%"
-      />
-    </carousel>
     <div class="555555555"></div>
-    <section id="carousel" class="sectioncarousel">
-      <!-- <b-carousel
+    <section id="carousel">
+      <carousel
         v-if="banners"
-        :interval="3000"
-        indicators
-        background="#ababab"
-        img-width="1024"
-        img-height="480"
-        style="text-shadow: 1px 1px 2px #333"
-        @sliding-start="onSlideStart"
-        @sliding-end="onSlideEnd"
+        class="sectioncarousel"
+        :autoplay="true"
+        :autoHeight="true"
+        :loop="true"
+        :items="1"
+        :center="true"
+        :nav="false"
       >
-        <b-carousel-slide
+        <img
           v-for="banner in banners"
-          id="carousel-1"
           :key="banner.id"
-          v-model="slide"
-          :banner="banner"
-          :img-src="`https://api.unii.co.th/api/uploads/${banner.image}`"
-        ></b-carousel-slide>
-      </b-carousel> -->
+          :src="`https://api.unii.co.th/api/uploads/${banner.image}`"
+          width="100%"
+        />
+      </carousel>
     </section>
 
     <section id="video">
@@ -264,9 +245,7 @@
               รับสมัครวันนี้ - 8/12/2563 เท่านั้น..!!! ลิ้งค์สมัคร Unii Mini
               Center รุ่น 2
             </p> -->
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSe5_5rTBMUoOGAcB4_u56nwZ_31FgIEmN5P9ZkQT24C3gZLvg/viewform"
-              target="_blank"
+            <a href="https://forms.gle/qhM8zp2GyjyR6ZtZ8" target="_blank"
               ><b-button class="outline-purple">สมัครอบรม คลิ๊ก!!!</b-button></a
             >
             <!-- <div class="my-4">
@@ -734,8 +713,12 @@ export default {
       noticeboards: [],
       slide: 0,
       sliding: null,
+      banners: null,
     }
   },
+  // async created() {
+  //   await this.asyncData()
+  // },
   methods: {
     onSlideStart(slide) {
       this.sliding = true
@@ -743,6 +726,25 @@ export default {
     onSlideEnd(slide) {
       this.sliding = false
     },
+    // async asyncData() {
+    //   const posts = await this.$axios.get('https://api.unii.co.th/api/posts')
+    //   const partners = await this.$axios.get(
+    //     'https://api.unii.co.th/api/partners'
+    //   )
+    //   const banners = await this.$axios.get(
+    //     'https://api.unii.co.th/api/banners'
+    //   )
+    //   const noticeboards = await this.$axios.get(
+    //     'https://api.unii.co.th/api/noticeboards'
+    //   )
+    //   console.log('Banner', banners)
+    //   console.log('Notice', noticeboards)
+
+    //   this.posts = posts
+    //   this.partners = partners
+    //   this.banners = banners
+    //   this.noticeboards = noticeboards
+    // },
   },
 }
 </script>
