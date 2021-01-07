@@ -157,36 +157,8 @@
             :src="`https://api.unii.co.th/api/uploads/${partner.image}`"
           />
         </carousel>
-        <!-- <div
-          id="recipeCarousel"
-          class="carousel slide w-100"
-          data-ride="carousel"
-        >
-          <div class="carousel-inner text-center" role="listbox">
-            <div class="carousel-item row no-gutters active">
-              <div
-                v-for="partner in partners"
-                :key="partner.id"
-                :partner="partner"
-                class="col-3 float-left"
-              >
-                <img
-                  class="img-fluid"
-                  :src="`https://api.unii.co.th/api/uploads/${partner.image}`"
-                />
-              </div>
-            </div>
-          </div>
-        </div> -->
       </div>
     </section>
-
-    <!-- <section id="partner">
-      <div class="container py-5">
-        <h3 class="text-center mb-4">ส่งสินค้ากลับสู่ผู้ผลิตทุกราย</h3>
-        <img src="../assets/imgs/partner.jpg" alt="" width="100%" />
-      </div>
-    </section> -->
 
     <section id="overley">
       <div class="container mt-5">
