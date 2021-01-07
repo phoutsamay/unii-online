@@ -2,25 +2,23 @@
 <template>
   <div>
     <div class="555555555"></div>
-    <section id="carousel">
-      <carousel
-        v-if="banners"
-        class="sectioncarousel"
-        :autoplay="true"
-        :autoHeight="true"
-        :loop="true"
-        :items="1"
-        :center="true"
-        :nav="false"
-      >
-        <img
-          v-for="banner in banners"
-          :key="banner.id"
-          :src="`https://api.unii.co.th/api/uploads/${banner.image}`"
-          width="100%"
-        />
-      </carousel>
-    </section>
+    <carousel
+      class="sectioncarousel"
+      :autoplay="true"
+      :autoHeight="true"
+      :loop="true"
+      :items="1"
+      :center="true"
+      :nav="false"
+    >
+      <img
+        v-for="banner in banners"
+        :key="banner.id"
+        :src="`https://api.unii.co.th/api/uploads/${banner.image}`"
+        width="100%"
+      />
+    </carousel>
+    <section id="carousel"></section>
 
     <section id="video">
       <div class="container pt-5">
