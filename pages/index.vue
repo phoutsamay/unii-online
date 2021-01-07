@@ -142,7 +142,22 @@
     <section id="partner">
       <div class="container my-5">
         <h3 class="text-center mb-4">ส่งสินค้ากลับสู่ผู้ผลิตทุกราย</h3>
-        <div
+        <carousel
+          class="sectioncarousel"
+          :autoplay="true"
+          :loop="true"
+          :items="4"
+          :center="true"
+          :nav="false"
+        >
+          <img
+            v-for="partner in partners"
+            :key="partner.id"
+            class="img-fluid"
+            :src="`https://api.unii.co.th/api/uploads/${partner.image}`"
+          />
+        </carousel>
+        <!-- <div
           id="recipeCarousel"
           class="carousel slide w-100"
           data-ride="carousel"
@@ -160,50 +175,9 @@
                   :src="`https://api.unii.co.th/api/uploads/${partner.image}`"
                 />
               </div>
-              <!-- <div class="col-3 float-left">
-                <img class="img-fluid" src="../assets/imgs/Group-4673.png" />
-              </div>
-              <div class="col-3 float-left">
-                <img class="img-fluid" src="../assets/imgs/Group-4672.png" />
-              </div>
-              <div class="col-3 float-right">
-                <img class="img-fluid" src="../assets/imgs/Group-4671.png" />
-              </div> -->
             </div>
-            <!-- <div class="carousel-item row no-gutters">
-              <div class="col-3 float-left">
-                <img class="img-fluid" src="../assets/imgs/metalcom.png" />
-              </div>
-              <div class="col-3 float-left">
-                <img class="img-fluid" src="../assets/imgs/newsolution.png" />
-              </div>
-              <div class="col-3 float-left">
-                <img class="img-fluid" src="../assets/imgs/osotspa.png" />
-              </div>
-              <div class="col-3 float-left">
-                <img class="img-fluid" src="../assets/imgs/Group-4671.png" />
-              </div>
-            </div> -->
           </div>
-          <!-- <a
-            class="carousel-control-prev"
-            href="#recipeCarousel"
-            role="button"
-            data-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a
-            class="carousel-control-next"
-            href="#recipeCarousel"
-            role="button"
-            data-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a> -->
-        </div>
+        </div> -->
       </div>
     </section>
 
