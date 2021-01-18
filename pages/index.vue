@@ -6,9 +6,9 @@
       class="sectioncarousel"
       :autoplay="true"
       :autoHeight="true"
+      :lazyLoad="true"
       :loop="true"
       :items="1"
-      :center="true"
       :nav="false"
     >
       <img
@@ -39,7 +39,32 @@
         </div>
 
         <div class="mt-3">
-          <div
+          <carousel
+            class="sectioncarousel"
+            :autoplay="true"
+            :loop="true"
+            :margin="20"
+            :video="true"
+            :lazyLoad="true"
+            :nav="false"
+            :autoplayHoverPause="true"
+          >
+            <div v-for="video in videos" :key="video.id">
+              <img
+                :src="`https://img.youtube.com/vi/` + video.title + `/0.jpg`"
+                style="width: 100%; height: 200px"
+                alt=""
+              />
+            </div>
+          </carousel>
+          <div class="text-center">
+            <NuxtLink to="/videos/allvideos">
+              <b-button size="lg" class="btn btn-purple" type="submit"
+                >วีดีโอทั้งหมด</b-button
+              ></NuxtLink
+            >
+          </div>
+          <!-- <div
             id="recipeCarousel1"
             class="carousel slide w-100"
             data-ride="carousel"
@@ -134,7 +159,7 @@
               ></span>
               <span class="sr-only">Next</span>
             </a>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -147,7 +172,6 @@
           :autoplay="true"
           :loop="true"
           :items="4"
-          :center="true"
           :nav="false"
         >
           <img
@@ -170,27 +194,12 @@
         >
           <div class="col-12 col-sm-12 col-md-12 col-lg-6 mt-5">
             <!-- eslint-disable-next-line vue/no-v-html -->
-            <p v-html="noticeboard.description">
-              <!-- ถ้าคุณพร้อมมาร่วมเป็น..!!! #หนึ่งใน 500 UMC ทั่วไทย <br />
-              #ค่าอบรม 9,500 บาท/คน (ที่พัก 3 คืนพร้อมอาหาร) พัก 2 คน<br />
-              คนที่ 2 ชำระ 5,000 บาท #คนUniiค่าอบรม 5,000 บาท -->
-              <!-- UNII Online เป็นการ Disrupt ต้นทุนธุรกิจรีไซเคิล ครั้งยิ่งใหญ่
-              ครั้งแรกของประเทศไทยคืนทุนไว ได้กำไรแน่นอน
-              ถ้าท่านสนใจติดต่อเข้ามาได้เลย แล้วมาร่วมเป็นส่วนหนึ่งกับเรา #Unii
-              family (โปรดติดตามข่าวสารการเปิดอบรมต่างๆ เกี่ยวกับ ยูนี่
-              ออนไลน์ได้ที่เว็บไซต์ ในเร็วๆนี้) -->
-            </p>
-            <!-- <p>
-              ***พิเศษสุด รุ่นนี้ ร่วมฉลองงานเลี้ยง <br />
-              Birthday Unii & Happy Newyear 2021 <br />
-              คืนที่ 18/12/2563..!!
-            </p>
-            <p>
-              รับสมัครวันนี้ - 8/12/2563 เท่านั้น..!!! ลิ้งค์สมัคร Unii Mini
-              Center รุ่น 2
-            </p> -->
-            <a href="https://forms.gle/qhM8zp2GyjyR6ZtZ8" target="_blank"
-              ><b-button class="outline-purple">สมัครอบรม คลิ๊ก!!!</b-button></a
+            <p v-html="noticeboard.description"></p>
+
+            <a :href="noticeboard.linkbtn" target="_blank"
+              ><b-button class="outline-purple mt-3"
+                >สมัครอบรม คลิ๊ก!!!</b-button
+              ></a
             >
             <!-- <div class="my-4">
               <b-button
@@ -365,25 +374,84 @@
 
     <section id="news" class="mt-4">
       <div class="container my-5">
-        <h1 class="pb-5">ข่าวสารที่น่าสนใจ จาก ยูนี่ ออนไลน์</h1>
-        <div class="row">
+        <h1 class="pb-5">Unii News ข่าวสาร ยูนี่</h1>
+        <div
+          v-for="activity in [activitys[0]]"
+          :key="activity.id"
+          :activity="activity"
+          class="row"
+        >
           <div class="zoom col-xs-3 col-sm-12 col-md-12 col-lg-12 col-xl-6">
             <b-embed
               type="iframe"
               aspect="16by9"
-              src="https://www.youtube.com/embed/lX8LTpBilAM"
+              :src="`https://www.youtube.com/embed/` + activity.video"
               allowfullscreen
             ></b-embed>
             <p class="pt-2">
-              ตัวจริง เสียงจริง Unii Center Thailand.!!! ฟังชัดๆ จาก Unii Center
-              Thailand ตัวแทนในระดับโซนและภูมิภาคของ Unii Recycle Online.!!!
-              Unii เพื่อยกระดับผู้ประกอบการ นักธุรกิจรีไซเคิลทั่วไทย
-              ไปสู่ระดับสากล...!!!
+              {{ activity.title }}
             </p>
             <p>December 29,2020</p>
-            <a href="detailNews" class="stretched-link"></a>
+            <nuxt-link
+              :to="{ name: 'news-id', params: { id: activity._id } }"
+              target="_blank"
+              class="stretched-link"
+            ></nuxt-link>
           </div>
           <div
+            class="col-xs-3 col-sm-12 col-md-12 col-lg-12 col-xl-6"
+            style="margin-top: -20px"
+          >
+            <hr class="vl d-none d-xl-block" />
+            <!-- <hr /> -->
+            <div
+              v-for="activity in [activitys[1], activitys[2]]"
+              :key="activity.id"
+              :activity="activity"
+              class="card mb-3 zoom"
+              style="max-width: 540px"
+            >
+              <!-- <hr /> -->
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <b-embed
+                    type="iframe"
+                    aspect="16by9"
+                    :src="`https://www.youtube.com/embed/` + activity.video"
+                    allowfullscreen
+                  ></b-embed>
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      {{ activity.title }}
+                      <!-- Unii ขอขอบคุณ FC ที่ติดตาม Unii ด้วยดีตลอดมามากๆนะครับ
+                      วันนี้พอมีเวลาได้เขียนเรื่องนี้สัก 1 ชั่วโมงพอดีครับ
+                      ที่จริงอยากเขียนมานานแล้วแต่ไม่มีเวลาเลยจริงๆครับ -->
+                    </h5>
+                    <p class="card-text">
+                      <small class="">October 14,2020</small>
+                    </p>
+                    <nuxt-link
+                      :to="{ name: 'news-id', params: { id: activity._id } }"
+                      target="_blank"
+                      class="stretched-link"
+                    ></nuxt-link>
+                  </div>
+                </div>
+              </div>
+              <hr />
+            </div>
+            <!-- <hr /> -->
+            <div class="text-center">
+              <NuxtLink to="/news/allnews">
+                <b-button size="lg" class="btn btn-purple" type="submit"
+                  >ดูทั้งหมด</b-button
+                ></NuxtLink
+              >
+            </div>
+          </div>
+          <!-- <div
             class="col-xs-3 col-sm-12 col-md-12 col-lg-12 col-xl-6"
             style="margin-top: -20px"
           >
@@ -441,7 +509,7 @@
                 >ดูเพิ่มเติม</b-button
               >
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -457,8 +525,10 @@
           />
         </div>
         <div class="text-center">
-          <b-button size="lg" class="btn btn-purple" type="submit"
-            >ดูทั้งหมด</b-button
+          <NuxtLink to="/blogs/allblogs">
+            <b-button size="lg" class="btn btn-purple" type="submit"
+              >ดูทั้งหมด</b-button
+            ></NuxtLink
           >
         </div>
       </div>
@@ -645,10 +715,12 @@ export default {
     const noticeboards = await $axios.$get(
       'https://api.unii.co.th/api/noticeboards'
     )
+    const videos = await $axios.$get('https://api.unii.co.th/api/videos')
+    const activitys = await $axios.$get('https://api.unii.co.th/api/activitys')
     // console.log('Banner', banners)
     // console.log('Notice', noticeboards)
 
-    return { posts, partners, banners, noticeboards }
+    return { posts, partners, banners, noticeboards, videos, activitys }
   },
   data() {
     return {
@@ -658,6 +730,8 @@ export default {
       slide: 0,
       sliding: null,
       banners: null,
+      videos: [],
+      activitys: [],
     }
   },
   // async created() {

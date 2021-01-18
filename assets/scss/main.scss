@@ -113,6 +113,18 @@ ul {
   border: 1px solid #707070;
   opacity: 1;
 }
+#news .card {
+  background-color: rgba(245, 245, 245, 0);
+  border: none;
+}
+#news .card-title {
+  color: #ffffff;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 #news .zoom:hover {
   transform: scale(1.025);
 }
