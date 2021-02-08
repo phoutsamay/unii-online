@@ -4,7 +4,7 @@
       <div class="text-center">
         <h5>ส่งสินค้ากลับสู่ผู้ผลิตทุกราย</h5>
       </div>
-      <div v-if="partners">
+      <div v-if="partners.length > 0">
         <client-only>
           <carousel
             :autoplay="true"
@@ -27,23 +27,20 @@
 
 <script>
 export default {
-  async fetch() {
-    this.partners = await this.$axios.$get('/api/partners')
-  },
   data() {
     return {
-      partners: null,
+      partners: [],
     }
   },
-  // async mounted() {
-  //   await this.getPartner()
-  // },
-  // methods: {
-  //   async getPartner() {
-  //     const data = await this.$axios.$get('/api/partners')
-  //     this.partners = data
-  //   },
-  // },
+  mounted() {
+    this.getPartner()
+  },
+  methods: {
+    async getPartner() {
+      const data = await this.$axios.$get('/api/partners')
+      this.partners = data
+    },
+  },
 }
 </script>
 
