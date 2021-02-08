@@ -63,8 +63,8 @@ export default {
       videos: null,
     }
   },
-  mounted() {
-    this.getVideo()
+  async mounted() {
+    await this.getVideo()
   },
   methods: {
     async getVideo() {

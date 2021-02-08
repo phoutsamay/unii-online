@@ -86,8 +86,8 @@ export default {
       activitys: [],
     }
   },
-  mounted() {
-    this.getActivitys()
+  async mounted() {
+    await this.getActivitys()
   },
   methods: {
     async getActivitys() {

@@ -34,8 +34,8 @@ export default {
       noticeboards: [],
     }
   },
-  mounted() {
-    this.getNoticeboards()
+  async mounted() {
+    await this.getNoticeboards()
   },
   methods: {
     async getNoticeboards() {
