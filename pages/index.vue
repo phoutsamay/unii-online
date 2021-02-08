@@ -27,7 +27,6 @@
         />
       </carousel>
     </client-only> -->
-    <section id="carousel"></section>
 
     <!-- <section id="video">
       <div class="container pt-5">
@@ -377,6 +376,8 @@
       </div>
     </section>
 
+    <Team />
+
     <!-- <section id="team">
       <div class="container py-5">
         <h1>MEET OUR TEAM</h1>
@@ -460,25 +461,25 @@
 import Banner from '~/components/Banner.vue'
 import Partner from '~/components/Partner.vue'
 import Video from '~/components/Video.vue'
-// import Partner from '~/components/Partner.vue'
 import Noticeboard from '~/components/Noticeboard.vue'
 import About from '~/components/About.vue'
 import Process from '~/components/Process.vue'
 import Service from '~/components/Service.vue'
 // import News from '~/components/News.vue'
 // import Post from '~/components/Post.vue'
+import Team from '~/components/Team.vue'
 export default {
   components: {
     Banner,
     Video,
     Partner,
-    // Partner,
     Noticeboard,
     About,
     Process,
     Service,
     // News,
     // Post,
+    Team,
   },
   async asyncData({ $axios }) {
     const posts = await $axios.$get('/api/posts')

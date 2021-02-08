@@ -58,20 +58,23 @@
 
 <script>
 export default {
+  async fetch() {
+    this.videos = await this.$axios.$get('/api/videos')
+  },
   data() {
     return {
       videos: null,
     }
   },
-  async mounted() {
-    await this.getVideo()
-  },
-  methods: {
-    async getVideo() {
-      const data = await this.$axios.$get('/api/videos')
-      this.videos = data
-    },
-  },
+  // async mounted() {
+  //   await this.getVideo()
+  // },
+  // methods: {
+  //   async getVideo() {
+  //     const data = await this.$axios.$get('/api/videos')
+  //     this.videos = data
+  //   },
+  // },
 }
 </script>
 

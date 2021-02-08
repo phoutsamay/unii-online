@@ -45,20 +45,23 @@
 
 <script>
 export default {
+  async fetch() {
+    this.posts = await this.$axios.$get('/api/posts')
+  },
   data() {
     return {
       posts: [],
     }
   },
-  async mounted() {
-    await this.getPost()
-  },
-  methods: {
-    async getPost() {
-      const data = await this.$axios.$get('/api/posts')
-      this.posts = data
-    },
-  },
+  // async mounted() {
+  //   await this.getPost()
+  // },
+  // methods: {
+  //   async getPost() {
+  //     const data = await this.$axios.$get('/api/posts')
+  //     this.posts = data
+  //   },
+  // },
 }
 </script>
 
