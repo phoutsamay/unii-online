@@ -18,7 +18,7 @@
       </div>
 
       <div class="mt-3">
-        <div v-if="videos">
+        <div v-if="videos.length > 0">
           <client-only>
             <carousel
               class="sectioncarousel"
@@ -58,23 +58,20 @@
 
 <script>
 export default {
-  async fetch() {
-    this.videos = await this.$axios.$get('/api/videos')
-  },
   data() {
     return {
-      videos: null,
+      videos: [],
     }
   },
-  // async mounted() {
-  //   await this.getVideo()
-  // },
-  // methods: {
-  //   async getVideo() {
-  //     const data = await this.$axios.$get('/api/videos')
-  //     this.videos = data
-  //   },
-  // },
+  mounted() {
+    this.getVideo()
+  },
+  methods: {
+    async getVideo() {
+      const data = await this.$axios.$get('/api/videos')
+      this.videos = data
+    },
+  },
 }
 </script>
 

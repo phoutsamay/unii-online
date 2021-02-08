@@ -1,13 +1,13 @@
 <template>
   <div id="banner">
     <!-- Carousel -->
-    <div v-if="banners">
+    <div v-if="banners.length > 0">
       <client-only>
         <carousel :autoplay="true" :loop="true" :items="1" :nav="false">
           <img
             v-for="item in banners"
             :key="item.id"
-            :src="`/api/uploads/${item.image}`"
+            :src="`https://api.unii.co.th/api/uploads/${item.image}`"
             width="100%"
           />
         </carousel>
@@ -17,25 +17,21 @@
 </template>
 
 <script>
-import axios from 'axios'
 export default {
   data() {
     return {
-      banners: null,
+      banners: [],
     }
   },
-  mounted() {
-    this.getBanner()
+  async mounted() {
+    await this.getBanner()
   },
   methods: {
-    getBanner() {
-      axios.get('/api/banners').then((res) => {
-        console.log(res.data)
-        this.banners = res.data
-      })
+    async getBanner() {
+      const data = await this.$axios.$get('/api/banners')
+      console.log('Banner')
+      this.banners = data
     },
-    // const data = axios.get('/api/banners')
-    // this.banners = data
   },
 }
 </script>

@@ -81,23 +81,20 @@
 
 <script>
 export default {
-  async fetch() {
-    this.activitys = await this.$axios.$get('/api/activitys')
-  },
   data() {
     return {
       activitys: [],
     }
   },
-  // async mounted() {
-  //   await this.getActivitys()
-  // },
-  // methods: {
-  //   async getActivitys() {
-  //     const data = await this.$axios.$get('/api/activitys')
-  //     this.activitys = data
-  //   },
-  // },
+  mounted() {
+    this.getActivitys()
+  },
+  methods: {
+    async getActivitys() {
+      const data = await this.$axios.$get('/api/activitys')
+      this.activitys = data
+    },
+  },
 }
 </script>
 
