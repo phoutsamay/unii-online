@@ -57,19 +57,25 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   data() {
     return {
       videos: [],
     }
   },
-  mounted() {
-    this.getVideo()
+  async mounted() {
+    await this.getVideo()
   },
   methods: {
-    async getVideo() {
-      const data = await this.$axios.$get('/api/videos')
-      this.videos = data
+    getVideo() {
+      axios.get('/api/videos').then((res) => {
+        console.log(res.data)
+        this.videos = res.data
+      })
+
+      // const data = await this.$axios.$get('/api/videos')
+      // this.videos = data
     },
   },
 }
