@@ -17,6 +17,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   data() {
     return {
@@ -27,10 +28,15 @@ export default {
     await this.getBanner()
   },
   methods: {
-    async getBanner() {
-      const data = await this.$axios.$get('/api/banners')
-      console.log('Banner')
-      this.banners = data
+    getBanner() {
+      axios.get('/api/banners').then((res) => {
+        console.log(res.data)
+        this.banners = res.data
+      })
+
+      // const data = await this.$axios.$get('/api/banners')
+      // console.log('Banner')
+      // this.banners = data
     },
   },
 }

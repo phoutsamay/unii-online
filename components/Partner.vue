@@ -26,19 +26,25 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   data() {
     return {
       partners: [],
     }
   },
-  mounted() {
-    this.getPartner()
+  async mounted() {
+    await this.getPartner()
   },
   methods: {
-    async getPartner() {
-      const data = await this.$axios.$get('/api/partners')
-      this.partners = data
+    getPartner() {
+      axios.get('/api/partners').then((res) => {
+        console.log(res.data)
+        this.partners = res.data
+      })
+
+      // const data = await this.$axios.$get('/api/partners')
+      // this.partners = data
     },
   },
 }
