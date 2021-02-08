@@ -17,24 +17,26 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
-  async fetch() {
-    this.banners = await this.$axios.$get('/api/banners')
-  },
   data() {
     return {
       banners: null,
     }
   },
-  // async mounted() {
-  //   await this.getBanner()
-  // },
-  // methods: {
-  //   async getBanner() {
-  //     const data = await this.$axios.$get('/api/banners')
-  //     this.banners = data
-  //   },
-  // },
+  mounted() {
+    this.getBanner()
+  },
+  methods: {
+    getBanner() {
+      axios.get('/api/banners').then((res) => {
+        console.log(res.data)
+        this.banners = res.data
+      })
+    },
+    // const data = axios.get('/api/banners')
+    // this.banners = data
+  },
 }
 </script>
 
