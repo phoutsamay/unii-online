@@ -1,26 +1,35 @@
 /* eslint-disable vue/attribute-hyphenation */
 <template>
   <div>
-    <div class="555555555"></div>
-    <carousel
-      class="sectioncarousel"
-      :autoplay="true"
-      :autoHeight="true"
-      :lazyLoad="true"
-      :loop="true"
-      :items="1"
-      :nav="false"
-    >
-      <img
-        v-for="banner in banners"
-        :key="banner.id"
-        :src="`https://api.unii.co.th/api/uploads/${banner.image}`"
-        width="100%"
-      />
-    </carousel>
+    <Banner />
+    <Video />
+    <Partner />
+    <Noticeboard />
+    <Service />
+    <About />
+    <Process />
+    <!-- <News /> -->
+    <!-- <client-only>
+      <carousel
+        class="sectioncarousel"
+        :autoplay="true"
+        :autoHeight="true"
+        :lazyLoad="true"
+        :loop="true"
+        :items="1"
+        :nav="false"
+      >
+        <img
+          v-for="(banner, index) in banners"
+          :key="index"
+          :src="`https://api.unii.co.th/api/uploads/${banner.image}`"
+          width="100%"
+        />
+      </carousel>
+    </client-only> -->
     <section id="carousel"></section>
 
-    <section id="video">
+    <!-- <section id="video">
       <div class="container pt-5">
         <div class="text-center">
           <h1>ทำความรู้จักกับ ยูนี่ ออนไลน์</h1>
@@ -48,8 +57,12 @@
             :lazyLoad="true"
             :nav="false"
             :autoplayHoverPause="true"
+            :responsive="{
+              0: { items: 1, nav: false },
+              600: { items: 3, nav: false },
+            }"
           >
-            <div v-for="video in videos" :key="video.id">
+            <div v-for="(video, index) in videos" :key="index" :video="video">
               <img
                 :src="`https://img.youtube.com/vi/` + video.title + `/0.jpg`"
                 style="width: 100%; height: 200px"
@@ -64,107 +77,11 @@
               ></NuxtLink
             >
           </div>
-          <!-- <div
-            id="recipeCarousel1"
-            class="carousel slide w-100"
-            data-ride="carousel"
-          >
-            <div class="carousel-inner w-100" role="listbox">
-              <div class="carousel-item row no-gutters active">
-                <div class="col-4 px-2 float-left">
-                  <div>
-                    <b-embed
-                      type="iframe"
-                      aspect="16by9"
-                      src="https://www.youtube.com/embed/YmGOn373ozU"
-                      allowfullscreen
-                    ></b-embed>
-                  </div>
-                </div>
-                <div class="col-4 px-2 float-left">
-                  <div>
-                    <b-embed
-                      type="iframe"
-                      aspect="16by9"
-                      src="https://www.youtube.com/embed/NMyEuLlbbWY"
-                      allowfullscreen
-                    ></b-embed>
-                  </div>
-                </div>
-                <div class="col-4 px-2 float-left">
-                  <div>
-                    <b-embed
-                      type="iframe"
-                      aspect="16by9"
-                      src="https://www.youtube.com/embed/yJHzs6VVRDw"
-                      allowfullscreen
-                    ></b-embed>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item row no-gutters">
-                <div class="col-4 px-2 float-left">
-                  <div>
-                    <b-embed
-                      type="iframe"
-                      aspect="16by9"
-                      src="https://www.youtube.com/embed/ayQ9KqMrslg"
-                      allowfullscreen
-                    ></b-embed>
-                  </div>
-                </div>
-                <div class="col-4 px-2 float-left">
-                  <div>
-                    <b-embed
-                      type="iframe"
-                      aspect="16by9"
-                      src="https://www.youtube.com/embed/eU1uoF14ve0"
-                      allowfullscreen
-                    ></b-embed>
-                  </div>
-                </div>
-                <div class="col-4 px-2 float-left">
-                  <div>
-                    <b-embed
-                      type="iframe"
-                      aspect="16by9"
-                      src="https://www.youtube.com/embed/iQ8VkAAWggg"
-                      allowfullscreen
-                    ></b-embed>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <a
-              class="carousel-control-prev"
-              href="#recipeCarousel1"
-              role="button"
-              data-slide="prev"
-            >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a
-              class="carousel-control-next"
-              href="#recipeCarousel1"
-              role="button"
-              data-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div> -->
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section id="partner">
+    <!-- <section id="partner">
       <div class="container my-5">
         <h3 class="text-center mb-4">ส่งสินค้ากลับสู่ผู้ผลิตทุกราย</h3>
         <carousel
@@ -175,25 +92,23 @@
           :nav="false"
         >
           <img
-            v-for="partner in partners"
-            :key="partner.id"
+            v-for="(partner, index) in partners"
+            :key="index"
             class="img-fluid"
             :src="`https://api.unii.co.th/api/uploads/${partner.image}`"
           />
         </carousel>
       </div>
-    </section>
+    </section> -->
 
-    <section id="overley">
+    <!-- <section id="overley">
       <div class="container mt-5">
         <div
-          v-for="noticeboard in noticeboards"
-          :key="noticeboard.id"
-          :noticeboard="noticeboard"
+          v-for="(noticeboard, index) in noticeboards"
+          :key="index"
           class="row"
         >
           <div class="col-12 col-sm-12 col-md-12 col-lg-6 mt-5">
-            <!-- eslint-disable-next-line vue/no-v-html -->
             <p v-html="noticeboard.description"></p>
 
             <a :href="noticeboard.linkbtn" target="_blank"
@@ -201,17 +116,8 @@
                 >สมัครอบรม คลิ๊ก!!!</b-button
               ></a
             >
-            <!-- <div class="my-4">
-              <b-button
-                size="sm"
-                class="btn btn-purple my-2 my-sm-0"
-                type="submit"
-                >สมัครอบรม</b-button
-              >
-            </div> -->
           </div>
           <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center">
-            <!-- <img src="../assets/imgs/mockup-register.png" alt="" /> -->
             <img
               :src="`https://api.unii.co.th/api/uploads/${noticeboard.image}`"
               alt=""
@@ -220,9 +126,9 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section id="service">
+    <!-- <section id="service">
       <div class="container py-5">
         <div>
           <b-card-group deck>
@@ -282,9 +188,9 @@
           </b-card-group>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section id="about">
+    <!-- <section id="about">
       <div class="container py-5">
         <div class="text-center col-lg-8 mx-auto">
           <img src="../assets/imgs/head-unii.png" alt="" />
@@ -304,9 +210,9 @@
           <img src="../assets/imgs/mockupIP.png" alt="" width="100%" />
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <client-only>
+    <!-- <client-only>
       <section id="process">
         <div class="container mt-5">
           <b-card style="border: 1px solid #69197b">
@@ -370,14 +276,14 @@
           </b-card>
         </div>
       </section>
-    </client-only>
+    </client-only> -->
 
     <section id="news" class="mt-4">
       <div class="container my-5">
         <h1 class="pb-5">Unii News ข่าวสาร ยูนี่</h1>
         <div
-          v-for="activity in [activitys[0]]"
-          :key="activity.id"
+          v-for="(activity, index) in [activitys[0]]"
+          :key="index"
           :activity="activity"
           class="row"
         >
@@ -403,15 +309,14 @@
             style="margin-top: -20px"
           >
             <hr class="vl d-none d-xl-block" />
-            <!-- <hr /> -->
+
             <div
-              v-for="activity in [activitys[1], activitys[2]]"
-              :key="activity.id"
+              v-for="(activity, index) in [activitys[1], activitys[2]]"
+              :key="index"
               :activity="activity"
               class="card mb-3 zoom"
               style="max-width: 540px"
             >
-              <!-- <hr /> -->
               <div class="row g-0">
                 <div class="col-md-4">
                   <b-embed
@@ -425,9 +330,6 @@
                   <div class="card-body">
                     <h5 class="card-title">
                       {{ activity.title }}
-                      <!-- Unii ขอขอบคุณ FC ที่ติดตาม Unii ด้วยดีตลอดมามากๆนะครับ
-                      วันนี้พอมีเวลาได้เขียนเรื่องนี้สัก 1 ชั่วโมงพอดีครับ
-                      ที่จริงอยากเขียนมานานแล้วแต่ไม่มีเวลาเลยจริงๆครับ -->
                     </h5>
                     <p class="card-text">
                       <small class="">October 14,2020</small>
@@ -442,7 +344,7 @@
               </div>
               <hr />
             </div>
-            <!-- <hr /> -->
+
             <div class="text-center">
               <NuxtLink to="/news/allnews">
                 <b-button size="lg" class="btn btn-purple" type="submit"
@@ -451,65 +353,6 @@
               >
             </div>
           </div>
-          <!-- <div
-            class="col-xs-3 col-sm-12 col-md-12 col-lg-12 col-xl-6"
-            style="margin-top: -20px"
-          >
-            <hr class="vl d-none d-xl-block" />
-            <hr />
-            <a href="detailNews1" class="stretched-link">
-              <div class="row">
-                <div class="col-sm-6 col-md-6 col-lg-6">
-                  <b-embed
-                    type="iframe"
-                    aspect="16by9"
-                    src="https://www.youtube.com/embed/CMQOxxgvgi8"
-                    allowfullscreen
-                  ></b-embed>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-6">
-                  <p class="cut-text-multi pt-2">
-                    Unii ขอขอบคุณ FC ที่ติดตาม Unii ด้วยดีตลอดมามากๆนะครับ
-                    วันนี้พอมีเวลาได้เขียนเรื่องนี้สัก 1 ชั่วโมงพอดีครับ
-                    ที่จริงอยากเขียนมานานแล้วแต่ไม่มีเวลาเลยจริงๆครับ
-                  </p>
-                  <p>October 14,2020</p>
-                </div>
-              </div>
-            </a>
-            <hr />
-            <a href="detailNews2" class="stretched-link">
-              <div class="row">
-                <div class="col-sm-6 col-md-6 col-lg-6">
-                  <b-embed
-                    type="iframe"
-                    aspect="16by9"
-                    src="https://www.youtube.com/embed/iQ8VkAAWggg"
-                    allowfullscreen
-                  ></b-embed>
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-6">
-                  <p class="cut-text-multi pt-2">
-                    ธุรกิจรีไซเคิล คือ
-                    ธุรกิจที่ดำเนินการเก็บรวบรวมเศษวัสดุและชิ้นส่วนโลหะและอโลหะที่ใช้แล้วและไม่เป็น
-                    อันตราย เช่น ขยะจากครัวเรือน กระดาษ พลาสติก
-                    ชิ้นส่วนเครื่องใช้ คอมพิวเตอร์ และยานพาหนะต่างๆ
-                    และสิ่งของที่นำกลับมาใช้ใหม่ได้ เป็นต้น
-                    เพื่อขายส่งโดยไม่มีกระบวนการเปลี่ยนรูป และธุรกิจที่ดำเนินการ
-                    แปรรูปเพื่อนำมาเป็นวัสดุที่ใช้แล้วกลับมาใช้ใหม่
-                    โดยกระบวนการแปรสภาพทางกลหรือทางเคมี
-                  </p>
-                  <p>October 14,2020</p>
-                </div>
-              </div>
-            </a>
-            <hr />
-            <div class="text-center">
-              <b-button size="sm" class="btn btn-purple" type="submit"
-                >ดูเพิ่มเติม</b-button
-              >
-            </div>
-          </div> -->
         </div>
       </div>
     </section>
@@ -519,8 +362,8 @@
         <h1>บทความดีๆจาก ยูนี่ ออนไลน์</h1>
         <div class="row row-cols-1 row-cols-md-3">
           <Card
-            v-for="post in [posts[0], posts[1], posts[2]]"
-            :key="post.id"
+            v-for="(post, index) in [posts[0], posts[1], posts[2]]"
+            :key="index"
             :post="post"
           />
         </div>
@@ -534,100 +377,7 @@
       </div>
     </section>
 
-    <!-- <section id="blog">
-      <div class="container py-5">
-        <div class="row row-cols-1 row-cols-md-3">
-          <div v-for="(post, index) in posts" :key="index" class="col mb-4">
-            <div class="card h-100 shadow-sm">
-              <img
-                :src="`http://localhost:5000/api/uploads/${post.image}`"
-                class="card-img-top"
-                alt=""
-              />
-              <div class="card-body">
-                <h5 class="card-title">{{ post.title }}</h5>
-
-                <p class="card-text" v-html="post.description">
-                  {{ post.description }}
-                </p>
-                <nuxt-link
-                  :to="{ name: 'blogs-id', params: { id: post._id } }"
-                  class="stretched-link"
-                ></nuxt-link>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="text-center mt-3">
-          <b-button size="lg" class="btn btn-purple" type="submit"
-            >ดูทั้งหมด</b-button
-          >
-        </div>
-        <div>
-          <b-card-group deck>
-            <b-card
-              title="เพราะขยะมีมากมายหลากหลายชนิด"
-              sub-title="3 กันยายน 2563 | ข่าวสารองค์กร"
-              img-src="../assets/imgs/b1.jpg"
-              img-height="183px"
-              img-alt="Image"
-              img-top
-              class="shadow-sm"
-            >
-              <NuxtLink to="detailBlog" class="stretched-link">
-                <b-card-text>
-                  อยากรณรงค์ให้ทุกครัวเรือนหันมาแยกขยะเพื่อการจัดการขยะที่ง่ายมากขึ้น
-                  ช่วยให้โลกร้อนน้อยลง
-                  และสามารถเพิ่มรายได้ให้ครอบครัวมากขึ้นครับ
-                </b-card-text>
-              </NuxtLink>
-            </b-card>
-
-            <b-card
-              title="รู้หรือไม่ว่าขยะ ใช้เวลาในการย่อยสลายยาวนานถึง 450 ปีเลยทีเดียว"
-              sub-title="3 กันยายน 2563 | ข่าวสารองค์กร"
-              img-src="../assets/imgs/b4.jpg"
-              img-height="183px"
-              img-alt="Image"
-              img-top
-              class="shadow-sm"
-            >
-              <NuxtLink to="detailBlog1" class="stretched-link">
-                <b-card-text>
-                  เพราะฉะนั้นเราทุกคนจึงควรคัดแยกขยะเพื่อนำไปรีไซเคิลนำกลับมาใช้ใหม่นะครับ
-                  อย่างน้อยก็สามารถช่วยลดปัญหาขยะล้นโลกและสามารถช่วยลดภาวะโลกร้อนได้อีกทางหนึ่ง
-                </b-card-text>
-              </NuxtLink>
-            </b-card>
-
-            <b-card
-              title="เจอขยะที่ไหนต้องช่วยกันเก็บ"
-              sub-title="3 กันยายน 2563 | ข่าวสารองค์กร"
-              img-src="../assets/imgs/b5.jpg"
-              img-height="183px"
-              img-alt="Image"
-              img-top
-              class="shadow-sm"
-            >
-              <NuxtLink to="detailBlog2" class="stretched-link">
-                <b-card-text>
-                  หากอยากให้บ้านเมืองน่าอยู่มากขึ้น🏠🌏
-                  ทุกคนต้องหันมาใส่ใจเรื่องความสะอาดกันนะครับ
-                  ทุกคนคิดว่าบ้านเมืองนี้เป็นของเราทุกคนและต้องช่วยกันดูแลไม่ให้เกิดความสกปรกขึ้นด้วยครับ
-                </b-card-text>
-              </NuxtLink>
-            </b-card>
-          </b-card-group>
-          <div class="text-center mt-3">
-            <b-button size="lg" class="btn btn-purple" type="submit"
-              >ดูทั้งหมด</b-button
-            >
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-    <section id="team">
+    <!-- <section id="team">
       <div class="container py-5">
         <h1>MEET OUR TEAM</h1>
         <p>รายชื่อทีมผู่ก่อตั้ง UNII</p>
@@ -702,68 +452,56 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
   </div>
 </template>
 
 <script>
+import Banner from '~/components/Banner.vue'
+import Partner from '~/components/Partner.vue'
+import Video from '~/components/Video.vue'
+// import Partner from '~/components/Partner.vue'
+import Noticeboard from '~/components/Noticeboard.vue'
+import About from '~/components/About.vue'
+import Process from '~/components/Process.vue'
+import Service from '~/components/Service.vue'
+// import News from '~/components/News.vue'
+// import Post from '~/components/Post.vue'
 export default {
+  components: {
+    Banner,
+    Video,
+    Partner,
+    // Partner,
+    Noticeboard,
+    About,
+    Process,
+    Service,
+    // News,
+    // Post,
+  },
   async asyncData({ $axios }) {
-    const posts = await $axios.$get('https://api.unii.co.th/api/posts')
-    const partners = await $axios.$get('https://api.unii.co.th/api/partners')
-    const banners = await $axios.$get('https://api.unii.co.th/api/banners')
-    const noticeboards = await $axios.$get(
-      'https://api.unii.co.th/api/noticeboards'
-    )
-    const videos = await $axios.$get('https://api.unii.co.th/api/videos')
-    const activitys = await $axios.$get('https://api.unii.co.th/api/activitys')
-    // console.log('Banner', banners)
-    // console.log('Notice', noticeboards)
+    const posts = await $axios.$get('/api/posts')
+    // const partners = await $axios.$get('/api/partners')
+    // const banners = await $axios.$get('/api/banners')
+    // const noticeboards = await $axios.$get('/api/noticeboards')
+    // const videos = await $axios.$get('/api/videos')
+    const activitys = await $axios.$get('/api/activitys')
 
-    return { posts, partners, banners, noticeboards, videos, activitys }
+    return { posts, activitys }
   },
   data() {
     return {
       posts: [],
-      partners: [],
-      noticeboards: [],
-      slide: 0,
-      sliding: null,
-      banners: null,
-      videos: [],
+      // partners: [],
+      // noticeboards: [],
+      // banners: null,
+      // videos: [],
       activitys: [],
     }
   },
-  // async created() {
-  //   await this.asyncData()
-  // },
-  methods: {
-    onSlideStart(slide) {
-      this.sliding = true
-    },
-    onSlideEnd(slide) {
-      this.sliding = false
-    },
-    // async asyncData() {
-    //   const posts = await this.$axios.get('https://api.unii.co.th/api/posts')
-    //   const partners = await this.$axios.get(
-    //     'https://api.unii.co.th/api/partners'
-    //   )
-    //   const banners = await this.$axios.get(
-    //     'https://api.unii.co.th/api/banners'
-    //   )
-    //   const noticeboards = await this.$axios.get(
-    //     'https://api.unii.co.th/api/noticeboards'
-    //   )
-    //   console.log('Banner', banners)
-    //   console.log('Notice', noticeboards)
 
-    //   this.posts = posts
-    //   this.partners = partners
-    //   this.banners = banners
-    //   this.noticeboards = noticeboards
-    // },
-  },
+  methods: {},
 }
 </script>
 

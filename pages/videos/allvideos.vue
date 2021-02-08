@@ -8,14 +8,24 @@
 
 <script>
 export default {
-  async asyncData({ $axios }) {
-    const videos = await $axios.$get('https://api.unii.co.th/api/videos')
-    return { videos }
-  },
+  loading: true,
+  // async asyncData({ $axios }) {
+  //   const videos = await $axios.$get('https://api.unii.co.th/api/videos')
+  //   return { videos }
+  // },
   data() {
     return {
       videos: [],
     }
+  },
+  mounted() {
+    this.getVideo()
+  },
+  methods: {
+    async getVideo() {
+      const data = await this.$axios.$get('/api/videos')
+      this.videos = data
+    },
   },
 }
 </script>

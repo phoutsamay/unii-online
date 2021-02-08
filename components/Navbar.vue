@@ -24,6 +24,7 @@
                   <b-nav-item href="#video">วีดีโอ</b-nav-item>
                   <b-nav-item href="#blog">บทความ</b-nav-item>
                   <b-nav-item href="#">ร่วมงานกับ Unii</b-nav-item>
+                  <b-nav-item href="/umt/umt">ค้นหา Unii Team</b-nav-item>
                   <b-nav-item href="#footer">ติดต่อเรา</b-nav-item>
                 </b-navbar-nav>
                 <hr />
@@ -40,25 +41,28 @@
 
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav class="mx-auto topnav">
-            <b-nav-item class="px-3" href="/">หน้าแรก</b-nav-item>
-            <b-nav-item class="px-3" href="#service">บริการของเรา</b-nav-item>
-            <b-nav-item class="px-3" href="#about">เกี่ยวกับเรา</b-nav-item>
-            <b-nav-item class="px-3" href="#video">วีดีโอ</b-nav-item>
-            <b-nav-item class="px-3" href="#blog">บทความ</b-nav-item>
-            <b-nav-item class="px-3" href="#">ร่วมงานกับ Unii</b-nav-item>
-            <b-nav-item class="px-3" href="#footer">ติดต่อเรา</b-nav-item>
+            <b-nav-item class="px-2" href="/">หน้าแรก</b-nav-item>
+            <b-nav-item class="px-2" href="#service">บริการของเรา</b-nav-item>
+            <b-nav-item class="px-2" href="#about">เกี่ยวกับเรา</b-nav-item>
+            <b-nav-item class="px-2" href="#video">วีดีโอ</b-nav-item>
+            <b-nav-item class="px-2" href="#blog">บทความ</b-nav-item>
+            <b-nav-item class="px-2" href="#">ร่วมงานกับ Unii</b-nav-item>
+            <b-nav-item class="px-2" href="/umt/umt"
+              >ค้นหา Unii Team</b-nav-item
+            >
+            <b-nav-item class="px-2" href="#footer">ติดต่อเรา</b-nav-item>
           </b-navbar-nav>
 
           <!-- Right aligned nav items -->
           <b-navbar-nav class="ml-auto">
-            <b-nav-form>
+            <!-- <b-nav-form>
               <b-button
                 size="sm"
                 class="btn btn-purple my-2 my-sm-0"
                 type="submit"
                 >เข้าสู่ระบบ</b-button
               >
-            </b-nav-form>
+            </b-nav-form> -->
           </b-navbar-nav>
         </b-collapse>
       </div>

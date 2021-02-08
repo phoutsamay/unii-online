@@ -8,6 +8,9 @@
 
 <script>
 export default {
+  loading: {
+    continuous: true,
+  },
   async asyncData({ $axios }) {
     const posts = await $axios.$get('https://api.unii.co.th/api/posts')
     return { posts }

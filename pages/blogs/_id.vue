@@ -1,14 +1,18 @@
 <template>
-  <div class="container">
-    <div class="card">
-      <h2>{{ posts.title }}</h2>
-      <p>3 กันยายน 2563 | ข่าวสารองค์กร</p>
-      <img :src="`https://api.unii.co.th/api/uploads/${posts.image}`" alt="" />
-      <br />
-      <!-- eslint-disable-next-line vue/no-v-html -->
-      <p v-html="posts.description">{{ posts.description }}</p>
-    </div>
-    <!-- <div class="row">
+  <div>
+    <div class="container">
+      <div class="card">
+        <h2>{{ posts.title }}</h2>
+        <p>3 กันยายน 2563 | ข่าวสารองค์กร</p>
+        <img
+          :src="`https://api.unii.co.th/api/uploads/${posts.image}`"
+          alt=""
+        />
+        <br />
+        <!-- eslint-disable-next-line vue/no-v-html -->
+        <p v-html="posts.description">{{ posts.description }}</p>
+      </div>
+      <!-- <div class="row">
       <div class="leftcolumn mx-auto">
         <div v-for="(post, index) in posts" :key="index" class="card">
           <h2>
@@ -32,11 +36,13 @@
         </div>
       </div>
     </div> -->
+    </div>
   </div>
 </template>
 
 <script>
 export default {
+  loading: true,
   async asyncData({ $axios, params }) {
     const posts = await $axios.$get(
       `https://api.unii.co.th/api/post/${params.id}`

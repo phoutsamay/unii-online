@@ -12,6 +12,7 @@
 
 <script>
 export default {
+  loading: true,
   async asyncData({ $axios }) {
     const activitys = await $axios.$get('https://api.unii.co.th/api/activitys')
     return { activitys }
