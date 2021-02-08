@@ -11,20 +11,26 @@
     "lint": "npm run lint:js"
   },
   "dependencies": {
+    "@googlemaps/js-api-loader": "^1.11.1",
     "@nuxt/content": "^1.11.1",
+    "@nuxt/http": "^0.6.2",
     "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/style-resources": "^1.0.0",
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
+    "axios": "^0.21.1",
     "bootstrap": "^4.5.3",
     "bootstrap-vue": "^2.18.1",
     "core-js": "^3.6.5",
     "intersection-observer": "^0.11.0",
     "jquery": "^3.5.1",
+    "longdo-map-vue": "^1.0.5",
     "nuxt": "^2.14.6",
+    "nuxt-gmaps": "^1.2.10",
     "popper.js": "^1.16.1",
     "regenerator-runtime": "^0.13.7",
-    "v-owl-carousel": "^1.0.8"
+    "v-owl-carousel": "^1.0.8",
+    "vue2-google-maps": "^0.10.7"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.1.0",

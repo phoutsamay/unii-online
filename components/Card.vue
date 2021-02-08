@@ -15,6 +15,7 @@
         </p>
         <nuxt-link
           :to="{ name: 'blogs-id', params: { id: post._id } }"
+          target="_blank"
           class="stretched-link"
         ></nuxt-link>
         <!-- <a href="#" class="stretched-link"></a> -->

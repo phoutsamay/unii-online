@@ -1,3 +1,4 @@
+const baseURL = 'https://api.unii.co.th'
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -44,7 +45,10 @@ export default {
   css: [],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [{ src: 'plugins/owl.js', ssr: false }],
+  plugins: [
+    { src: 'plugins/owl.js', ssr: false },
+    { src: 'plugins/map.js', ssr: false },
+  ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -63,13 +67,25 @@ export default {
     '@nuxtjs/axios',
     // https://medium.com/@wearethreebears/globally-accessible-css-and-scss-sass-in-your-nuxt-component-files-7c1c012d31bd
     '@nuxtjs/style-resources',
+    '@nuxt/http',
   ],
   styleResources: {
     scss: ['~/assets/scss/main.scss'],
   },
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
-  axios: {},
+  axios: {
+    baseURL,
+    proxy: true,
+  },
+
+  proxy: {
+    '/api/': baseURL,
+  },
+
+  env: {
+    API_HOST: 'localhost:3000',
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
