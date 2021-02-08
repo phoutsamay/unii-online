@@ -50,8 +50,8 @@ export default {
       posts: [],
     }
   },
-  mounted() {
-    this.getPost()
+  async mounted() {
+    await this.getPost()
   },
   methods: {
     async getPost() {

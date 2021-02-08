@@ -23,8 +23,8 @@ export default {
       banners: null,
     }
   },
-  mounted() {
-    this.getBanner()
+  async mounted() {
+    await this.getBanner()
   },
   methods: {
     async getBanner() {

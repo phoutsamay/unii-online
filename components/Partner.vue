@@ -32,8 +32,8 @@ export default {
       partners: null,
     }
   },
-  mounted() {
-    this.getPartner()
+  async mounted() {
+    await this.getPartner()
   },
   methods: {
     async getPartner() {
