@@ -27,20 +27,23 @@
 
 <script>
 export default {
+  async fetch() {
+    this.partners = await this.$axios.$get('/api/partners')
+  },
   data() {
     return {
       partners: null,
     }
   },
-  async mounted() {
-    await this.getPartner()
-  },
-  methods: {
-    async getPartner() {
-      const data = await this.$axios.$get('/api/partners')
-      this.partners = data
-    },
-  },
+  // async mounted() {
+  //   await this.getPartner()
+  // },
+  // methods: {
+  //   async getPartner() {
+  //     const data = await this.$axios.$get('/api/partners')
+  //     this.partners = data
+  //   },
+  // },
 }
 </script>
 

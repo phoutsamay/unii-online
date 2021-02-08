@@ -29,20 +29,23 @@
 
 <script>
 export default {
+  async fetch() {
+    this.noticeboards = await this.$axios.$get('/api/noticeboards')
+  },
   data() {
     return {
       noticeboards: [],
     }
   },
-  async mounted() {
-    await this.getNoticeboards()
-  },
-  methods: {
-    async getNoticeboards() {
-      const data = await this.$axios.$get('/api/noticeboards')
-      this.noticeboards = data
-    },
-  },
+  // async mounted() {
+  //   await this.getNoticeboards()
+  // },
+  // methods: {
+  //   async getNoticeboards() {
+  //     const data = await this.$axios.$get('/api/noticeboards')
+  //     this.noticeboards = data
+  //   },
+  // },
 }
 </script>
 

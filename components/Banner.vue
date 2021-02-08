@@ -18,20 +18,23 @@
 
 <script>
 export default {
+  async fetch() {
+    this.banners = await this.$axios.$get('/api/banners')
+  },
   data() {
     return {
       banners: null,
     }
   },
-  async mounted() {
-    await this.getBanner()
-  },
-  methods: {
-    async getBanner() {
-      const data = await this.$axios.$get('/api/banners')
-      this.banners = data
-    },
-  },
+  // async mounted() {
+  //   await this.getBanner()
+  // },
+  // methods: {
+  //   async getBanner() {
+  //     const data = await this.$axios.$get('/api/banners')
+  //     this.banners = data
+  //   },
+  // },
 }
 </script>
 
