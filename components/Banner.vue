@@ -23,15 +23,20 @@ export default {
       banners: [],
     }
   },
-  mounted() {
-    this.getBanner()
+  created() {
+    this.$axios.get('/api/banners').then((res) => {
+      this.banners = res.data
+    })
   },
-  methods: {
-    async getBanner() {
-      const data = await this.$axios.$get('/api/banners')
-      this.banners = data
-    },
-  },
+  // mounted() {
+  //   this.getBanner()
+  // },
+  // methods: {
+  //   async getBanner() {
+  //     const data = await this.$axios.$get('/api/banners')
+  //     this.banners = data
+  //   },
+  // },
 }
 </script>
 
