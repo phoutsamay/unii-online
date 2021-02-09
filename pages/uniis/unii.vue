@@ -97,19 +97,16 @@
 
 <script>
 export default {
-  // async fetch() {
-  //   this.uniis = await this.$axios.$get('/api/uniis')
-  // },
+  async asyncData({ $axios }) {
+    const uniis = await $axios.$get('/api/uniis')
+
+    return { uniis }
+  },
   data() {
     return {
       uniis: [],
       selected: '',
     }
-  },
-  created() {
-    this.$axios.get('/api/uniis').then((res) => {
-      this.uniis = res.data
-    })
   },
   methods: {
     sendInfo(item) {
