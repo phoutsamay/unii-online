@@ -1,26 +1,28 @@
 <template>
-  <div id="overley">
-    <div class="container mt-5">
-      <div
-        v-for="(noticeboard, index) in noticeboards"
-        :key="index"
-        class="row"
-      >
-        <div class="col-12 col-sm-12 col-md-12 col-lg-6 mt-5">
-          <p v-html="noticeboard.description"></p>
+  <div>
+    <div id="overley">
+      <div class="container mt-5">
+        <div
+          v-for="(noticeboard, index) in noticeboards"
+          :key="index"
+          class="row"
+        >
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6 mt-5">
+            <p v-html="noticeboard.description"></p>
 
-          <a :href="noticeboard.linkbtn" target="_blank"
-            ><b-button class="outline-purple mt-3"
-              >สมัครอบรม คลิ๊ก!!!</b-button
-            ></a
-          >
-        </div>
-        <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center">
-          <img
-            :src="`https://api.unii.co.th/api/uploads/${noticeboard.image}`"
-            alt=""
-            width="75%"
-          />
+            <a :href="noticeboard.linkbtn" target="_blank"
+              ><b-button class="outline-purple mt-3"
+                >สมัครอบรม คลิ๊ก!!!</b-button
+              ></a
+            >
+          </div>
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center">
+            <img
+              :src="`https://api.unii.co.th/api/uploads/${noticeboard.image}`"
+              alt=""
+              width="75%"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -29,20 +31,26 @@
 
 <script>
 export default {
+  async fetch() {
+    this.noticeboards = await fetch('/api/noticeboards').then((res) =>
+      res.json()
+    )
+  },
+  fetchOnServer: false,
   data() {
     return {
       noticeboards: [],
     }
   },
-  mounted() {
-    this.getNoticeboards()
-  },
-  methods: {
-    async getNoticeboards() {
-      const data = await this.$axios.$get('/api/noticeboards')
-      this.noticeboards = data
-    },
-  },
+  // mounted() {
+  //   this.getNoticeboards()
+  // },
+  // methods: {
+  //   async getNoticeboards() {
+  //     const data = await this.$axios.$get('/api/noticeboards')
+  //     this.noticeboards = data
+  //   },
+  // },
 }
 </script>
 

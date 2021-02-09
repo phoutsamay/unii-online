@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="uniis.length > 0">
     <div class="bg-img"></div>
     <div class="centered"><h1>OUR TEAM</h1></div>
     <div class="container">
@@ -98,8 +98,9 @@
 <script>
 export default {
   async fetch() {
-    this.uniis = await this.$axios.$get('/api/uniis')
+    this.uniis = await fetch('/api/uniis').then((res) => res.json())
   },
+  fetchOnServer: false,
   data() {
     return {
       uniis: [],
