@@ -100,7 +100,7 @@ export default {
   async fetch() {
     this.uniis = await fetch('/api/uniis').then((res) => res.json())
   },
-  fetchOnServer: false,
+  fetchOnServer: true,
   data() {
     return {
       uniis: [],

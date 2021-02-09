@@ -30,7 +30,7 @@ export default {
   async fetch() {
     this.partners = await fetch('/api/partners').then((res) => res.json())
   },
-  fetchOnServer: false,
+  fetchOnServer: true,
   data() {
     return {
       partners: [],

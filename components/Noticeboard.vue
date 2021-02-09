@@ -36,7 +36,7 @@ export default {
       res.json()
     )
   },
-  fetchOnServer: false,
+  fetchOnServer: true,
   data() {
     return {
       noticeboards: [],
