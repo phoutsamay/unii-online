@@ -34,17 +34,11 @@ export default {
   },
   mounted() {
     this.getPartner()
-    console.log('partnerlog', this.partners)
   },
   methods: {
-    getPartner() {
-      this.$axios.get('/api/partners').then((res) => {
-        console.log('partnerlog', res.data)
-        this.partners = res.data
-      })
-
-      // const data = await this.$axios.$get('/api/partners')
-      // this.partners = data
+    async getPartner() {
+      const data = await this.$axios.$get('/api/partners')
+      this.partners = data
     },
   },
 }

@@ -7,7 +7,7 @@
           <img
             v-for="item in banners"
             :key="item.id"
-            :src="`https://api.unii.co.th/api/uploads/${item.image}`"
+            :src="`/api/uploads/${item.image}`"
             width="100%"
           />
         </carousel>
@@ -25,18 +25,11 @@ export default {
   },
   mounted() {
     this.getBanner()
-    console.log('bannerlog', this.banners)
   },
   methods: {
-    getBanner() {
-      this.$axios.get('/api/banners').then((res) => {
-        console.log('reslog', res.data)
-        this.banners = res.data
-      })
-
-      // const data = await this.$axios.$get('/api/banners')
-      // console.log('Banner')
-      // this.banners = data
+    async getBanner() {
+      const data = await this.$axios.$get('/api/banners')
+      this.banners = data
     },
   },
 }

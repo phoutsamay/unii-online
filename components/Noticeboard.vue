@@ -36,17 +36,11 @@ export default {
   },
   mounted() {
     this.getNoticeboards()
-    console.log('noticeboardlog', this.noticeboards)
   },
   methods: {
-    getNoticeboards() {
-      this.$axios.get('/api/noticeboards').then((res) => {
-        console.log('noticeboardlog', res.data)
-        this.noticeboards = res.data
-      })
-
-      // const data = await this.$axios.$get('/api/noticeboards')
-      // this.noticeboards = data
+    async getNoticeboards() {
+      const data = await this.$axios.$get('/api/noticeboards')
+      this.noticeboards = data
     },
   },
 }
