@@ -57,20 +57,20 @@
 </template>
 
 <script>
-import axios from 'axios'
 export default {
   data() {
     return {
       videos: [],
     }
   },
-  async mounted() {
-    await this.getVideo()
+  mounted() {
+    this.getVideo()
+    console.log('videolog', this.videos)
   },
   methods: {
     getVideo() {
-      axios.get('/api/videos').then((res) => {
-        console.log(res.data)
+      this.$axios.get('/api/videos').then((res) => {
+        console.log('video', res.data)
         this.videos = res.data
       })
 

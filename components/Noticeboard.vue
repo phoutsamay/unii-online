@@ -28,20 +28,20 @@
 </template>
 
 <script>
-import axios from 'axios'
 export default {
   data() {
     return {
       noticeboards: [],
     }
   },
-  async mounted() {
-    await this.getNoticeboards()
+  mounted() {
+    this.getNoticeboards()
+    console.log('noticeboardlog', this.noticeboards)
   },
   methods: {
     getNoticeboards() {
-      axios.get('/api/noticeboards').then((res) => {
-        console.log(res.data)
+      this.$axios.get('/api/noticeboards').then((res) => {
+        console.log('noticeboardlog', res.data)
         this.noticeboards = res.data
       })
 
