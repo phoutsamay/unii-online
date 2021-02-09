@@ -61,7 +61,7 @@ export default {
   async fetch() {
     this.videos = await fetch('/api/videos').then((res) => res.json())
   },
-  fetchOnServer: false,
+  fetchOnServer: true,
   data() {
     return {
       videos: [],
