@@ -17,20 +17,20 @@
 </template>
 
 <script>
-import axios from 'axios'
 export default {
   data() {
     return {
       banners: [],
     }
   },
-  async mounted() {
-    await this.getBanner()
+  mounted() {
+    this.getBanner()
+    console.log('bannerlog', this.banners)
   },
   methods: {
     getBanner() {
-      axios.get('/api/banners').then((res) => {
-        console.log(res.data)
+      this.$axios.get('/api/banners').then((res) => {
+        console.log('reslog', res.data)
         this.banners = res.data
       })
 

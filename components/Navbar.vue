@@ -24,7 +24,7 @@
                   <b-nav-item href="#video">วีดีโอ</b-nav-item>
                   <b-nav-item href="#blog">บทความ</b-nav-item>
                   <b-nav-item href="#">ร่วมงานกับ Unii</b-nav-item>
-                  <b-nav-item href="/umt/umt">ค้นหา Unii Team</b-nav-item>
+                  <b-nav-item href="/uniis/unii">ค้นหา Unii Team</b-nav-item>
                   <b-nav-item href="#footer">ติดต่อเรา</b-nav-item>
                 </b-navbar-nav>
                 <hr />
@@ -47,7 +47,7 @@
             <b-nav-item class="px-2" href="#video">วีดีโอ</b-nav-item>
             <b-nav-item class="px-2" href="#blog">บทความ</b-nav-item>
             <b-nav-item class="px-2" href="#">ร่วมงานกับ Unii</b-nav-item>
-            <b-nav-item class="px-2" href="/umt/umt"
+            <b-nav-item class="px-2" href="/uniis/unii"
               >ค้นหา Unii Team</b-nav-item
             >
             <b-nav-item class="px-2" href="#footer">ติดต่อเรา</b-nav-item>
