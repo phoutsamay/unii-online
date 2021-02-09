@@ -65,17 +65,11 @@ export default {
   },
   mounted() {
     this.getVideo()
-    console.log('videolog', this.videos)
   },
   methods: {
-    getVideo() {
-      this.$axios.get('/api/videos').then((res) => {
-        console.log('video', res.data)
-        this.videos = res.data
-      })
-
-      // const data = await this.$axios.$get('/api/videos')
-      // this.videos = data
+    async getVideo() {
+      const data = await this.$axios.$get('/api/videos')
+      this.videos = data
     },
   },
 }
