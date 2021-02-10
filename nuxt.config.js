@@ -1,4 +1,4 @@
-const baseURL = 'https://api.unii.co.th'
+const baseURL = 'http://api.unii.co.th'
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
