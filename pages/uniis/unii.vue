@@ -3,9 +3,43 @@
     <div class="bg-img"></div>
     <div class="centered"><h1>OUR TEAM</h1></div>
     <div class="container">
+      <b-card>
+        <template #header>
+          <div class="card-header">
+            <h4>ค้นหาสาขาและจุดบริการยูนี่</h4>
+          </div>
+        </template>
+
+        <b-card-body>
+          <div>
+            <GoogleMap :items="uniis"> </GoogleMap>
+          </div>
+        </b-card-body>
+
+        <b-card-text>
+          <div>
+            <b-table sticky-header hover :items="uniis" :fields="fields">
+              <template #cell(actions)="item">
+                <b-link v-b-modal="'myModal'" size="sm" @click="sendInfo(item)">
+                  ดูแผนที่
+                </b-link>
+              </template>
+            </b-table>
+            <b-modal id="myModal" size="lg">
+              <h5>{{ selected.name }}</h5>
+              <p>{{ selected.address }}</p>
+              <div class="mapstyle">
+                <GoogleMap :items="selected"> </GoogleMap>
+              </div>
+            </b-modal>
+          </div>
+        </b-card-text>
+      </b-card>
+    </div>
+    <!-- <div class="bg-img"></div>
+    <div class="centered"><h1>OUR TEAM</h1></div>
+    <div class="container">
       <div class="card">
-        <!-- <ModalMap /> -->
-        <!-- Modal -->
         <b-modal id="myModal" size="lg">
           <h5>{{ selected.name }}</h5>
           <p>{{ selected.address }}</p>
@@ -13,7 +47,7 @@
             <GoogleMap :items="selected"> </GoogleMap>
           </div>
         </b-modal>
-        <!-- End Modal -->
+
         <div class="card-header">
           <h4>ค้นหาสาขาและจุดบริการยูนี่</h4>
         </div>
@@ -55,10 +89,6 @@
           <GoogleMap :items="uniis"> </GoogleMap>
         </div>
 
-        <!-- <img
-          src="../../assets/imgs/1Why-Create-GoogleMaps-Listing-TH-1.jpg"
-          alt=""
-        /> -->
         <div class="card-body overflow-auto">
           <table class="table">
             <thead>
@@ -76,7 +106,6 @@
                 </td>
                 <td>{{ item.tel }}</td>
                 <td>
-                  <!-- <a v-b-modal.modal-1>ดูแผนที่</a> -->
                   <b-link
                     v-b-modal="'myModal'"
                     size="sm"
@@ -91,7 +120,7 @@
           </table>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -106,6 +135,26 @@ export default {
     return {
       uniis: [],
       selected: '',
+      fields: [
+        {
+          key: 'name',
+          label: 'ชื่อ',
+          sortable: false,
+        },
+        {
+          key: 'address',
+          label: 'สาขา/ที่ตั้ง',
+          sortable: false,
+        },
+        {
+          key: 'tel',
+          label: 'เบอร์โทรศัพท์',
+          sortable: false,
+        },
+        {
+          key: 'actions',
+        },
+      ],
     }
   },
   methods: {
@@ -128,15 +177,15 @@ body {
   padding-left: 20px;
   padding-right: 20px;
 }
-.card {
+/* .card {
   margin: 20px;
   margin-top: -170px;
   height: 60em;
   border: none;
-}
+} */
 .card-header {
   background-color: #993a96;
-  padding: 30px;
+  padding: 20px;
 }
 thead {
   color: #993a96;
