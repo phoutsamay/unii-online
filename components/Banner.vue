@@ -33,9 +33,15 @@ export default {
   },
   methods: {
     async getBanner() {
-      await this.$axios.$get('/api/banners').then((res) => (this.banners = res))
+      await this.$axios
+        .$get('/api/banners')
+        .then((res) => {
+          this.banners = res.data
+        })
+        .catch((error) => {
+          console.log(error)
+        })
       // this.banners = data
-      console.log(this.banners)
     },
   },
 }
