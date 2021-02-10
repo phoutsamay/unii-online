@@ -1,16 +1,15 @@
 /* eslint-disable vue/attribute-hyphenation */
 <template>
   <div>
-    <Banner />
-    <!-- <Video /> -->
-    <!-- <Partner /> -->
-    <!-- <Noticeboard /> -->
-    <!-- <Service /> -->
-    <!-- <About /> -->
-    <!-- <Process /> -->
+    <!-- <Banner />
+    <Video />
+    <Partner />
+    <Noticeboard />
+    <Service />
+    <About />
+    <Process /> -->
     <!-- <News /> -->
-
-    <!-- <client-only>
+    <client-only>
       <carousel
         class="sectioncarousel"
         :autoplay="true"
@@ -27,10 +26,10 @@
           width="100%"
         />
       </carousel>
-    </client-only> -->
-    <!-- <section id="carousel"></section> -->
+    </client-only>
+    <section id="carousel"></section>
 
-    <!-- <section id="video">
+    <section id="video">
       <div class="container pt-5">
         <div class="text-center">
           <h1>ทำความรู้จักกับ ยูนี่ ออนไลน์</h1>
@@ -80,9 +79,9 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
-    <!-- <section id="partner">
+    <section id="partner">
       <div class="container my-5">
         <h3 class="text-center mb-4">ส่งสินค้ากลับสู่ผู้ผลิตทุกราย</h3>
         <carousel
@@ -100,9 +99,9 @@
           />
         </carousel>
       </div>
-    </section> -->
+    </section>
 
-    <!-- <section id="overley">
+    <section id="overley">
       <div class="container mt-5">
         <div
           v-for="(noticeboard, index) in noticeboards"
@@ -127,9 +126,9 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
-    <!-- <section id="service">
+    <section id="service">
       <div class="container py-5">
         <div>
           <b-card-group deck>
@@ -189,9 +188,9 @@
           </b-card-group>
         </div>
       </div>
-    </section> -->
+    </section>
 
-    <!-- <section id="about">
+    <section id="about">
       <div class="container py-5">
         <div class="text-center col-lg-8 mx-auto">
           <img src="../assets/imgs/head-unii.png" alt="" />
@@ -211,9 +210,9 @@
           <img src="../assets/imgs/mockupIP.png" alt="" width="100%" />
         </div>
       </div>
-    </section> -->
+    </section>
 
-    <!-- <client-only>
+    <client-only>
       <section id="process">
         <div class="container mt-5">
           <b-card style="border: 1px solid #69197b">
@@ -277,9 +276,9 @@
           </b-card>
         </div>
       </section>
-    </client-only> -->
+    </client-only>
 
-    <!-- <section id="news" class="mt-4">
+    <section id="news" class="mt-4">
       <div class="container my-5">
         <h1 class="pb-5">Unii News ข่าวสาร ยูนี่</h1>
         <div
@@ -356,9 +355,9 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
-    <!-- <section id="blog">
+    <section id="blog">
       <div class="container mt-5">
         <h1>บทความดีๆจาก ยูนี่ ออนไลน์</h1>
         <div class="row row-cols-1 row-cols-md-3">
@@ -376,9 +375,9 @@
           >
         </div>
       </div>
-    </section> -->
+    </section>
 
-    <!-- <section id="team">
+    <section id="team">
       <div class="container py-5">
         <h1>MEET OUR TEAM</h1>
         <p>รายชื่อทีมผู่ก่อตั้ง UNII</p>
@@ -453,12 +452,12 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
   </div>
 </template>
 
 <script>
-import Banner from '~/components/Banner.vue'
+// import Banner from '~/components/Banner.vue'
 // import Partner from '~/components/Partner.vue'
 // import Video from '~/components/Video.vue'
 // // import Partner from '~/components/Partner.vue'
@@ -470,7 +469,7 @@ import Banner from '~/components/Banner.vue'
 // // import Post from '~/components/Post.vue'
 export default {
   components: {
-    Banner,
+    // Banner,
     // Video,
     // Partner,
     // // Partner,
@@ -481,16 +480,16 @@ export default {
     // // News,
     // // Post,
   },
-  // async asyncData({ $axios }) {
-  //   const posts = await $axios.$get('/api/posts')
-  //   const partners = await $axios.$get('/api/partners')
-  //   const banners = await $axios.$get('/api/banners')
-  //   const noticeboards = await $axios.$get('/api/noticeboards')
-  //   const videos = await $axios.$get('/api/videos')
-  //   const activitys = await $axios.$get('/api/activitys')
+  async asyncData({ $axios }) {
+    const posts = await $axios.$get('/api/posts')
+    const partners = await $axios.$get('/api/partners')
+    const banners = await $axios.$get('/api/banners')
+    const noticeboards = await $axios.$get('/api/noticeboards')
+    const videos = await $axios.$get('/api/videos')
+    const activitys = await $axios.$get('/api/activitys')
 
-  //   return { posts, partners, banners, noticeboards, videos, activitys }
-  // },
+    return { posts, partners, banners, noticeboards, videos, activitys }
+  },
 }
 </script>
 

@@ -37,7 +37,7 @@ export default {
         .$get('/api/banners')
         .then((res) => {
           console.log('zz', res.data)
-          this.banners = res.data.data
+          this.banners = res.data
           console.log('xx', this.banners)
         })
         .catch((error) => {
