@@ -1,5 +1,5 @@
 <template>
-  <div id="banner">
+  <div v-if="banners.length" id="banner">
     <!-- Carousel -->
     <div v-if="banners.length > 0">
       <client-only>
@@ -36,7 +36,7 @@ export default {
       await this.$axios
         .$get('/api/banners')
         .then((res) => {
-          console.log(res.data)
+          console.log('zz', res.data)
           this.banners = res.data
           console.log('xx', this.banners)
         })
