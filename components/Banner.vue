@@ -36,7 +36,9 @@ export default {
       await this.$axios
         .$get('/api/banners')
         .then((res) => {
+          console.log(res.data)
           this.banners = res.data
+          console.log('xx', this.banners)
         })
         .catch((error) => {
           console.log(error)
