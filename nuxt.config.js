@@ -79,11 +79,11 @@ export default {
   },
 
   proxy: {
-    '/api/': baseURL,
+    '^api/': baseURL,
   },
 
   env: {
-    API_HOST: 'localhost:3000',
+    API_HOST: baseURL,
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
