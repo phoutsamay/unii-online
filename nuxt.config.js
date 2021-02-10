@@ -1,4 +1,4 @@
-const baseURL = 'https://api.unii.co.th'
+// const baseURL = 'https://api.unii.co.th'
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -74,16 +74,12 @@ export default {
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
-    baseURL,
+    baseURL: 'https://api.unii.co.th',
     proxy: true,
   },
 
   proxy: {
-    '^api/': baseURL,
-  },
-
-  env: {
-    API_HOST: baseURL,
+    '^api/': 'https://api.unii.co.th',
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
