@@ -1,4 +1,8 @@
-const baseURL = 'https://api.unii.co.th'
+// const baseURL = 'https://api.unii.co.th'
+const baseURL =
+  process.env.NODE_ENV === 'production'
+    ? 'https://api.unii.co.th'
+    : 'http://127.0.0.1:5000'
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -75,11 +79,16 @@ export default {
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
     baseURL,
-    proxy: true,
+    // proxy: true,
   },
 
   proxy: {
-    '/api/': baseURL,
+    '/api': {
+      target: baseURL,
+      pathRewrite: {
+        '^/api': '/',
+      },
+    },
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)

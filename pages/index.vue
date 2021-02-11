@@ -1,15 +1,15 @@
-/* eslint-disable vue/attribute-hyphenation */
 <template>
   <div>
-    <!-- <Banner />
-    <Video />
-    <Partner />
-    <Noticeboard />
-    <Service />
-    <About />
-    <Process /> -->
+    <Banner />
+    <!-- <Video /> -->
+    <!-- <Partner /> -->
+    <!-- <Noticeboard /> -->
+    <!-- <Service /> -->
+    <!-- <About /> -->
+    <!-- <Process /> -->
     <!-- <News /> -->
-    <client-only>
+
+    <!-- <client-only>
       <carousel
         class="sectioncarousel"
         :autoplay="true"
@@ -26,8 +26,8 @@
           width="100%"
         />
       </carousel>
-    </client-only>
-    <section id="carousel"></section>
+    </client-only> -->
+    <!-- <section id="carousel"></section> -->
 
     <section id="video">
       <div class="container pt-5">
@@ -457,7 +457,7 @@
 </template>
 
 <script>
-// import Banner from '~/components/Banner.vue'
+import Banner from '~/components/Banner.vue'
 // import Partner from '~/components/Partner.vue'
 // import Video from '~/components/Video.vue'
 // // import Partner from '~/components/Partner.vue'
@@ -469,7 +469,7 @@
 // // import Post from '~/components/Post.vue'
 export default {
   components: {
-    // Banner,
+    Banner,
     // Video,
     // Partner,
     // // Partner,
@@ -483,12 +483,12 @@ export default {
   async asyncData({ $axios }) {
     const posts = await $axios.$get('/api/posts')
     const partners = await $axios.$get('/api/partners')
-    const banners = await $axios.$get('/api/banners')
+    // const banners = await $axios.$get('/api/banners')
     const noticeboards = await $axios.$get('/api/noticeboards')
     const videos = await $axios.$get('/api/videos')
     const activitys = await $axios.$get('/api/activitys')
 
-    return { posts, partners, banners, noticeboards, videos, activitys }
+    return { posts, partners, noticeboards, videos, activitys }
   },
 }
 </script>
