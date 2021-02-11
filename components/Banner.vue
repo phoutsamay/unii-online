@@ -1,6 +1,7 @@
 <template>
   <div v-if="banners.length" id="banner">
     <!-- Carousel -->
+    <div class="555555555"></div>
     <div v-if="banners.length > 0">
       <no-ssr>
         <carousel :autoplay="true" :loop="true" :items="1" :nav="false">
