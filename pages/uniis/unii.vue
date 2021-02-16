@@ -4,6 +4,13 @@
     <div class="centered"><h1>OUR TEAM</h1></div>
     <div class="container">
       <b-card>
+        <b-modal v-model="show" size="lg">
+          <h5>{{ selected.name }}</h5>
+          <p>{{ selected.address }}</p>
+          <div class="mapstyle">
+            <GoogleMap :items="selected"> </GoogleMap>
+          </div>
+        </b-modal>
         <template #header>
           <div class="card-header">
             <h4>ค้นหาสาขาและจุดบริการยูนี่</h4>
@@ -11,7 +18,7 @@
         </template>
 
         <b-card-body>
-          <div>
+          <div v-if="uniis.length > 0">
             <GoogleMap :items="uniis"> </GoogleMap>
           </div>
         </b-card-body>
@@ -19,19 +26,12 @@
         <b-card-text>
           <div>
             <b-table sticky-header hover :items="uniis" :fields="fields">
-              <template #cell(actions)="item">
-                <b-link v-b-modal="'myModal'" size="sm" @click="sendInfo(item)">
+              <template #cell(actions)="row">
+                <b-link size="sm" @click="sendInfo(row.item)">
                   ดูแผนที่
                 </b-link>
               </template>
             </b-table>
-            <b-modal id="myModal" size="lg">
-              <h5>{{ selected.name }}</h5>
-              <p>{{ selected.address }}</p>
-              <div class="mapstyle">
-                <GoogleMap :items="selected"> </GoogleMap>
-              </div>
-            </b-modal>
           </div>
         </b-card-text>
       </b-card>
@@ -126,15 +126,11 @@
 
 <script>
 export default {
-  async asyncData({ $axios }) {
-    const uniis = await $axios.$get('/api/uniis')
-
-    return { uniis }
-  },
   data() {
     return {
       uniis: [],
       selected: '',
+      show: false,
       fields: [
         {
           key: 'name',
@@ -153,13 +149,31 @@ export default {
         },
         {
           key: 'actions',
+          label: 'แผนที่',
         },
       ],
     }
   },
+  mounted() {
+    this.getUnii()
+  },
   methods: {
+    async getUnii() {
+      await this.$axios
+        .$get('/api/uniis')
+        .then((res) => {
+          // console.log('zz', res.data)
+          this.uniis = res
+          // console.log('logUnii', this.uniis)
+        })
+        .catch((error) => {
+          // eslint-disable-next-line no-console
+          console.log(error)
+        })
+    },
     sendInfo(item) {
       this.selected = item
+      this.show = true
     },
   },
 }

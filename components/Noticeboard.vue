@@ -7,6 +7,7 @@
         class="row"
       >
         <div class="col-12 col-sm-12 col-md-12 col-lg-6 mt-5">
+          <!-- eslint-disable-next-line vue/no-v-html -->
           <p v-html="noticeboard.description"></p>
 
           <a :href="noticeboard.linkbtn" target="_blank"
@@ -34,20 +35,25 @@ export default {
       noticeboards: [],
     }
   },
-  created() {
-    this.$axios.get('/api/noticeboards').then((res) => {
-      this.noticeboards = res.data
-    })
+  mounted() {
+    this.getNoticeboard()
   },
-  // mounted() {
-  //   this.getNoticeboards()
-  // },
-  // methods: {
-  //   async getNoticeboards() {
-  //     const data = await this.$axios.$get('/api/noticeboards')
-  //     this.noticeboards = data
-  //   },
-  // },
+  methods: {
+    async getNoticeboard() {
+      await this.$axios
+        .$get('/api/noticeboards')
+        .then((res) => {
+          // console.log('zz', res.data)
+          this.noticeboards = res.data
+          // console.log('logNoticeboard', this.noticeboards)
+        })
+        .catch((error) => {
+          // eslint-disable-next-line no-console
+          console.log(error)
+        })
+      // this.noticeboards = data
+    },
+  },
 }
 </script>
 
