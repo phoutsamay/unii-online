@@ -1,31 +1,11 @@
 <template>
-  <!-- <div>
-    <div class="container">
-      <div>
-        <h1>บทความจาก ยูนี่</h1>
-      </div>
-      <div class="row row-cols-1 row-cols-md-3">
-        <div v-for="item in posts" :key="item.id" class="card h-100 shadow-sm">
-          <img
-            :src="`https://api.unii.co.th/api/uploads/${item.image}`"
-            class="card-img-top"
-            alt=""
-          />
-          <div class="card-body">
-            <h5 class="card-title">{{ item.title }}</h5>
-            <small class="text-muted">Last updated 3 mins ago</small>
-
-            <p class="card-text" v-html="item.description"></p>
-            <b-button variant="primary">Primary</b-button>
-          </div>
-        </div>
-      </div>
+  <div id="blog" class="container mt-5">
+    <div class="my-4">
+      <h1>บทความดีๆจาก ยูนี่ ออนไลน์</h1>
     </div>
-  </div> -->
-  <div class="container">
     <b-card-group deck>
       <b-card
-        v-for="item in posts"
+        v-for="item in posts.slice(0, 3)"
         :key="item.id"
         :title="item.title"
         :img-src="`https://api.unii.co.th/api/uploads/${item.image}`"
@@ -34,11 +14,21 @@
         class="shadow-sm"
       >
         <small class="text-muted">Last updated 3 mins ago</small>
+        <!-- eslint-disable-next-line vue/no-v-html -->
         <b-card-text v-html="item.description"> </b-card-text>
+        <nuxt-link
+          :to="{ name: 'blogs-id', params: { id: item._id } }"
+          target="_blank"
+          class="stretched-link"
+        ></nuxt-link>
       </b-card>
     </b-card-group>
-    <div class="text-center">
-      <button type="button" class="btn btn-custom">บทความทั้งหมด</button>
+    <div class="text-center mt-5">
+      <NuxtLink to="/blogs/allblogs">
+        <b-button size="lg" class="btn btn-purple" type="submit"
+          >ดูทั้งหมด</b-button
+        ></NuxtLink
+      >
     </div>
   </div>
 </template>

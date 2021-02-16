@@ -10,7 +10,9 @@
       </div>
       <div>
         <b-embed
-          src="https://www.youtube.com/embed/CMQOxxgvgi8?controls=0"
+          v-if="videos[0]"
+          id="youtube"
+          :src="`https://www.youtube.com/embed/${videos[0].title}?controls=0`"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
@@ -26,19 +28,18 @@
               :loop="true"
               :margin="20"
               :video="true"
-              :lazyLoad="true"
               :nav="false"
-              :autoplayHoverPause="true"
               :responsive="{
                 0: { items: 1, nav: false },
                 600: { items: 3, nav: false },
               }"
             >
-              <div v-for="(video, index) in videos" :key="index" :video="video">
+              <div v-for="item in videos" :key="item.id">
                 <img
-                  :src="`https://img.youtube.com/vi/` + video.title + `/0.jpg`"
+                  :src="`https://img.youtube.com/vi/${item.title}/0.jpg`"
                   style="width: 100%; height: 200px"
                   alt=""
+                  @click="changeVideo(item.title)"
                 />
               </div>
             </carousel>
@@ -63,20 +64,28 @@ export default {
       videos: [],
     }
   },
-  created() {
-    this.$axios.get('/api/videos').then((res) => {
-      this.videos = res.data
-    })
+  mounted() {
+    this.getVideo()
   },
-  // mounted() {
-  //   this.getVideo()
-  // },
-  // methods: {
-  //   async getVideo() {
-  //     const data = await this.$axios.$get('/api/videos')
-  //     this.videos = data
-  //   },
-  // },
+  methods: {
+    async getVideo() {
+      await this.$axios
+        .$get('/api/videos')
+        .then((res) => {
+          // console.log('zz', res.data)
+          this.videos = res.data
+          // console.log('logVideo', this.videos)
+        })
+        .catch((error) => {
+          // eslint-disable-next-line no-console
+          console.log(error)
+        })
+    },
+    changeVideo(videoId) {
+      const ytString = 'https://www.youtube.com/embed/' + videoId
+      document.getElementById('youtube').src = ytString
+    },
+  },
 }
 </script>
 

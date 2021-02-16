@@ -16,7 +16,7 @@
             <img
               v-for="item in partners"
               :key="item.id"
-              :src="`/api/uploads/${item.image}`"
+              :src="`${$axios.defaults.baseURL}/api/uploads/${item.image}`"
             />
           </carousel>
         </client-only>
@@ -32,20 +32,25 @@ export default {
       partners: [],
     }
   },
-  created() {
-    this.$axios.get('/api/partners').then((res) => {
-      this.partners = res.data
-    })
+  mounted() {
+    this.getPartner()
   },
-  // mounted() {
-  //   this.getPartner()
-  // },
-  // methods: {
-  //   async getPartner() {
-  //     const data = await this.$axios.$get('/api/partners')
-  //     this.partners = data
-  //   },
-  // },
+  methods: {
+    async getPartner() {
+      await this.$axios
+        .$get('/api/partners')
+        .then((res) => {
+          // console.log('zz', res.data)
+          this.partners = res.data
+          // console.log('logPartner', this.partners)
+        })
+        .catch((error) => {
+          // eslint-disable-next-line no-console
+          console.log(error)
+        })
+      // this.partners = data
+    },
+  },
 }
 </script>
 
