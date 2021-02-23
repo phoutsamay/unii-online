@@ -45,8 +45,18 @@ export default {
   },
   methods: {
     async getPost() {
-      const data = await this.$axios.$get('/api/posts')
-      this.posts = data
+      await this.$axios
+        .$get('/api/posts')
+        .then((res) => {
+          // console.log('zz', res.data)
+          this.posts = res.data
+          // console.log('logPost', this.posts)
+        })
+        .catch((error) => {
+          // eslint-disable-next-line no-console
+          console.log(error)
+        })
+      // this.posts = data
     },
   },
 }
