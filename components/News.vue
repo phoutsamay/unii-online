@@ -101,7 +101,7 @@ export default {
         .$get('/api/activitys')
         .then((res) => {
           // console.log('zz', res.data)
-          this.activitys = res
+          this.activitys = res.data
           // console.log('logactivity', this.activitys)
         })
         .catch((error) => {
