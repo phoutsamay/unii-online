@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="container">
-      <b-card class="my-5">
+      <b-card v-if="posts" class="my-5">
         <b-card-title>{{ posts.title }}</b-card-title>
         <small class="text-muted">Last updated 3 mins ago</small>
         <b-card-img
@@ -67,7 +67,7 @@ export default {
       posts: [],
     }
   },
-  created() {
+  mounted() {
     this.getPost()
   },
   methods: {
