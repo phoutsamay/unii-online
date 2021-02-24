@@ -23,8 +23,18 @@ export default {
   },
   methods: {
     async getVideo() {
-      const data = await this.$axios.$get('/api/videos')
-      this.videos = data
+      await this.$axios
+        .$get('/api/videos')
+        .then((res) => {
+          // console.log('zz', res.data)
+          this.videos = res.data
+          // console.log('logVideo', this.videos)
+        })
+        .catch((error) => {
+          // eslint-disable-next-line no-console
+          console.log(error)
+        })
+      // this.videos = data
     },
   },
 }
