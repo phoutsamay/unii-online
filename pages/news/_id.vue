@@ -42,16 +42,33 @@
 
 <script>
 export default {
-  async asyncData({ $axios, params }) {
-    const activitys = await $axios.$get(
-      `https://api.unii.co.th/api/activity/${params.id}`
-    )
-    return { activitys }
-  },
+  // async asyncData({ $axios, params }) {
+  //   const activitys = await $axios.$get(
+  //     `https://api.unii.co.th/api/activity/${params.id}`
+  //   )
+  //   return { activitys }
+  // },
   data() {
     return {
       activitys: [],
     }
+  },
+  mounted() {
+    this.getActivity()
+  },
+  methods: {
+    async getActivity() {
+      await this.$axios
+        .$get(`/api/activity/${this.$route.params.id}`)
+        .then((res) => {
+          this.activitys = res.data
+          // console.log('logActivitys', this.activitys)
+        })
+        .catch((error) => {
+          // eslint-disable-next-line no-console
+          console.log(error)
+        })
+    },
   },
 }
 </script>

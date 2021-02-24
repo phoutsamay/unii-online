@@ -13,14 +13,33 @@
 <script>
 export default {
   loading: true,
-  async asyncData({ $axios }) {
-    const activitys = await $axios.$get('https://api.unii.co.th/api/activitys')
-    return { activitys }
-  },
+  // async asyncData({ $axios }) {
+  //   const activitys = await $axios.$get('https://api.unii.co.th/api/activitys')
+  //   return { activitys }
+  // },
   data() {
     return {
       activitys: [],
     }
+  },
+  mounted() {
+    this.getActivity()
+  },
+  methods: {
+    async getActivity() {
+      await this.$axios
+        .$get('/api/activitys')
+        .then((res) => {
+          // console.log('zz', res.data)
+          this.activitys = res.data
+          // console.log('logActivity', this.activitys)
+        })
+        .catch((error) => {
+          // eslint-disable-next-line no-console
+          console.log(error)
+        })
+      // this.activitys = data
+    },
   },
 }
 </script>
