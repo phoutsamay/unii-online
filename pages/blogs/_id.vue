@@ -1,18 +1,29 @@
 <template>
   <div>
     <div class="container">
-      <div class="card">
+      <b-card class="my-5">
+        <b-card-title>{{ posts.title }}</b-card-title>
+        <small class="text-muted">Last updated 3 mins ago</small>
+        <b-card-img
+          v-if="posts.image"
+          :src="`${$axios.defaults.baseURL}/api/uploads/${posts.image}`"
+          alt="Image"
+          bottom
+        ></b-card-img>
+        <b-card-text v-html="posts.description"> </b-card-text>
+      </b-card>
+      <!-- <div class="card">
         <h2>{{ posts.title }}</h2>
         <p>3 กันยายน 2563 | ข่าวสารองค์กร</p>
         <img
           v-if="posts.image"
-          :src="`https://api.unii.co.th/api/uploads/${posts.image}`"
+          :src="`${$axios.defaults.baseURL}/api/uploads/${posts.image}`"
           alt=""
         />
         <br />
-        <!-- eslint-disable-next-line vue/no-v-html -->
-        <p v-html="posts.description">{{ posts.description }}</p>
-      </div>
+        eslint-disable-next-line vue/no-v-html
+        <p v-html="posts.description"></p>
+      </div> -->
       <!-- <div class="row">
       <div class="leftcolumn mx-auto">
         <div v-for="(post, index) in posts" :key="index" class="card">
