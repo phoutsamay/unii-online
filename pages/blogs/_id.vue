@@ -85,7 +85,7 @@ export default {
   //       })
   //     // this.posts = data
   //   },
-  },
+  // },
 }
 </script>
 
