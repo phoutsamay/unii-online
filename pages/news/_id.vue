@@ -78,8 +78,9 @@ export default {
       await this.$axios
         .$get(`/api/activity/${this.$route.params.id}`)
         .then((res) => {
+          console.log(res.data)
           this.activitys = res.data
-          // console.log('logActivitys', this.activitys)
+          console.log('logActivitys', this.activitys)
         })
         .catch((error) => {
           // eslint-disable-next-line no-console
