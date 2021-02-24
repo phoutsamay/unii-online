@@ -56,35 +56,35 @@
 <script>
 export default {
   loading: true,
-  // async asyncData({ $axios, params }) {
-  //   const posts = await $axios.$get(
-  //     `https://api.unii.co.th/api/post/${params.id}`
-  //   )
-  //   return { posts }
-  // },
+  async asyncData({ $axios, params }) {
+    const posts = await $axios.$get(
+      `https://api.unii.co.th/api/post/${params.id}`
+    )
+    return { posts }
+  },
   data() {
     return {
       posts: [],
     }
   },
-  mounted() {
-    this.getPost()
-  },
-  methods: {
-    async getPost() {
-      await this.$axios
-        .$get(`/api/post/${this.$route.params.id}`)
-        .then((res) => {
-          console.log('zz', res.data)
-          this.posts = res.data
-          // console.log('logPost', this.posts)
-        })
-        .catch((error) => {
-          // eslint-disable-next-line no-console
-          console.log(error)
-        })
-      // this.posts = data
-    },
+  // mounted() {
+  //   this.getPost()
+  // },
+  // methods: {
+  //   async getPost() {
+  //     await this.$axios
+  //       .$get(`/api/post/${this.$route.params.id}`)
+  //       .then((res) => {
+  //         console.log('zz', res.data)
+  //         this.posts = res.data
+  //         // console.log('logPost', this.posts)
+  //       })
+  //       .catch((error) => {
+  //         // eslint-disable-next-line no-console
+  //         console.log(error)
+  //       })
+  //     // this.posts = data
+  //   },
   },
 }
 </script>
