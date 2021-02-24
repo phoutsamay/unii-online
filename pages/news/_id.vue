@@ -1,6 +1,22 @@
 <template>
   <div class="container">
-    <div class="card">
+    <b-card class="my-5">
+      <b-card-title>{{ activitys.title }}</b-card-title>
+      <small class="text-muted">Last updated 3 mins ago</small>
+      <b-card-body>
+        <b-embed
+          v-if="activitys.video"
+          type="iframe"
+          aspect="16by9"
+          :src="`https://www.youtube.com/embed/${activitys.video}`"
+          allowfullscreen
+        ></b-embed
+      ></b-card-body>
+      <!-- eslint-disable-next-line vue/no-v-html -->
+      <b-card-text v-html="activitys.description"> </b-card-text>
+    </b-card>
+
+    <!-- <div class="card">
       <h2>{{ activitys.title }}</h2>
       <p>3 กันยายน 2563 | ข่าวสารองค์กร</p>
       <b-embed
@@ -11,9 +27,9 @@
         allowfullscreen
       ></b-embed>
       <br />
-      <!-- eslint-disable-next-line vue/no-v-html -->
+      eslint-disable-next-line vue/no-v-html
       <p v-html="activitys.description">{{ activitys.description }}</p>
-    </div>
+    </div> -->
     <!-- <div class="row">
       <div class="leftcolumn mx-auto">
         <div v-for="(post, index) in posts" :key="index" class="card">

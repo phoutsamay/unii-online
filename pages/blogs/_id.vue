@@ -8,10 +8,11 @@
           v-if="posts.image"
           :src="`${$axios.defaults.baseURL}/api/uploads/${posts.image}`"
           alt="Image"
-          bottom
         ></b-card-img>
+        <!-- eslint-disable-next-line vue/no-v-html -->
         <b-card-text v-html="posts.description"> </b-card-text>
       </b-card>
+
       <!-- <div class="card">
         <h2>{{ posts.title }}</h2>
         <p>3 กันยายน 2563 | ข่าวสารองค์กร</p>
@@ -66,7 +67,7 @@ export default {
       posts: [],
     }
   },
-  mounted() {
+  created() {
     this.getPost()
   },
   methods: {
@@ -74,7 +75,7 @@ export default {
       await this.$axios
         .$get(`/api/post/${this.$route.params.id}`)
         .then((res) => {
-          // console.log('zz', res.data)
+          console.log('zz', res.data)
           this.posts = res.data
           // console.log('logPost', this.posts)
         })
