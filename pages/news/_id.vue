@@ -4,9 +4,10 @@
       <h2>{{ activitys.title }}</h2>
       <p>3 กันยายน 2563 | ข่าวสารองค์กร</p>
       <b-embed
+        v-if="activitys.video"
         type="iframe"
         aspect="16by9"
-        :src="`https://www.youtube.com/embed/` + activitys.video"
+        :src="`https://www.youtube.com/embed/${activitys.video}`"
         allowfullscreen
       ></b-embed>
       <br />

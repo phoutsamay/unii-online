@@ -5,6 +5,7 @@
         <h2>{{ posts.title }}</h2>
         <p>3 กันยายน 2563 | ข่าวสารองค์กร</p>
         <img
+          v-if="posts.image"
           :src="`https://api.unii.co.th/api/uploads/${posts.image}`"
           alt=""
         />

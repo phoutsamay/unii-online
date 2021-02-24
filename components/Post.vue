@@ -7,7 +7,6 @@
       <b-card
         v-for="item in posts.slice(0, 3)"
         :key="item.id"
-        :title="item.title"
         :img-src="`https://api.unii.co.th/api/uploads/${item.image}`"
         img-alt="Image"
         img-top
