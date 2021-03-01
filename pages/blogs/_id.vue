@@ -1,59 +1,46 @@
 <template>
-  <div class="container">
-    <!-- <b-card class="my-5">
-      <b-card-title>{{ activitys.title }}</b-card-title>
-      <small class="text-muted">Last updated 3 mins ago</small>
-      <b-card-body>
-        <b-embed
-          v-if="activitys.video"
-          type="iframe"
-          aspect="16by9"
-          :src="`https://www.youtube.com/embed/${activitys.video}`"
-          allowfullscreen
-        ></b-embed
-      ></b-card-body>
+  <div>
+    <div class="container">
+      <b-card v-show="posts" class="my-5">
+        <b-card-title>{{ posts.title }}</b-card-title>
+        <small class="text-muted">Last updated 3 mins ago</small>
+        <b-card-img
+          v-if="posts.image"
+          :src="`${$axios.defaults.baseURL}/api/uploads/${posts.image}`"
+          alt="Image"
+        ></b-card-img>
+        <!-- eslint-disable-next-line vue/no-v-html -->
+        <b-card-text v-html="posts.description"> </b-card-text>
+      </b-card>
 
-      <b-card-text v-html="activitys.description"> </b-card-text>
-    </b-card> -->
-
-    <!-- <div class="card">
-      <h2>{{ activitys.title }}</h2>
-      <p>3 กันยายน 2563 | ข่าวสารองค์กร</p>
-      <b-embed
-        v-if="activitys.video"
-        type="iframe"
-        aspect="16by9"
-        :src="`https://www.youtube.com/embed/${activitys.video}`"
-        allowfullscreen
-      ></b-embed>
-      <br />
-      eslint-disable-next-line vue/no-v-html
-      <p v-html="activitys.description">{{ activitys.description }}</p>
-    </div> -->
-    <div class="row">
+      <!-- <div class="card">
+        <h2>{{ posts.title }}</h2>
+        <p>3 กันยายน 2563 | ข่าวสารองค์กร</p>
+        <img
+          v-if="posts.image"
+          :src="`${$axios.defaults.baseURL}/api/uploads/${posts.image}`"
+          alt=""
+        />
+        <br />
+        eslint-disable-next-line vue/no-v-html
+        <p v-html="posts.description"></p>
+      </div> -->
+      <!-- <div class="row">
       <div class="leftcolumn mx-auto">
-        <div class="card px-4 py-4 my-4">
-          <h2>{{ posts.title }}</h2>
-          <img
-            :src="`${$axios.defaults.baseURL}/api/uploads/${posts.image}`"
-            width="100%"
-          />
-          <p v-html="posts.description"></p>
-        </div>
-        <!-- <div v-for="item in posts" :key="item.id" class="card">
+        <div v-for="(post, index) in posts" :key="index" class="card">
           <h2>
-            {{ item.title }}
+            {{ post.title }}
           </h2>
           <p>3 กันยายน 2563 | ข่าวสารองค์กร</p>
           <div>
             <img src="../../assets/imgs/b1.jpg" alt="" width="100%" />
           </div>
           <br />
-
+          eslint-disable-next-line vue/no-v-html
           <p v-html="post.description">
-            {{ item.description }}
+            {{ post.description }}
           </p>
-        </div> -->
+        </div>
 
         <div class="my-3">
           <nuxt-link to="/" class="previous back-buttom"
@@ -61,12 +48,20 @@
           >
         </div>
       </div>
+    </div> -->
     </div>
   </div>
 </template>
 
 <script>
 export default {
+  // loading: true,
+  // async asyncData({ $axios, params }) {
+  //   const posts = await $axios.$get(
+  //     `https://api.unii.co.th/api/post/${params.id}`
+  //   )
+  //   return { posts }
+  // },
   data() {
     return {
       posts: [],
@@ -80,17 +75,87 @@ export default {
       await this.$axios
         .$get(`/api/post/${this.$route.params.id}`)
         .then((res) => {
-          console.log(res.data)
+          console.log('zz', res.data)
           this.posts = res.data
-          console.log('logPosts', this.posts)
+          // console.log('logPost', this.posts)
         })
         .catch((error) => {
           // eslint-disable-next-line no-console
           console.log(error)
         })
+      // this.posts = data
     },
   },
 }
 </script>
 
-<style></style>
+<style scoped>
+a {
+  color: #212529;
+  text-decoration: none;
+}
+a:hover {
+  color: #69197b;
+}
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn,
+  .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+  .back-buttom {
+    padding-left: 20px;
+  }
+}
+</style>
