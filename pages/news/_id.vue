@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <b-card class="my-5">
+    <b-card v-show="activitys" class="my-5">
       <b-card-title>{{ activitys.title }}</b-card-title>
       <small class="text-muted">Last updated 3 mins ago</small>
       <b-card-body>
