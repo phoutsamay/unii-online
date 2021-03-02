@@ -2,14 +2,14 @@
   <div>
     <div v-if="posts" class="container">
       <h1>{{ posts.data.title }}</h1>
-      <div>
+      <!-- <div>
         <img
           v-if="posts.data.image"
           :src="`${baseURL}/api/uploads/${posts.data.image}`"
           alt=""
           width="100%"
         />
-      </div>
+      </div> -->
       <p>{{ posts.data.description }}</p>
       <!-- <client-only>
         <b-card class="my-5">
