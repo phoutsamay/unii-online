@@ -1,6 +1,7 @@
 <template>
   <div>
     {{ posts.data.title }}
+    {{ posts.data.description }}
   </div>
 </template>
 
