@@ -1,14 +1,16 @@
 <template>
   <div>
     <div v-if="posts" class="container">
-      <!-- <h1>{{ posts.data.title }}</h1> -->
-      <img
-        v-if="posts.data.image"
-        :src="`${$axios.defaults.baseURL}/api/uploads/${posts.data.image}`"
-        alt=""
-        width="100%"
-      />
-      <!-- <p>{{ posts.data.description }}</p> -->
+      <h1>{{ posts.data.title }}</h1>
+      <div>
+        <img
+          v-if="posts.data.image"
+          :src="`${baseURL}/api/uploads/${posts.data.image}`"
+          alt=""
+          width="100%"
+        />
+      </div>
+      <p>{{ posts.data.description }}</p>
       <!-- <client-only>
         <b-card class="my-5">
           <b-card-title>{{ posts.title }}</b-card-title>
@@ -51,6 +53,7 @@ export default {
   data() {
     return {
       // posts: {},
+      baseURL: this.$axios.defaults.baseURL,
     }
   },
 
