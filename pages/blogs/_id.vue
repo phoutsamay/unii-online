@@ -1,6 +1,61 @@
 <template>
-  <div>
-    {{ posts }}
+  <div v-if="posts">
+    <div class="container">
+      <!-- <client-only>
+        <b-card class="my-5">
+          <b-card-title>{{ posts.title }}</b-card-title>
+          <small class="text-muted">Last updated 3 mins ago</small>
+          <b-card-img
+            v-if="posts.image"
+            :src="`${$axios.defaults.baseURL}/api/uploads/${posts.image}`"
+            alt="Image"
+          ></b-card-img>
+
+          <b-card-text v-html="posts.description"> </b-card-text>
+        </b-card>
+      </client-only> -->
+
+      <!-- <div class="card">
+        <h2>{{ posts.title }}</h2>
+        <p>3 กันยายน 2563 | ข่าวสารองค์กร</p>
+        <img
+          v-if="posts.image"
+          :src="`${$axios.defaults.baseURL}/api/uploads/${posts.image}`"
+          alt=""
+        />
+        <br />
+        eslint-disable-next-line vue/no-v-html
+        <p v-html="posts.description"></p>
+      </div> -->
+      <div class="row">
+        <div class="leftcolumn mx-auto">
+          <div class="card">
+            <h2>
+              {{ posts.data.title }}
+            </h2>
+            <p>3 กันยายน 2563 | ข่าวสารองค์กร</p>
+            <div>
+              <img
+                v-if="posts.data.image"
+                :src="`${$axios.defaults.baseURL}/api/uploads/${posts.data.image}`"
+                alt="Image"
+                width="100%"
+              />
+            </div>
+            <br />
+            <!-- eslint-disable-next-line vue/no-v-html -->
+            <p v-html="posts.data.description"></p>
+            <!-- <p>{{ posts.data.description }}</p> -->
+          </div>
+
+          <div class="my-3">
+            <NuxtLink to="/" class="previous back-buttom"
+              >&laquo; กลับสู่หน้าหลัก</NuxtLink
+            >
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
