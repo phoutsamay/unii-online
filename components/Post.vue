@@ -12,7 +12,7 @@
         img-top
         class="shadow-sm"
       >
-        <small class="text-muted">Last updated 3 mins ago</small>
+        <small class="text-muted">Last updated 3 mins ago{{ item._id }}</small>
         <!-- eslint-disable-next-line vue/no-v-html -->
         <b-card-text v-html="item.description"> </b-card-text>
         <nuxt-link
@@ -25,7 +25,7 @@
     <div class="text-center mt-5">
       <NuxtLink to="/blogs/allblogs">
         <b-button size="lg" class="btn btn-purple" type="submit"
-          >ดูทั้งหมด</b-button
+          >see more</b-button
         ></NuxtLink
       >
     </div>
