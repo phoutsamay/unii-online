@@ -1,7 +1,6 @@
 <template>
-  <div>
+  <div v-if="posts">
     <div class="container">
-      {{ posts }}
       <!-- <client-only>
         <b-card class="my-5">
           <b-card-title>{{ posts.title }}</b-card-title>
@@ -28,7 +27,7 @@
         eslint-disable-next-line vue/no-v-html
         <p v-html="posts.description"></p>
       </div> -->
-      <!-- <div class="row">
+      <div class="row">
         <div class="leftcolumn mx-auto">
           <div class="card">
             <h2>
@@ -38,13 +37,14 @@
             <div>
               <img
                 v-if="posts.image"
-                :src="`${$axios.defaults.baseURL}/api/uploads/${posts.image}`"
+                :src="`/api/uploads/${posts.image}`"
                 alt="Image"
                 width="100%"
               />
             </div>
             <br />
-
+            <!-- eslint-disable-next-line vue/no-v-html -->
+            <!-- <p v-html="posts.description"></p> -->
             <p>{{ posts.description }}</p>
           </div>
 
@@ -54,7 +54,7 @@
             >
           </div>
         </div>
-      </div> -->
+      </div>
     </div>
   </div>
 </template>
@@ -62,39 +62,39 @@
 <script>
 export default {
   // loading: true,
-  // async asyncData({ $axios, params }) {
-  //   const posts = await $axios.$get(
-  //     `https://api.unii.co.th/api/post/${params.id}`
-  //   )
-  //   return { posts }
-  // },
+  async asyncData({ $axios, params }) {
+    const posts = await $axios.$get(
+      `https://api.unii.co.th/api/post/${params.id}`
+    )
+    return { posts }
+  },
   data() {
     return {
-      posts: {},
+      // posts: {},
     }
   },
 
-  mounted() {
-    this.getPost()
-  },
-  methods: {
-    async getPost() {
-      await this.$axios
-        .$get(`/api/post/${this.$route.params.id}`)
-        .then((res) => {
-          // eslint-disable-next-line no-console
-          console.log('zz', res.data)
-          this.posts = res.data
-          // eslint-disable-next-line no-console
-          console.log('logPost', this.posts)
-        })
-        .catch((error) => {
-          // eslint-disable-next-line no-console
-          console.log(error)
-        })
-      // this.posts = data
-    },
-  },
+  // mounted() {
+  //   this.getPost()
+  // },
+  // methods: {
+  //   async getPost() {
+  //     await this.$axios
+  //       .$get(`/api/post/${this.$route.params.id}`)
+  //       .then((res) => {
+  //         // eslint-disable-next-line no-console
+  //         console.log('zz', res.data)
+  //         this.posts = res.data
+  //         // eslint-disable-next-line no-console
+  //         console.log('logPost', this.posts)
+  //       })
+  //       .catch((error) => {
+  //         // eslint-disable-next-line no-console
+  //         console.log(error)
+  //       })
+  //     // this.posts = data
+  //   },
+  // },
 }
 </script>
 
