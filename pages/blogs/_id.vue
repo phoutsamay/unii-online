@@ -44,7 +44,7 @@
             </div>
             <br />
             <!-- eslint-disable-next-line vue/no-v-html -->
-            <p v-html="posts.data.description"></p>
+            <!-- <p v-html="posts.data.description"></p> -->
             <!-- <p>{{ posts.data.description }}</p> -->
           </div>
           <!-- 
