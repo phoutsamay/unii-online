@@ -13,11 +13,11 @@
         <p class="card-text" v-html="post.description">
           <!-- {{ post.description }} -->
         </p>
-        <nuxt-link
+        <NuxtLink
           :to="{ name: 'blogs-id', params: { id: post._id } }"
           target="_blank"
           class="stretched-link"
-        ></nuxt-link>
+        ></NuxtLink>
         <!-- <a href="#" class="stretched-link"></a> -->
       </div>
     </div>

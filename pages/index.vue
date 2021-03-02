@@ -299,11 +299,11 @@
               {{ activity.title }}
             </p>
             <p>December 29,2020</p>
-            <nuxt-link
+            <NuxtLink
               :to="{ name: 'news-id', params: { id: activity._id } }"
               target="_blank"
               class="stretched-link"
-            ></nuxt-link>
+            ></NuxtLink>
           </div>
           <div
             class="col-xs-3 col-sm-12 col-md-12 col-lg-12 col-xl-6"
@@ -335,11 +335,11 @@
                     <p class="card-text">
                       <small class="">October 14,2020</small>
                     </p>
-                    <nuxt-link
+                    <NuxtLink
                       :to="{ name: 'news-id', params: { id: activity._id } }"
                       target="_blank"
                       class="stretched-link"
-                    ></nuxt-link>
+                    ></NuxtLink>
                   </div>
                 </div>
               </div>

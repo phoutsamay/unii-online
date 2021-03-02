@@ -12,7 +12,7 @@
         img-top
         class="shadow-sm"
       >
-        <small class="text-muted">Last updated 3 mins ago{{ item._id }}</small>
+        <small class="text-muted">Last updated 3 mins ago</small>
         <!-- eslint-disable-next-line vue/no-v-html -->
         <b-card-text v-html="item.description"> </b-card-text>
         <NuxtLink

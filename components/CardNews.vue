@@ -14,10 +14,10 @@
         <p class="card-text" v-html="activity.description">
           <!-- {{ activity.description }} -->
         </p>
-        <nuxt-link
+        <NuxtLink
           :to="{ name: 'blogs-id', params: { id: activity._id } }"
           class="stretched-link"
-        ></nuxt-link>
+        ></NuxtLink>
         <!-- <a href="#" class="stretched-link"></a> -->
       </div>
     </div>
