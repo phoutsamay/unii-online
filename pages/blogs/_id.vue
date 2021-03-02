@@ -1,17 +1,19 @@
 <template>
   <div v-show="posts">
     <div class="container">
-      <b-card class="my-5">
-        <b-card-title>{{ posts.title }}</b-card-title>
-        <small class="text-muted">Last updated 3 mins ago</small>
-        <b-card-img
-          v-if="posts.image"
-          :src="`${$axios.defaults.baseURL}/api/uploads/${posts.image}`"
-          alt="Image"
-        ></b-card-img>
-        <!-- eslint-disable-next-line vue/no-v-html -->
-        <b-card-text v-html="posts.description"> </b-card-text>
-      </b-card>
+      <client-only>
+        <b-card v-for="item in posts" :key="item.id" class="my-5">
+          <b-card-title>{{ item.title }}</b-card-title>
+          <small class="text-muted">Last updated 3 mins ago</small>
+          <b-card-img
+            v-if="item.image"
+            :src="`${$axios.defaults.baseURL}/api/uploads/${item.image}`"
+            alt="Image"
+          ></b-card-img>
+          <!-- eslint-disable-next-line vue/no-v-html -->
+          <b-card-text v-html="item.description"> </b-card-text>
+        </b-card>
+      </client-only>
 
       <!-- <div class="card">
         <h2>{{ posts.title }}</h2>
@@ -57,11 +59,10 @@
 export default {
   // loading: true,
   async asyncData({ $axios, params }) {
-    return await $axios
-      .$get(`https://api.unii.co.th/api/post/${params.id}`)
-      .then((res) => {
-        return { posts: res.data }
-      })
+    const posts = await $axios.$get(
+      `https://api.unii.co.th/api/post/${params.id}`
+    )
+    return { posts }
   },
   data() {
     return {
