@@ -1,10 +1,12 @@
 <template>
   <div class="container">
-    <div style="font-size: 20px">
-      {{ posts.data.title }}
-    </div>
     <div>
-      {{ posts.data.description }}
+      <div>
+        {{ posts.data.title }}
+      </div>
+      <div>
+        {{ posts.data.description }}
+      </div>
     </div>
   </div>
 </template>
