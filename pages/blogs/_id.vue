@@ -1,10 +1,10 @@
 <template>
-  <div class="container">
-    <div>
-      <div>
+  <div class="container" v-if="posts">
+    <div v-if="posts.data">
+      <div v-if="posts.data.title">
         {{ posts.data.title }}
       </div>
-      <div>
+      <div v-if="posts.data.description">
         {{ posts.data.description }}
       </div>
     </div>
