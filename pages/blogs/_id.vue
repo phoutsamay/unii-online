@@ -27,7 +27,7 @@
         eslint-disable-next-line vue/no-v-html
         <p v-html="posts.description"></p>
       </div> -->
-      <div class="row" v-if="posts.data">
+      <div v-if="posts.data" class="row">
         <div class="leftcolumn mx-auto">
           <div class="card">
             <h2>
@@ -35,12 +35,12 @@
             </h2>
             <p>3 กันยายน 2563 | ข่าวสารองค์กร</p>
             <div>
-              <img
+              <!-- <img
                 v-if="posts.data.image"
                 :src="`${$axios.defaults.baseURL}/api/uploads/${posts.data.image}`"
                 alt="Image"
                 width="100%"
-              />
+              /> -->
             </div>
             <br />
             <!-- eslint-disable-next-line vue/no-v-html -->
