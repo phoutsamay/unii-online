@@ -8,7 +8,7 @@
         alt=""
         width="100%"
       />
-      <p>{{ posts.data.description }}</p>
+      <!-- <p>{{ posts.data.description }}</p> -->
       <!-- <client-only>
         <b-card class="my-5">
           <b-card-title>{{ posts.title }}</b-card-title>
