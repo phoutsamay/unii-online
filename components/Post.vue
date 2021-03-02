@@ -25,7 +25,7 @@
     <div class="text-center mt-5">
       <NuxtLink to="/blogs/allblogs">
         <b-button size="lg" class="btn btn-purple" type="submit"
-          >see more</b-button
+          >บทความทั้งหมด</b-button
         ></NuxtLink
       >
     </div>
