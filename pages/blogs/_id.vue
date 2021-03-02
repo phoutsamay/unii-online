@@ -1,16 +1,16 @@
 <template>
-  <div>
+  <div v-show="posts">
     <div class="container">
-      <b-card v-for="item in posts" :key="item.id" class="my-5">
-        <b-card-title>{{ item.title }}</b-card-title>
+      <b-card class="my-5">
+        <b-card-title>{{ posts.title }}</b-card-title>
         <small class="text-muted">Last updated 3 mins ago</small>
         <b-card-img
-          v-if="item.image"
-          :src="`${$axios.defaults.baseURL}/api/uploads/${item.image}`"
+          v-if="posts.image"
+          :src="`${$axios.defaults.baseURL}/api/uploads/${posts.image}`"
           alt="Image"
         ></b-card-img>
         <!-- eslint-disable-next-line vue/no-v-html -->
-        <b-card-text v-html="item.description"> </b-card-text>
+        <b-card-text v-html="posts.description"> </b-card-text>
       </b-card>
 
       <!-- <div class="card">
@@ -56,38 +56,39 @@
 <script>
 export default {
   // loading: true,
-  // async asyncData({ $axios, params }) {
-  //   const posts = await $axios.$get(
-  //     `https://api.unii.co.th/api/post/${params.id}`
-  //   )
-  //   return { posts }
-  // },
+  async asyncData({ $axios, params }) {
+    return await $axios
+      .$get(`https://api.unii.co.th/api/post/${params.id}`)
+      .then((res) => {
+        return { posts: res.data }
+      })
+  },
   data() {
     return {
       posts: [],
     }
   },
-  mounted() {
-    this.getPost()
-  },
-  methods: {
-    async getPost() {
-      await this.$axios
-        .$get(`/api/post/${this.$route.params.id}`)
-        .then((res) => {
-          // eslint-disable-next-line no-console
-          console.log('zz', res.data)
-          this.posts = res.data
-          // eslint-disable-next-line no-console
-          console.log('logPost', this.posts)
-        })
-        .catch((error) => {
-          // eslint-disable-next-line no-console
-          console.log(error)
-        })
-      // this.posts = data
-    },
-  },
+  // mounted() {
+  //   this.getPost()
+  // },
+  // methods: {
+  //   async getPost() {
+  //     await this.$axios
+  //       .$get(`/api/post/${this.$route.params.id}`)
+  //       .then((res) => {
+  //         // eslint-disable-next-line no-console
+  //         console.log('zz', res.data)
+  //         this.posts = res.data
+  //         // eslint-disable-next-line no-console
+  //         console.log('logPost', this.posts)
+  //       })
+  //       .catch((error) => {
+  //         // eslint-disable-next-line no-console
+  //         console.log(error)
+  //       })
+  //     // this.posts = data
+  //   },
+  // },
 }
 </script>
 
