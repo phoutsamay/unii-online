@@ -73,7 +73,7 @@ export default {
   methods: {
     async getPost() {
       await this.$axios
-        .$get(`/api/posts`)
+        .$get(`/api/post/${this.$route.params.id}`)
         .then((res) => {
           // eslint-disable-next-line no-console
           console.log('zz', res.data)
