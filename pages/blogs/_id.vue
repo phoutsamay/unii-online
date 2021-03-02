@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-if="posts" class="container">
-      <h1>{{ posts.data.title }}</h1>
+      <!-- <h1>{{ posts.data.title }}</h1> -->
       <img
         v-if="posts.data.image"
         :src="`${$axios.defaults.baseURL}/api/uploads/${posts.data.image}`"
