@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="container">
     {{ posts.data.title }}
-    {{ posts.data.description }}
+    <p>{{ posts.data.description }}</p>
   </div>
 </template>
 
