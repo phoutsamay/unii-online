@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-if="posts" class="container">
-      <h1>{{ posts.data.title }}</h1>
+      {{ posts.data.title }}
       <!-- <div>
         <img
           v-if="posts.data.image"
@@ -10,7 +10,7 @@
           width="100%"
         />
       </div> -->
-      <p>{{ posts.data.description }}</p>
+      {{ posts.data.description }}
       <!-- <client-only>
         <b-card class="my-5">
           <b-card-title>{{ posts.title }}</b-card-title>
