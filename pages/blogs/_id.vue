@@ -44,14 +44,13 @@
             </div>
             <br />
             <!-- eslint-disable-next-line vue/no-v-html -->
-            <p v-html="posts.description">
-              {{ posts.description }}
-            </p>
+            <!-- <p v-html="posts.description"></p> -->
+            <!-- <p>{{ posts.description }}</p> -->
           </div>
 
           <div class="my-3">
-            <nuxt-link to="/" class="previous back-buttom"
-              >&laquo; กลับสู่หน้าหลัก</nuxt-link
+            <NuxtLink to="/" class="previous back-buttom"
+              >&laquo; กลับสู่หน้าหลัก</NuxtLink
             >
           </div>
         </div>
@@ -74,6 +73,7 @@ export default {
       posts: {},
     }
   },
+
   mounted() {
     this.getPost()
   },

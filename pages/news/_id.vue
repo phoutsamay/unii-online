@@ -48,8 +48,8 @@
         </div>
 
         <div class="my-3">
-          <nuxt-link to="/" class="previous back-buttom"
-            >&laquo; กลับสู่หน้าหลัก</nuxt-link
+          <NuxtLink to="/" class="previous back-buttom"
+            >&laquo; กลับสู่หน้าหลัก</NuxtLink
           >
         </div>
       </div>
