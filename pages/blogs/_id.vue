@@ -1,16 +1,16 @@
 <template>
   <div>
     <div class="container">
-      <b-card v-show="posts" class="my-5">
-        <b-card-title>{{ posts.title }}</b-card-title>
+      <b-card v-for="item in posts" :key="item.id" class="my-5">
+        <b-card-title>{{ item.title }}</b-card-title>
         <small class="text-muted">Last updated 3 mins ago</small>
         <b-card-img
-          v-if="posts.image"
-          :src="`${$axios.defaults.baseURL}/api/uploads/${posts.image}`"
+          v-if="item.image"
+          :src="`${$axios.defaults.baseURL}/api/uploads/${item.image}`"
           alt="Image"
         ></b-card-img>
         <!-- eslint-disable-next-line vue/no-v-html -->
-        <b-card-text v-html="posts.description"> </b-card-text>
+        <b-card-text v-html="item.description"> </b-card-text>
       </b-card>
 
       <!-- <div class="card">
@@ -73,11 +73,13 @@ export default {
   methods: {
     async getPost() {
       await this.$axios
-        .$get(`/api/post/${this.$route.params.id}`)
+        .$get(`/api/posts`)
         .then((res) => {
+          // eslint-disable-next-line no-console
           console.log('zz', res.data)
           this.posts = res.data
-          // console.log('logPost', this.posts)
+          // eslint-disable-next-line no-console
+          console.log('logPost', this.posts)
         })
         .catch((error) => {
           // eslint-disable-next-line no-console

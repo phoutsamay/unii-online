@@ -16,7 +16,8 @@
         <!-- eslint-disable-next-line vue/no-v-html -->
         <b-card-text v-html="item.description"> </b-card-text>
         <nuxt-link
-          :to="{ name: 'blogs-id', params: { id: item._id } }"
+          :to="{ name: 'blogs-id' }"
+          target="_blank"
           class="stretched-link"
         ></nuxt-link>
       </b-card>
