@@ -15,11 +15,12 @@
         <small class="text-muted">Last updated 3 mins ago</small>
         <!-- eslint-disable-next-line vue/no-v-html -->
         <b-card-text v-html="item.description"> </b-card-text>
-        <NuxtLink
+        <a :href="`blogs/${item._id}`" target="_blank">555</a>
+        <!-- <NuxtLink
           :to="{ name: 'blogs-id', params: { id: item._id } }"
           target="_blank"
           class="stretched-link"
-        ></NuxtLink>
+        ></NuxtLink> -->
       </b-card>
     </b-card-group>
     <div class="text-center mt-5">
