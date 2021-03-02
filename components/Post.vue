@@ -16,7 +16,7 @@
         <!-- eslint-disable-next-line vue/no-v-html -->
         <b-card-text v-html="item.description"> </b-card-text>
         <nuxt-link
-          :to="{ name: 'blogs-id' }"
+          :to="{ name: 'blogs-id', params: { id: item._id } }"
           target="_blank"
           class="stretched-link"
         ></nuxt-link>
@@ -45,7 +45,7 @@ export default {
   methods: {
     async getPost() {
       await this.$axios
-        .$get('/api/posts')
+        .$get(`/api/post/${this.$route.params.id}`)
         .then((res) => {
           // console.log('zz', res.data)
           this.posts = res.data
