@@ -45,7 +45,7 @@ export default {
   methods: {
     async getPost() {
       await this.$axios
-        .$get(`/api/post/${this.$route.params.id}`)
+        .$get('/api/posts')
         .then((res) => {
           // console.log('zz', res.data)
           this.posts = res.data
