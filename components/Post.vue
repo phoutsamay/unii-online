@@ -29,11 +29,6 @@
         ></NuxtLink
       >
     </div>
-    <!-- <div v-for="item in posts" :key="item.id">
-      <NuxtLink :to="{ name: 'posts-slug', params: { slug: posts.slug } }">
-        {{ posts.title }}
-      </NuxtLink>
-    </div> -->
   </div>
 </template>
 

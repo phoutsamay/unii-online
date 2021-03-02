@@ -1,19 +1,19 @@
 <template>
-  <div v-show="posts">
+  <div v-if="posts">
     <div class="container">
-      <client-only>
-        <b-card v-for="item in posts" :key="item.id" class="my-5">
-          <b-card-title>{{ item.title }}</b-card-title>
+      <!-- <client-only>
+        <b-card class="my-5">
+          <b-card-title>{{ posts.title }}</b-card-title>
           <small class="text-muted">Last updated 3 mins ago</small>
           <b-card-img
-            v-if="item.image"
-            :src="`${$axios.defaults.baseURL}/api/uploads/${item.image}`"
+            v-if="posts.image"
+            :src="`${$axios.defaults.baseURL}/api/uploads/${posts.image}`"
             alt="Image"
           ></b-card-img>
-          <!-- eslint-disable-next-line vue/no-v-html -->
-          <b-card-text v-html="item.description"> </b-card-text>
+
+          <b-card-text v-html="posts.description"> </b-card-text>
         </b-card>
-      </client-only>
+      </client-only> -->
 
       <!-- <div class="card">
         <h2>{{ posts.title }}</h2>
@@ -27,30 +27,35 @@
         eslint-disable-next-line vue/no-v-html
         <p v-html="posts.description"></p>
       </div> -->
-      <!-- <div class="row">
-      <div class="leftcolumn mx-auto">
-        <div v-for="(post, index) in posts" :key="index" class="card">
-          <h2>
-            {{ post.title }}
-          </h2>
-          <p>3 กันยายน 2563 | ข่าวสารองค์กร</p>
-          <div>
-            <img src="../../assets/imgs/b1.jpg" alt="" width="100%" />
+      <div class="row">
+        <div class="leftcolumn mx-auto">
+          <div class="card">
+            <h2>
+              {{ posts.title }}
+            </h2>
+            <p>3 กันยายน 2563 | ข่าวสารองค์กร</p>
+            <div>
+              <img
+                v-if="posts.image"
+                :src="`${$axios.defaults.baseURL}/api/uploads/${posts.image}`"
+                alt="Image"
+                width="100%"
+              />
+            </div>
+            <br />
+            <!-- eslint-disable-next-line vue/no-v-html -->
+            <p v-html="posts.description">
+              {{ posts.description }}
+            </p>
           </div>
-          <br />
-          eslint-disable-next-line vue/no-v-html
-          <p v-html="post.description">
-            {{ post.description }}
-          </p>
-        </div>
 
-        <div class="my-3">
-          <nuxt-link to="/" class="previous back-buttom"
-            >&laquo; กลับสู่หน้าหลัก</nuxt-link
-          >
+          <div class="my-3">
+            <nuxt-link to="/" class="previous back-buttom"
+              >&laquo; กลับสู่หน้าหลัก</nuxt-link
+            >
+          </div>
         </div>
       </div>
-    </div> -->
     </div>
   </div>
 </template>
@@ -58,38 +63,38 @@
 <script>
 export default {
   // loading: true,
-  async asyncData({ $axios, params }) {
-    const posts = await $axios.$get(
-      `https://api.unii.co.th/api/post/${params.id}`
-    )
-    return { posts }
-  },
+  // async asyncData({ $axios, params }) {
+  //   const posts = await $axios.$get(
+  //     `https://api.unii.co.th/api/post/${params.id}`
+  //   )
+  //   return { posts }
+  // },
   data() {
     return {
-      posts: [],
+      posts: {},
     }
   },
-  // mounted() {
-  //   this.getPost()
-  // },
-  // methods: {
-  //   async getPost() {
-  //     await this.$axios
-  //       .$get(`/api/post/${this.$route.params.id}`)
-  //       .then((res) => {
-  //         // eslint-disable-next-line no-console
-  //         console.log('zz', res.data)
-  //         this.posts = res.data
-  //         // eslint-disable-next-line no-console
-  //         console.log('logPost', this.posts)
-  //       })
-  //       .catch((error) => {
-  //         // eslint-disable-next-line no-console
-  //         console.log(error)
-  //       })
-  //     // this.posts = data
-  //   },
-  // },
+  mounted() {
+    this.getPost()
+  },
+  methods: {
+    async getPost() {
+      await this.$axios
+        .$get(`/api/post/${this.$route.params.id}`)
+        .then((res) => {
+          // eslint-disable-next-line no-console
+          console.log('zz', res.data)
+          this.posts = res.data
+          // eslint-disable-next-line no-console
+          console.log('logPost', this.posts)
+        })
+        .catch((error) => {
+          // eslint-disable-next-line no-console
+          console.log(error)
+        })
+      // this.posts = data
+    },
+  },
 }
 </script>
 
