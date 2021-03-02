@@ -1,6 +1,7 @@
 <template>
-  <div v-if="posts">
+  <div>
     <div class="container">
+      {{ posts }}
       <!-- <client-only>
         <b-card class="my-5">
           <b-card-title>{{ posts.title }}</b-card-title>
@@ -27,7 +28,7 @@
         eslint-disable-next-line vue/no-v-html
         <p v-html="posts.description"></p>
       </div> -->
-      <div class="row">
+      <!-- <div class="row">
         <div class="leftcolumn mx-auto">
           <div class="card">
             <h2>
@@ -43,9 +44,8 @@
               />
             </div>
             <br />
-            <!-- eslint-disable-next-line vue/no-v-html -->
-            <!-- <p v-html="posts.description"></p> -->
-            <!-- <p>{{ posts.description }}</p> -->
+
+            <p>{{ posts.description }}</p>
           </div>
 
           <div class="my-3">
@@ -54,7 +54,7 @@
             >
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
