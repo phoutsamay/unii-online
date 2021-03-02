@@ -15,11 +15,11 @@
         <small class="text-muted">Last updated 3 mins ago{{ item._id }}</small>
         <!-- eslint-disable-next-line vue/no-v-html -->
         <b-card-text v-html="item.description"> </b-card-text>
-        <nuxt-link
+        <NuxtLink
           :to="{ name: 'blogs-id', params: { id: item._id } }"
           target="_blank"
           class="stretched-link"
-        ></nuxt-link>
+        ></NuxtLink>
       </b-card>
     </b-card-group>
     <div class="text-center mt-5">
@@ -29,6 +29,11 @@
         ></NuxtLink
       >
     </div>
+    <!-- <div v-for="item in posts" :key="item.id">
+      <NuxtLink :to="{ name: 'posts-slug', params: { slug: posts.slug } }">
+        {{ posts.title }}
+      </NuxtLink>
+    </div> -->
   </div>
 </template>
 
