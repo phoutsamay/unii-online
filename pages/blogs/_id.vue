@@ -1,43 +1,6 @@
 <template>
   <div>
-    <div v-if="posts" class="container">
-      {{ posts.data.title }}
-      <!-- <div>
-        <img
-          v-if="posts.data.image"
-          :src="`${baseURL}/api/uploads/${posts.data.image}`"
-          alt=""
-          width="100%"
-        />
-      </div> -->
-      {{ posts.data.description }}
-      <!-- <client-only>
-        <b-card class="my-5">
-          <b-card-title>{{ posts.title }}</b-card-title>
-          <small class="text-muted">Last updated 3 mins ago</small>
-          <b-card-img
-            v-if="posts.image"
-            :src="`${$axios.defaults.baseURL}/api/uploads/${posts.image}`"
-            alt="Image"
-          ></b-card-img>
-
-          <b-card-text v-html="posts.description"> </b-card-text>
-        </b-card>
-      </client-only> -->
-
-      <!-- <div class="card">
-        <h2>{{ posts.title }}</h2>
-        <p>3 กันยายน 2563 | ข่าวสารองค์กร</p>
-        <img
-          v-if="posts.image"
-          :src="`${$axios.defaults.baseURL}/api/uploads/${posts.image}`"
-          alt=""
-        />
-        <br />
-        eslint-disable-next-line vue/no-v-html
-        <p v-html="posts.description"></p>
-      </div> -->
-    </div>
+    {{ posts.data.title }}
   </div>
 </template>
 
