@@ -72,6 +72,7 @@ export default {
     // https://medium.com/@wearethreebears/globally-accessible-css-and-scss-sass-in-your-nuxt-component-files-7c1c012d31bd
     '@nuxtjs/style-resources',
     '@nuxt/http',
+    '@nuxt/content',
   ],
   styleResources: {
     scss: ['~/assets/scss/main.scss'],
