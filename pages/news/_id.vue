@@ -1,20 +1,22 @@
 <template>
   <div class="container">
-    <b-card v-show="activitys" class="my-5">
-      <b-card-title>{{ activitys.title }}</b-card-title>
-      <small class="text-muted">Last updated 3 mins ago</small>
-      <b-card-body>
-        <b-embed
-          v-if="activitys.video"
-          type="iframe"
-          aspect="16by9"
-          :src="`https://www.youtube.com/embed/${activitys.video}`"
-          allowfullscreen
-        ></b-embed
-      ></b-card-body>
-      <!-- eslint-disable-next-line vue/no-v-html -->
-      <b-card-text v-html="activitys.description"> </b-card-text>
-    </b-card>
+    <no-ssr>
+      <b-card class="my-5">
+        <b-card-title>{{ activitys.data.title }}</b-card-title>
+        <small class="text-muted">Last updated 3 mins ago</small>
+        <b-card-body>
+          <b-embed
+            v-if="activitys.data.video"
+            type="iframe"
+            aspect="16by9"
+            :src="`https://www.youtube.com/embed/${activitys.data.video}`"
+            allowfullscreen
+          ></b-embed
+        ></b-card-body>
+        <!-- eslint-disable-next-line vue/no-v-html -->
+        <b-card-text v-html="activitys.data.description"> </b-card-text>
+      </b-card>
+    </no-ssr>
 
     <!-- <div class="card">
       <h2>{{ activitys.title }}</h2>
@@ -59,37 +61,35 @@
 
 <script>
 export default {
-  // async asyncData({ $axios, params }) {
-  //   const activitys = await $axios.$get(
-  //     `https://api.unii.co.th/api/activity/${params.id}`
-  //   )
-  //   return { activitys }
-  // },
+  async asyncData({ params, $axios }) {
+    const activity = await $axios.$get(`/api/activity/${params.id}`)
+    return { activity }
+  },
   data() {
     return {
       activitys: [],
     }
   },
-  mounted() {
-    this.getActivity()
-  },
-  methods: {
-    async getActivity() {
-      await this.$axios
-        .$get(`/api/activity/${this.$route.params.id}`)
-        .then((res) => {
-          // eslint-disable-next-line no-console
-          console.log(res.data)
-          this.activitys = res.data
-          // eslint-disable-next-line no-console
-          console.log('logActivitys', this.activitys)
-        })
-        .catch((error) => {
-          // eslint-disable-next-line no-console
-          console.log(error)
-        })
-    },
-  },
+  // mounted() {
+  //   this.getActivity()
+  // },
+  // methods: {
+  //   async getActivity() {
+  //     await this.$axios
+  //       .$get(`/api/activity/${this.$route.params.id}`)
+  //       .then((res) => {
+  //         // eslint-disable-next-line no-console
+  //         console.log(res.data)
+  //         this.activitys = res.data
+  //         // eslint-disable-next-line no-console
+  //         console.log('logActivitys', this.activitys)
+  //       })
+  //       .catch((error) => {
+  //         // eslint-disable-next-line no-console
+  //         console.log(error)
+  //       })
+  //   },
+  // },
 }
 </script>
 
