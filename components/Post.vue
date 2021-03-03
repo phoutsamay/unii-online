@@ -12,7 +12,7 @@
         img-top
         class="shadow-sm"
       >
-        <small class="text-muted">Last updated 3 mins ago</small>
+        <small class="text-muted">{{ post.createdAt }}</small>
         <!-- eslint-disable-next-line vue/no-v-html -->
         <b-card-text v-html="item.description"> </b-card-text>
         <!-- <a
@@ -50,7 +50,7 @@ export default {
   methods: {
     async getPost() {
       await this.$axios
-        .$get('/api/posts')
+        .$get('/api/posts?sortBy=createdAt&OrderBy=desc')
         .then((res) => {
           // console.log('zz', res.data)
           this.posts = res.data

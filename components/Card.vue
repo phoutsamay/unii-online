@@ -3,12 +3,12 @@
     <div class="card h-100 shadow-sm">
       <img
         :src="`https://api.unii.co.th/api/uploads/${post.image}`"
-        class="card-img-top"
+        class="card-img-top img-fluid"
         alt=""
       />
       <div class="card-body">
         <h5 class="card-title">{{ post.title }}</h5>
-        <small class="text-muted">Last updated 3 mins ago</small>
+        <small class="text-muted">{{ post.createdAt }}</small>
         <!-- eslint-disable-next-line vue/no-v-html -->
         <p class="card-text" v-html="post.description">
           <!-- {{ post.description }} -->

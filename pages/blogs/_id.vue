@@ -9,8 +9,7 @@
             :src="`${$axios.defaults.baseURL}/api/uploads/${post.data.image}`"
             width="100%"
           />
-          ></b-card-body
-        >
+        </b-card-body>
         <!-- eslint-disable-next-line vue/no-v-html -->
         <b-card-text v-html="post.data.description"> </b-card-text>
       </b-card>
