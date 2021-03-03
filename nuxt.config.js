@@ -1,6 +1,6 @@
 // const baseURL = 'https://api.unii.co.th'
 const baseURL =
-  process.env.NODE_ENV === 'develop'
+  process.env.NODE_ENV !== 'develop'
     ? 'https://api.unii.co.th'
     : 'http://127.0.0.1:5000'
 export default {
