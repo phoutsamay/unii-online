@@ -26,7 +26,7 @@ export default {
   methods: {
     async getPost() {
       await this.$axios
-        .$get('/api/posts')
+        .$get('/api/posts?sortBy=createdAt&OrderBy=desc')
         .then((res) => {
           // console.log('zz', res.data)
           this.posts = res.data
