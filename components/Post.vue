@@ -12,7 +12,7 @@
         img-top
         class="shadow-sm"
       >
-        <small class="text-muted">{{ post.createdAt }}</small>
+        <small class="text-muted">{{ item.createdAt }}</small>
         <!-- eslint-disable-next-line vue/no-v-html -->
         <b-card-text v-html="item.description"> </b-card-text>
         <!-- <a
