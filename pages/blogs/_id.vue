@@ -1,6 +1,7 @@
 <template>
   <div>
     <p>{{ post }}</p>
+    <h1>{{ post.data.title }}</h1>
   </div>
 </template>
 
