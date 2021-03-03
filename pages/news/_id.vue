@@ -2,19 +2,19 @@
   <div class="container">
     <no-ssr>
       <b-card class="my-5">
-        <b-card-title>{{ activitys.data.title }}</b-card-title>
+        <b-card-title>{{ activity.data.title }}</b-card-title>
         <small class="text-muted">Last updated 3 mins ago</small>
         <b-card-body>
           <b-embed
-            v-if="activitys.data.video"
+            v-if="activity.data.video"
             type="iframe"
             aspect="16by9"
-            :src="`https://www.youtube.com/embed/${activitys.data.video}`"
+            :src="`https://www.youtube.com/embed/${activity.data.video}`"
             allowfullscreen
           ></b-embed
         ></b-card-body>
         <!-- eslint-disable-next-line vue/no-v-html -->
-        <b-card-text v-html="activitys.data.description"> </b-card-text>
+        <b-card-text v-html="activity.data.description"> </b-card-text>
       </b-card>
     </no-ssr>
 
@@ -64,11 +64,6 @@ export default {
   async asyncData({ params, $axios }) {
     const activity = await $axios.$get(`/api/activity/${params.id}`)
     return { activity }
-  },
-  data() {
-    return {
-      activitys: [],
-    }
   },
   // mounted() {
   //   this.getActivity()
