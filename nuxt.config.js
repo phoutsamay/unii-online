@@ -5,7 +5,7 @@ const baseURL =
     : 'http://127.0.0.1:5000'
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
-  ssr: false,
+  ssr: true,
   head: {
     title: 'uniionline',
     htmlAttrs: {
