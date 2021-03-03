@@ -4,14 +4,12 @@
       <b-card-title>{{ post.data.title }}</b-card-title>
       <small class="text-muted">Last updated 3 mins ago</small>
       <b-card-body>
-        <b-embed
-          v-if="post.data.video"
-          type="iframe"
-          aspect="16by9"
-          :src="`https://www.youtube.com/embed/${post.data.video}`"
-          allowfullscreen
-        ></b-embed
-      ></b-card-body>
+        <img
+          :src="`${$axios.defaults.baseURL}/api/uploads/${post.data.image}`"
+          width="100%"
+        />
+        ></b-card-body
+      >
       <!-- eslint-disable-next-line vue/no-v-html -->
       <b-card-text v-html="post.data.description"> </b-card-text>
     </b-card>
