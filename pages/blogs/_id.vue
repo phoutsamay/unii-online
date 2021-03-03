@@ -1,123 +1,16 @@
 <template>
-  <div class="container" v-if="posts">
-    <div v-if="posts.data">
-      <div v-if="posts.data.title">
-        {{ posts.data.title }}
-      </div>
-      <div v-if="posts.data.description">
-        {{ posts.data.description }}
-      </div>
-    </div>
+  <div>
+    <p>{{ post }}</p>
   </div>
 </template>
 
 <script>
 export default {
-  // loading: true,
-  async asyncData({ $axios, params }) {
-    const posts = await $axios.$get(
-      `https://api.unii.co.th/api/post/${params.id}`
-    )
-    return { posts }
+  async asyncData({ params, $axios }) {
+    const post = await $axios.$get(`/api/post/${params.id}`)
+    return { post }
   },
-  data() {
-    return {
-      // posts: {},
-      baseURL: this.$axios.defaults.baseURL,
-    }
-  },
-
-  // mounted() {
-  //   this.getPost()
-  // },
-  // methods: {
-  //   async getPost() {
-  //     await this.$axios
-  //       .$get(`/api/post/${this.$route.params.id}`)
-  //       .then((res) => {
-  //         // eslint-disable-next-line no-console
-  //         console.log('zz', res.data)
-  //         this.posts = res.data
-  //         // eslint-disable-next-line no-console
-  //         console.log('logPost', this.posts)
-  //       })
-  //       .catch((error) => {
-  //         // eslint-disable-next-line no-console
-  //         console.log(error)
-  //       })
-  //     // this.posts = data
-  //   },
-  // },
 }
 </script>
 
-<style scoped>
-a {
-  color: #212529;
-  text-decoration: none;
-}
-a:hover {
-  color: #69197b;
-}
-/* Header/Blog Title */
-.header {
-  padding: 30px;
-  font-size: 40px;
-  text-align: center;
-  background: white;
-}
-
-/* Create two unequal columns that floats next to each other */
-/* Left column */
-.leftcolumn {
-  width: 75%;
-}
-
-/* Right column */
-.rightcolumn {
-  float: left;
-  width: 25%;
-  padding-left: 20px;
-}
-
-/* Fake image */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
-
-/* Add a card effect for articles */
-.card {
-  background-color: white;
-  padding: 20px;
-  margin-top: 20px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-  margin-top: 20px;
-}
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .leftcolumn,
-  .rightcolumn {
-    width: 100%;
-    padding: 0;
-  }
-  .back-buttom {
-    padding-left: 20px;
-  }
-}
-</style>
+<style></style>

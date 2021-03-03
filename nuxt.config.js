@@ -1,6 +1,6 @@
 // const baseURL = 'https://api.unii.co.th'
 const baseURL =
-  process.env.NODE_ENV !== 'develop'
+  process.env.NODE_ENV === 'develop'
     ? 'https://api.unii.co.th'
     : 'http://127.0.0.1:5000'
 export default {
@@ -72,6 +72,7 @@ export default {
     // https://medium.com/@wearethreebears/globally-accessible-css-and-scss-sass-in-your-nuxt-component-files-7c1c012d31bd
     '@nuxtjs/style-resources',
     '@nuxt/http',
+    '@nuxt/content',
   ],
   styleResources: {
     scss: ['~/assets/scss/main.scss'],
