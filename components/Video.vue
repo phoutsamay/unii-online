@@ -70,7 +70,7 @@ export default {
   methods: {
     async getVideo() {
       await this.$axios
-        .$get('/api/videos')
+        .$get('/api/videos?sortBy=createdAt&OrderBy=desc')
         .then((res) => {
           // console.log('zz', res.data)
           this.videos = res.data

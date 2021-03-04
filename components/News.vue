@@ -98,7 +98,7 @@ export default {
   methods: {
     async getActivity() {
       await this.$axios
-        .$get('/api/activitys')
+        .$get('/api/activitys?sortBy=createdAt&OrderBy=desc')
         .then((res) => {
           // console.log('zz', res.data)
           this.activitys = res.data
