@@ -21,7 +21,7 @@
           <img
             :src="`https://api.unii.co.th/api/uploads/${noticeboard.image}`"
             alt=""
-            width=""
+            width="75%"
           />
         </div>
       </div>
