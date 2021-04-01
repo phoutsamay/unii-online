@@ -1,8 +1,9 @@
 <template>
   <div id="overley">
-    <div class="container mt-5">
+    <div class="container my-2">
       <div
         v-for="(noticeboard, index) in noticeboards"
+        v-show="noticeboard.status"
         :key="index"
         class="row"
       >
@@ -20,7 +21,7 @@
           <img
             :src="`https://api.unii.co.th/api/uploads/${noticeboard.image}`"
             alt=""
-            width="75%"
+            width=""
           />
         </div>
       </div>
