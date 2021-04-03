@@ -38,7 +38,9 @@ export default {
   methods: {
     async getPartner() {
       await this.$axios
-        .$get('/api/partners')
+        .$get('/api/partner', {
+          status: true,
+        })
         .then((res) => {
           // console.log('zz', res.data)
           this.partners = res.data
