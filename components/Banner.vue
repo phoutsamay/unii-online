@@ -33,7 +33,7 @@ export default {
   methods: {
     async getBanner() {
       await this.$axios
-        .$get('/api/banner', {
+        .$get('/api/banner?sortBy=createdAt&OrderBy=desc', {
           status: true,
         })
         .then((res) => {
