@@ -3,8 +3,10 @@
     <div class="card h-100 shadow-sm">
       <img
         :src="`https://api.unii.co.th/api/uploads/${post.image}`"
-        class="card-img-top img-fluid"
+        class="card-img-top"
         alt=""
+        height="200"
+        style="object-fit: cover; object-position: 0px 0%"
       />
       <div class="card-body">
         <h5 class="card-title">{{ post.title }}</h5>
