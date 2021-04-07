@@ -11,6 +11,8 @@
         img-alt="Image"
         img-top
         class="shadow-sm"
+        img-height="200"
+        style="object-fit: cover; object-position: 0px 0%"
       >
         <small class="text-muted">{{ item.createdAt }}</small>
         <!-- eslint-disable-next-line vue/no-v-html -->
