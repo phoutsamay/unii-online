@@ -8,7 +8,7 @@
               <div class="col-6 col-sm-6 col-md-6 col-lg-3">
                 <b-card
                   title="Unii Recycle"
-                  img-src="~/assets/imgs/recycle-icon.png"
+                  img-src="~/assets/imgs/servicelogo/recycle-logo.svg"
                   img-alt="Image"
                   img-top
                 >
@@ -21,12 +21,12 @@
               <div class="col-6 col-sm-6 col-md-6 col-lg-3">
                 <b-card
                   title="Unii Truck"
-                  img-src="~/assets/imgs/recycle-icon.png"
+                  img-src="~/assets/imgs/servicelogo/truck-logo.svg"
                   img-alt="Image"
                   img-top
                 >
                   <b-card-text class="d-none d-md-block">
-                    ติดตามข้อมูลข่าวสารสำหรับ Unii Recylce
+                    ติดตามข้อมูลข่าวสารสำหรับ Unii Truck
                   </b-card-text>
                 </b-card>
               </div>
@@ -34,12 +34,12 @@
               <div class="col-6 col-sm-6 col-md-6 col-lg-3">
                 <b-card
                   title="Unii Center"
-                  img-src="~/assets/imgs/recycle-icon.png"
+                  img-src="~/assets/imgs/servicelogo/food-logo.svg"
                   img-alt="Image"
                   img-top
                 >
                   <b-card-text class="d-none d-md-block">
-                    ติดตามข้อมูลข่าวสารสำหรับ Unii Recylce
+                    ติดตามข้อมูลข่าวสารสำหรับ Unii Food&amp;Drinks
                   </b-card-text>
                 </b-card>
               </div>
@@ -47,12 +47,12 @@
               <div class="col-6 col-sm-6 col-md-6 col-lg-3">
                 <b-card
                   title="Unii Truck"
-                  img-src="~/assets/imgs/recycle-icon.png"
+                  img-src="~/assets/imgs/servicelogo/chat-logo.svg"
                   img-alt="Image"
                   img-top
                 >
                   <b-card-text class="d-none d-md-block">
-                    ติดตามข้อมูลข่าวสารสำหรับ Unii Recylce
+                    ติดตามข้อมูลข่าวสารสำหรับ Unii Chat
                   </b-card-text>
                 </b-card>
               </div>
