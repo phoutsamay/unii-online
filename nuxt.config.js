@@ -25,7 +25,7 @@ export default {
       },
       {
         rel: 'stylesheet',
-        href: 'https://pro.fontawesome.com/releases/v5.10.0/css/all.css',
+        href: 'https://use.fontawesome.com/releases/v5.7.0/css/all.css',
       },
       {
         rel: 'stylesheet',
