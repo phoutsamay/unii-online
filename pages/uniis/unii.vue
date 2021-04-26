@@ -2,7 +2,7 @@
   <div>
     <div class="bg-img"></div>
     <div class="centered"><h1>OUR TEAM</h1></div>
-    <div class="container">
+    <div class="container mb-5">
       <b-card>
         <b-modal v-model="show" size="lg">
           <div class="pl-4">
@@ -143,6 +143,11 @@ export default {
       show: false,
       fields: [
         {
+          key: 'type',
+          label: 'ตำแหน่ง',
+          sortable: false,
+        },
+        {
           key: 'name',
           label: 'ชื่อ',
           sortable: false,
@@ -207,6 +212,9 @@ body {
   height: 60em;
   border: none;
 } */
+.card {
+  margin-top: -150px;
+}
 .card-header {
   background-color: #993a96;
   padding: 20px;
@@ -241,7 +249,7 @@ h4 {
 
 .bg-img {
   /* The image used */
-  background-image: url('../../assets/imgs/Header.jpg');
+  background-image: url('../../assets/imgs/bgunii.jpg');
 
   min-height: 380px;
 
