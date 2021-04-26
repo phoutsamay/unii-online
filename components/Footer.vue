@@ -4,7 +4,7 @@
     <p>Connect with us</p>
     <div class="col mb-2">
       <a href="https://www.facebook.com/Unii.co.th" target="blank"
-        ><b-button variant="outline-light"
+        ><b-button variant="outline-dark"
           ><i class="fab fa-facebook-square"
             ><span class="mx-2">Facebook</span></i
           ></b-button
@@ -14,7 +14,7 @@
       <a
         href="https://www.youtube.com/channel/UCpmnNygcabMF-KReKDXY56w"
         target="blank"
-        ><b-button variant="outline-light"
+        ><b-button variant="outline-dark"
           ><i class="fab fa-youtube"
             ><span class="mx-2">Youtube</span></i
           ></b-button
@@ -22,14 +22,14 @@
       >
 
       <a href="https://line.me/ti/p/~@Unii" target="blank"
-        ><b-button variant="outline-light"
+        ><b-button variant="outline-dark"
           ><i class="fab fa-line"><span class="mx-2">Line</span></i></b-button
         ></a
       >
     </div>
 
     <a href="https://twitter.com/Unii60868578" target="blank"
-      ><b-button variant="outline-light"
+      ><b-button variant="outline-dark"
         ><i class="fab fa-twitter"
           ><span class="mx-2">Twitter</span></i
         ></b-button
@@ -37,7 +37,7 @@
     >
 
     <a href="https://www.instagram.com/unii.co.th/" target="blank"
-      ><b-button variant="outline-light"
+      ><b-button variant="outline-dark"
         ><i class="fab fa-instagram"
           ><span class="mx-2">Instagram</span></i
         ></b-button
@@ -52,6 +52,9 @@ export default {}
 </script>
 
 <style scoped>
+#footer .btn-outline-dark {
+  border: none;
+}
 #footer {
   background-color: #222222;
   margin-bottom: 0;
