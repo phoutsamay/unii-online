@@ -33,7 +33,7 @@
 
               <div class="col-6 col-sm-6 col-md-6 col-lg-3">
                 <b-card
-                  title="Unii Center"
+                  title="Unii Food&amp;Drinks"
                   img-src="~/assets/imgs/servicelogo/food-logo.svg"
                   img-alt="Image"
                   img-top
@@ -46,7 +46,7 @@
 
               <div class="col-6 col-sm-6 col-md-6 col-lg-3">
                 <b-card
-                  title="Unii Truck"
+                  title="Unii Chat"
                   img-src="~/assets/imgs/servicelogo/chat-logo.svg"
                   img-alt="Image"
                   img-top
