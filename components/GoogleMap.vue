@@ -10,6 +10,7 @@
         v-for="(m, index) in markers"
         :key="index"
         :position="m.position"
+        :icon="m.icon"
         @click="center = m.position"
       ></gmap-marker>
     </gmap-map>
@@ -41,16 +42,48 @@ export default {
           const marker = {
             lat: pin.lat,
             lng: pin.lng,
+            authorized: pin.authorized,
           }
-          await this.markers.push({ position: marker })
+          if (marker.authorized === true) {
+            await this.markers.push({
+              position: marker,
+              icon: {
+                url: require('../assets/imgs/googlemap/Authorized_pin.svg'),
+                scaledSize: { width: 32, height: 32 },
+              },
+            })
+          } else
+            await this.markers.push({
+              position: marker,
+              icon: {
+                url: require('../assets/imgs/googlemap/pin.svg'),
+                scaledSize: { width: 32, height: 32 },
+              },
+            })
           this.center = marker
         })
       } else {
         const marker = {
           lat: this.items.lat,
           lng: this.items.lng,
+          authorized: this.items.authorized,
         }
-        await this.markers.push({ position: marker })
+        if (marker.authorized === true) {
+          await this.markers.push({
+            position: marker,
+            icon: {
+              url: require('../assets/imgs/googlemap/Authorized_pin.svg'),
+              scaledSize: { width: 32, height: 32 },
+            },
+          })
+        } else
+          await this.markers.push({
+            position: marker,
+            icon: {
+              url: require('../assets/imgs/googlemap/pin.svg'),
+              scaledSize: { width: 32, height: 32 },
+            },
+          })
         this.center = marker
       }
     },

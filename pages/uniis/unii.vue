@@ -23,9 +23,44 @@
         </b-modal>
         <template #header>
           <div class="card-header">
-            <h4>ค้นหาสาขาและจุดบริการยูนี่</h4>
+            <h4>ตัวแทนที่ได้รับการแต่งตั้ง Authorized Unii Center</h4>
           </div>
         </template>
+        <b-form inline>
+          <div>
+            <b-form-select
+              v-model="uniitypeselected"
+              size="sm"
+              class="mb-2 mr-sm-2 mb-sm-0 mx-4"
+              :options="uniitypeoptions"
+            ></b-form-select>
+          </div>
+
+          <div>
+            <b-form-select
+              v-model="cityselected"
+              size="sm"
+              class="mb-2 mr-sm-2 mb-sm-0 mx-4"
+              :options="cityoptions"
+            ></b-form-select>
+          </div>
+
+          <div>
+            <b-form-input
+              size="sm"
+              class="mb-2 mr-sm-2 mb-sm-0 mx-4"
+              type="search"
+              placeholder="พิมพ์คำค้นหา เช่น สถานที่อยู่ เขต รหัสไปรษณีย์"
+              aria-label="Search"
+            ></b-form-input>
+          </div>
+
+          <div>
+            <b-button href="#" size="sm" class="btn btn-purple" type="submit"
+              >ค้นหา</b-button
+            >
+          </div>
+        </b-form>
 
         <b-card-body>
           <div v-if="uniis.length > 0">
@@ -33,17 +68,24 @@
           </div>
         </b-card-body>
 
-        <b-card-text>
-          <div>
-            <b-table sticky-header hover :items="uniis" :fields="fields">
-              <template #cell(actions)="row">
-                <b-link size="sm" @click="sendInfo(row.item)">
-                  ดูข้อมูล
-                </b-link>
-              </template>
-            </b-table>
-          </div>
-        </b-card-text>
+        <div>
+          <b-table sticky-header hover :items="uniis" :fields="fields">
+            <template #cell(authorized)="row">
+              <div>
+                <b-img
+                  v-if="row.item.authorized"
+                  center
+                  src="../../assets/imgs/authorized/Authorized.svg"
+                  alt="Center image"
+                  width="50"
+                ></b-img>
+              </div>
+            </template>
+            <template #cell(actions)="row">
+              <b-link size="sm" @click="sendInfo(row.item)"> ดูข้อมูล </b-link>
+            </template>
+          </b-table>
+        </div>
       </b-card>
     </div>
     <!-- <div class="bg-img"></div>
@@ -138,6 +180,20 @@
 export default {
   data() {
     return {
+      uniitypeselected: null,
+      uniitypeoptions: [
+        { value: null, text: 'ประเภททั้งหมด' },
+        { value: 'UMT', text: 'UMT' },
+        { value: 'UT', text: 'UT' },
+        { value: 'Authorized UNII Center', text: 'Authorized UNII Center' },
+      ],
+      cityselected: null,
+      cityoptions: [
+        { value: null, text: 'เลือกจังหวัด' },
+        { value: 'BKK', text: 'BKK' },
+        { value: 'UT', text: 'UT' },
+        { value: 'Authorized UNII Center', text: 'Authorized UNII Center' },
+      ],
       uniis: [],
       selected: '',
       show: false,
@@ -145,7 +201,7 @@ export default {
         {
           key: 'type',
           label: 'ตำแหน่ง',
-          sortable: false,
+          sortable: true,
         },
         {
           key: 'name',
@@ -161,6 +217,11 @@ export default {
           key: 'tel',
           label: 'เบอร์โทรศัพท์',
           sortable: false,
+        },
+        {
+          key: 'authorized',
+          label: 'authorized',
+          sortable: true,
         },
         {
           key: 'actions',
