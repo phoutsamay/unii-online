@@ -26,7 +26,7 @@
             <h4>ตัวแทนที่ได้รับการแต่งตั้ง Authorized Unii Center</h4>
           </div>
         </template>
-        <b-form inline>
+        <!-- <b-form inline>
           <div>
             <b-form-select
               v-model="uniitypeselected"
@@ -60,7 +60,87 @@
               >ค้นหา</b-button
             >
           </div>
-        </b-form>
+        </b-form> -->
+
+        <b-row>
+          <b-col lg="6" class="my-1">
+            <b-form-group
+              v-slot="{ ariaDescribedby }"
+              label="ค้นหาจาก"
+              label-for="sort-by-select"
+              label-cols-sm="3"
+              label-align-sm="right"
+              label-size="sm"
+              class="mb-0"
+            >
+              <b-input-group size="sm">
+                <b-form-select
+                  id="sort-by-select"
+                  v-model="sortBy"
+                  :options="sortOptionsType"
+                  :aria-describedby="ariaDescribedby"
+                  class="w-75"
+                >
+                  <template #first>
+                    <option value="">-- ทั้งหมด --</option>
+                  </template>
+                </b-form-select>
+              </b-input-group>
+            </b-form-group>
+          </b-col>
+
+          <b-col lg="6" class="my-1">
+            <b-form-group
+              v-slot="{ ariaDescribedby }"
+              label="ค้นหาจังหวัด"
+              label-for="sort-by-select"
+              label-cols-sm="3"
+              label-align-sm="right"
+              label-size="sm"
+              class="mb-0"
+            >
+              <b-input-group size="sm">
+                <b-form-select
+                  id="sort-by-select"
+                  v-model="sortBy"
+                  :options="sortOptionsCity"
+                  :aria-describedby="ariaDescribedby"
+                  class="w-75"
+                >
+                  <template #first>
+                    <option value="">-- ทั้งหมด --</option>
+                  </template>
+                </b-form-select>
+              </b-input-group>
+            </b-form-group>
+          </b-col>
+
+          <b-col lg="6" class="my-1">
+            <b-form-group
+              label="พิมพ์คำค้นหา"
+              label-for="filter-input"
+              label-cols-sm="3"
+              label-align-sm="right"
+              label-size="sm"
+              class="mb-0"
+            >
+              <b-input-group size="sm">
+                <b-form-input
+                  id="filter-input"
+                  v-model="filter"
+                  type="search"
+                  placeholder="ค้นหา"
+                ></b-form-input>
+
+                <b-input-group-append>
+                  <b-button :disabled="!filter" @click="filter = ''"
+                    >Clear</b-button
+                  >
+                </b-input-group-append>
+              </b-input-group>
+            </b-form-group>
+          </b-col>
+        </b-row>
 
         <b-card-body>
           <div v-if="uniis.length > 0">
@@ -69,7 +149,14 @@
         </b-card-body>
 
         <div>
-          <b-table sticky-header hover :items="uniis" :fields="fields">
+          <b-table
+            sticky-header
+            hover
+            :items="uniis"
+            :fields="fields"
+            :filter="filter"
+            :sort-by.sync="sortBy"
+          >
             <template #cell(authorized)="row">
               <div>
                 <b-img
@@ -88,91 +175,6 @@
         </div>
       </b-card>
     </div>
-    <!-- <div class="bg-img"></div>
-    <div class="centered"><h1>OUR TEAM</h1></div>
-    <div class="container">
-      <div class="card">
-        <b-modal id="myModal" size="lg">
-          <h5>{{ selected.name }}</h5>
-          <p>{{ selected.address }}</p>
-          <div class="mapstyle">
-            <GoogleMap :items="selected"> </GoogleMap>
-          </div>
-        </b-modal>
-
-        <div class="card-header">
-          <h4>ค้นหาสาขาและจุดบริการยูนี่</h4>
-        </div>
-
-        <form class="form-inline mt-3 mx-auto">
-          <select class="form-control mx-3">
-            <option>ประเภททั้งหมด</option>
-            <option>UMT</option>
-            <option>UC</option>
-            <option>UMC</option>
-          </select>
-
-          <select class="form-control mx-3">
-            <option>เลือกจังหวัด</option>
-            <option>จังหวัด1</option>
-            <option>จังหวัด2</option>
-            <option>จังหวัด3</option>
-          </select>
-
-          <select class="form-control mx-3">
-            <option>เขต/อำเภอ</option>
-            <option>เขต/อำเภอ1</option>
-            <option>เขต/อำเภอ2</option>
-            <option>เขต/อำเภอ3</option>
-          </select>
-
-          <input
-            class="form-control mr-sm-2"
-            type="search"
-            placeholder="ระบุคำค้นหา"
-            aria-label="Search"
-          />
-          <b-button href="#" size="sm" class="btn btn-purple" type="submit"
-            >ค้นหา</b-button
-          >
-        </form>
-
-        <div class="mapstyle">
-          <GoogleMap :items="uniis"> </GoogleMap>
-        </div>
-
-        <div class="card-body overflow-auto">
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">สาขา/ที่ตั้ง</th>
-                <th scope="col">เบอร์โทรศัพท์</th>
-                <th scope="col">แผนที่</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="item in uniis" :key="item.id">
-                <td>
-                  <h5>{{ item.name }}</h5>
-                  <p>{{ item.address }}</p>
-                </td>
-                <td>{{ item.tel }}</td>
-                <td>
-                  <b-link
-                    v-b-modal="'myModal'"
-                    size="sm"
-                    user="'item'"
-                    @click="sendInfo(item)"
-                  >
-                    ดูแผนที่
-                  </b-link>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div> -->
   </div>
 </template>
 
@@ -180,23 +182,22 @@
 export default {
   data() {
     return {
-      uniitypeselected: null,
-      uniitypeoptions: [
-        { value: null, text: 'ประเภททั้งหมด' },
-        { value: 'UMT', text: 'UMT' },
-        { value: 'UT', text: 'UT' },
-        { value: 'Authorized UNII Center', text: 'Authorized UNII Center' },
-      ],
-      cityselected: null,
-      cityoptions: [
-        { value: null, text: 'เลือกจังหวัด' },
-        { value: 'BKK', text: 'BKK' },
-        { value: 'UT', text: 'UT' },
-        { value: 'Authorized UNII Center', text: 'Authorized UNII Center' },
-      ],
+      // uniitypeselected: null,
+      // uniitypeoptions: [
+      //   { value: null, text: 'ประเภททั้งหมด' },
+      //   { value: 'UMT', text: 'UMT' },
+      //   { value: 'UT', text: 'UT' },
+      //   { value: 'Authorized UNII Center', text: 'Authorized UNII Center' },
+      // ],
+      // cityselected: null,
+      // cityoptions: [
+      //   { value: null, text: 'เลือกจังหวัด' },
+      //   { value: 'BKK', text: 'BKK' },
+      //   { value: 'UT', text: 'UT' },
+      //   { value: 'Authorized UNII Center', text: 'Authorized UNII Center' },
+      // ],
       uniis: [],
-      selected: '',
-      show: false,
+      uniitypes: [],
       fields: [
         {
           key: 'type',
@@ -228,15 +229,52 @@ export default {
           label: 'แผนที่',
         },
       ],
+      sortBy: '',
+      sortDesc: false,
+      sortDirection: 'asc',
+      filter: null,
+      filterOn: [],
+      selected: '',
+      show: false,
     }
+  },
+  computed: {
+    sortOptionsType() {
+      // Create an options list from our fields
+      return this.uniitypes.map((f) => {
+        return { text: f.uniitype, value: f.uniitype }
+      })
+    },
+    sortOptionsCity() {
+      // Create an options list from our fields
+      return this.fields
+        .filter((f) => f.sortable)
+        .map((f) => {
+          return { text: f.label, value: f.key }
+        })
+    },
   },
   mounted() {
     this.getUnii()
+    this.getUniiType()
   },
   methods: {
+    async getUniiType() {
+      await this.$axios
+        .$get('/api/uniitypes')
+        .then((res) => {
+          // console.log('zz', res.data)
+          this.uniitypes = res.data
+          // console.log('logUnii', this.uniis)
+        })
+        .catch((error) => {
+          // eslint-disable-next-line no-console
+          console.log(error)
+        })
+    },
     async getUnii() {
       await this.$axios
-        .$get('/api/uniis')
+        .$get('/api/alluniis')
         .then((res) => {
           // console.log('zz', res.data)
           this.uniis = res.data

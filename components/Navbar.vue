@@ -46,7 +46,7 @@
             <b-nav-item class="px-2" href="#about">เกี่ยวกับเรา</b-nav-item>
             <b-nav-item class="px-2" href="#video">วีดีโอ</b-nav-item>
             <b-nav-item class="px-2" href="#blog">บทความ</b-nav-item>
-            <b-nav-item class="px-2" href="/joinme/joinme"
+            <b-nav-item class="px-2" href="/joinunii/joinunii"
               >ร่วมงานกับ Unii</b-nav-item
             >
             <b-nav-item class="px-2" href="/uniis/unii"
