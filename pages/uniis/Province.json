@@ -1,0 +1,479 @@
+{
+    "code": 200,
+    "status": true,
+    "msg": "",
+    "time": "2021-05-27 02:34:27",
+    "param_obj": {
+        "prov_name": false,
+        "prov_code": false,
+        "prov_id": false,
+        "prov_gf_code": false
+    },
+    "summary": {
+        "total": 77
+    },
+    "result": [
+        {
+            "prov_code": "04810000",
+            "prov_name": "กระบี่",
+            "prov_id": "81",
+            "prov_gf_code": "8100"
+        },
+        {
+            "prov_code": "03100000",
+            "prov_name": "กรุงเทพมหานคร",
+            "prov_id": "10",
+            "prov_gf_code": null
+        },
+        {
+            "prov_code": "03710000",
+            "prov_name": "กาญจนบุรี",
+            "prov_id": "71",
+            "prov_gf_code": "7100"
+        },
+        {
+            "prov_code": "02460000",
+            "prov_name": "กาฬสินธุ์",
+            "prov_id": "46",
+            "prov_gf_code": "4600"
+        },
+        {
+            "prov_code": "01620000",
+            "prov_name": "กำแพงเพชร",
+            "prov_id": "62",
+            "prov_gf_code": "6200"
+        },
+        {
+            "prov_code": "02400000",
+            "prov_name": "ขอนแก่น",
+            "prov_id": "40",
+            "prov_gf_code": "4000"
+        },
+        {
+            "prov_code": "03220000",
+            "prov_name": "จันทบุรี",
+            "prov_id": "22",
+            "prov_gf_code": "2200"
+        },
+        {
+            "prov_code": "03240000",
+            "prov_name": "ฉะเชิงเทรา",
+            "prov_id": "24",
+            "prov_gf_code": "2400"
+        },
+        {
+            "prov_code": "03200000",
+            "prov_name": "ชลบุรี",
+            "prov_id": "20",
+            "prov_gf_code": "2000"
+        },
+        {
+            "prov_code": "03180000",
+            "prov_name": "ชัยนาท",
+            "prov_id": "18",
+            "prov_gf_code": "1800"
+        },
+        {
+            "prov_code": "02360000",
+            "prov_name": "ชัยภูมิ",
+            "prov_id": "36",
+            "prov_gf_code": "3600"
+        },
+        {
+            "prov_code": "04860000",
+            "prov_name": "ชุมพร",
+            "prov_id": "86",
+            "prov_gf_code": "8600"
+        },
+        {
+            "prov_code": "01570000",
+            "prov_name": "เชียงราย",
+            "prov_id": "57",
+            "prov_gf_code": "5700"
+        },
+        {
+            "prov_code": "01500000",
+            "prov_name": "เชียงใหม่",
+            "prov_id": "50",
+            "prov_gf_code": "5000"
+        },
+        {
+            "prov_code": "04920000",
+            "prov_name": "ตรัง",
+            "prov_id": "92",
+            "prov_gf_code": "9200"
+        },
+        {
+            "prov_code": "03230000",
+            "prov_name": "ตราด",
+            "prov_id": "23",
+            "prov_gf_code": "2300"
+        },
+        {
+            "prov_code": "01630000",
+            "prov_name": "ตาก",
+            "prov_id": "63",
+            "prov_gf_code": "6300"
+        },
+        {
+            "prov_code": "03260000",
+            "prov_name": "นครนายก",
+            "prov_id": "26",
+            "prov_gf_code": "2600"
+        },
+        {
+            "prov_code": "03730000",
+            "prov_name": "นครปฐม",
+            "prov_id": "73",
+            "prov_gf_code": "7300"
+        },
+        {
+            "prov_code": "02480000",
+            "prov_name": "นครพนม",
+            "prov_id": "48",
+            "prov_gf_code": "4800"
+        },
+        {
+            "prov_code": "02300000",
+            "prov_name": "นครราชสีมา",
+            "prov_id": "30",
+            "prov_gf_code": "3000"
+        },
+        {
+            "prov_code": "04800000",
+            "prov_name": "นครศรีธรรมราช",
+            "prov_id": "80",
+            "prov_gf_code": "8000"
+        },
+        {
+            "prov_code": "01600000",
+            "prov_name": "นครสวรรค์",
+            "prov_id": "60",
+            "prov_gf_code": "6000"
+        },
+        {
+            "prov_code": "03120000",
+            "prov_name": "นนทบุรี",
+            "prov_id": "12",
+            "prov_gf_code": "1200"
+        },
+        {
+            "prov_code": "04960000",
+            "prov_name": "นราธิวาส",
+            "prov_id": "96",
+            "prov_gf_code": "9600"
+        },
+        {
+            "prov_code": "01550000",
+            "prov_name": "น่าน",
+            "prov_id": "55",
+            "prov_gf_code": "5500"
+        },
+        {
+            "prov_code": "02500000",
+            "prov_name": "บึงกาฬ",
+            "prov_id": "38",
+            "prov_gf_code": "3800"
+        },
+        {
+            "prov_code": "02310000",
+            "prov_name": "บุรีรัมย์",
+            "prov_id": "31",
+            "prov_gf_code": "3100"
+        },
+        {
+            "prov_code": "03130000",
+            "prov_name": "ปทุมธานี",
+            "prov_id": "13",
+            "prov_gf_code": "1300"
+        },
+        {
+            "prov_code": "03770000",
+            "prov_name": "ประจวบคีรีขันธ์",
+            "prov_id": "77",
+            "prov_gf_code": "7700"
+        },
+        {
+            "prov_code": "03250000",
+            "prov_name": "ปราจีนบุรี",
+            "prov_id": "25",
+            "prov_gf_code": "2500"
+        },
+        {
+            "prov_code": "04940000",
+            "prov_name": "ปัตตานี",
+            "prov_id": "94",
+            "prov_gf_code": "9400"
+        },
+        {
+            "prov_code": "03140000",
+            "prov_name": "พระนครศรีอยุธยา",
+            "prov_id": "14",
+            "prov_gf_code": "1400"
+        },
+        {
+            "prov_code": "01560000",
+            "prov_name": "พะเยา",
+            "prov_id": "56",
+            "prov_gf_code": "5600"
+        },
+        {
+            "prov_code": "04820000",
+            "prov_name": "พังงา",
+            "prov_id": "82",
+            "prov_gf_code": "8200"
+        },
+        {
+            "prov_code": "04930000",
+            "prov_name": "พัทลุง",
+            "prov_id": "93",
+            "prov_gf_code": "9300"
+        },
+        {
+            "prov_code": "01660000",
+            "prov_name": "พิจิตร",
+            "prov_id": "66",
+            "prov_gf_code": "6600"
+        },
+        {
+            "prov_code": "01650000",
+            "prov_name": "พิษณุโลก",
+            "prov_id": "65",
+            "prov_gf_code": "6500"
+        },
+        {
+            "prov_code": "03760000",
+            "prov_name": "เพชรบุรี",
+            "prov_id": "76",
+            "prov_gf_code": "7600"
+        },
+        {
+            "prov_code": "01670000",
+            "prov_name": "เพชรบูรณ์",
+            "prov_id": "67",
+            "prov_gf_code": "6700"
+        },
+        {
+            "prov_code": "01540000",
+            "prov_name": "แพร่",
+            "prov_id": "54",
+            "prov_gf_code": "5400"
+        },
+        {
+            "prov_code": "04830000",
+            "prov_name": "ภูเก็ต",
+            "prov_id": "83",
+            "prov_gf_code": "8300"
+        },
+        {
+            "prov_code": "02440000",
+            "prov_name": "มหาสารคาม",
+            "prov_id": "44",
+            "prov_gf_code": "4400"
+        },
+        {
+            "prov_code": "02490000",
+            "prov_name": "มุกดาหาร",
+            "prov_id": "49",
+            "prov_gf_code": "4900"
+        },
+        {
+            "prov_code": "01580000",
+            "prov_name": "แม่ฮ่องสอน",
+            "prov_id": "58",
+            "prov_gf_code": "5800"
+        },
+        {
+            "prov_code": "02350000",
+            "prov_name": "ยโสธร",
+            "prov_id": "35",
+            "prov_gf_code": "3500"
+        },
+        {
+            "prov_code": "04950000",
+            "prov_name": "ยะลา",
+            "prov_id": "95",
+            "prov_gf_code": "9500"
+        },
+        {
+            "prov_code": "02450000",
+            "prov_name": "ร้อยเอ็ด",
+            "prov_id": "45",
+            "prov_gf_code": "4500"
+        },
+        {
+            "prov_code": "04850000",
+            "prov_name": "ระนอง",
+            "prov_id": "85",
+            "prov_gf_code": "8500"
+        },
+        {
+            "prov_code": "03210000",
+            "prov_name": "ระยอง",
+            "prov_id": "21",
+            "prov_gf_code": "2100"
+        },
+        {
+            "prov_code": "03700000",
+            "prov_name": "ราชบุรี",
+            "prov_id": "70",
+            "prov_gf_code": "7000"
+        },
+        {
+            "prov_code": "03160000",
+            "prov_name": "ลพบุรี",
+            "prov_id": "16",
+            "prov_gf_code": "1600"
+        },
+        {
+            "prov_code": "01520000",
+            "prov_name": "ลำปาง",
+            "prov_id": "52",
+            "prov_gf_code": "5200"
+        },
+        {
+            "prov_code": "01510000",
+            "prov_name": "ลำพูน",
+            "prov_id": "51",
+            "prov_gf_code": "5100"
+        },
+        {
+            "prov_code": "02420000",
+            "prov_name": "เลย",
+            "prov_id": "42",
+            "prov_gf_code": "4200"
+        },
+        {
+            "prov_code": "02330000",
+            "prov_name": "ศรีสะเกษ",
+            "prov_id": "33",
+            "prov_gf_code": "3300"
+        },
+        {
+            "prov_code": "02470000",
+            "prov_name": "สกลนคร",
+            "prov_id": "47",
+            "prov_gf_code": "4700"
+        },
+        {
+            "prov_code": "04900000",
+            "prov_name": "สงขลา",
+            "prov_id": "90",
+            "prov_gf_code": "9000"
+        },
+        {
+            "prov_code": "04910000",
+            "prov_name": "สตูล",
+            "prov_id": "91",
+            "prov_gf_code": "9100"
+        },
+        {
+            "prov_code": "03110000",
+            "prov_name": "สมุทรปราการ",
+            "prov_id": "11",
+            "prov_gf_code": "1100"
+        },
+        {
+            "prov_code": "03750000",
+            "prov_name": "สมุทรสงคราม",
+            "prov_id": "75",
+            "prov_gf_code": "7500"
+        },
+        {
+            "prov_code": "03740000",
+            "prov_name": "สมุทรสาคร",
+            "prov_id": "74",
+            "prov_gf_code": "7400"
+        },
+        {
+            "prov_code": "03270000",
+            "prov_name": "สระแก้ว",
+            "prov_id": "27",
+            "prov_gf_code": "2700"
+        },
+        {
+            "prov_code": "03190000",
+            "prov_name": "สระบุรี",
+            "prov_id": "19",
+            "prov_gf_code": "1900"
+        },
+        {
+            "prov_code": "03170000",
+            "prov_name": "สิงห์บุรี",
+            "prov_id": "17",
+            "prov_gf_code": "1700"
+        },
+        {
+            "prov_code": "01640000",
+            "prov_name": "สุโขทัย",
+            "prov_id": "64",
+            "prov_gf_code": "6400"
+        },
+        {
+            "prov_code": "03720000",
+            "prov_name": "สุพรรณบุรี",
+            "prov_id": "72",
+            "prov_gf_code": "7200"
+        },
+        {
+            "prov_code": "04840000",
+            "prov_name": "สุราษฎร์ธานี",
+            "prov_id": "84",
+            "prov_gf_code": "8400"
+        },
+        {
+            "prov_code": "02320000",
+            "prov_name": "สุรินทร์",
+            "prov_id": "32",
+            "prov_gf_code": "3200"
+        },
+        {
+            "prov_code": "02430000",
+            "prov_name": "หนองคาย",
+            "prov_id": "43",
+            "prov_gf_code": "4300"
+        },
+        {
+            "prov_code": "02390000",
+            "prov_name": "หนองบัวลำภู",
+            "prov_id": "39",
+            "prov_gf_code": "3900"
+        },
+        {
+            "prov_code": "03150000",
+            "prov_name": "อ่างทอง",
+            "prov_id": "15",
+            "prov_gf_code": "1500"
+        },
+        {
+            "prov_code": "02370000",
+            "prov_name": "อำนาจเจริญ",
+            "prov_id": "37",
+            "prov_gf_code": "3700"
+        },
+        {
+            "prov_code": "02410000",
+            "prov_name": "อุดรธานี",
+            "prov_id": "41",
+            "prov_gf_code": "4100"
+        },
+        {
+            "prov_code": "01530000",
+            "prov_name": "อุตรดิตถ์",
+            "prov_id": "53",
+            "prov_gf_code": "5300"
+        },
+        {
+            "prov_code": "03610000",
+            "prov_name": "อุทัยธานี",
+            "prov_id": "61",
+            "prov_gf_code": "6100"
+        },
+        {
+            "prov_code": "02340000",
+            "prov_name": "อุบลราชธานี",
+            "prov_id": "34",
+            "prov_gf_code": "3400"
+        }
+    ]
+}

@@ -44,11 +44,19 @@ export default {
             lng: pin.lng,
             authorized: pin.authorized,
           }
-          if (marker.authorized === true) {
+          if (marker.authorized === 'authorized') {
             await this.markers.push({
               position: marker,
               icon: {
                 url: require('../assets/imgs/googlemap/Authorized_pin.svg'),
+                scaledSize: { width: 32, height: 32 },
+              },
+            })
+          } else if (marker.authorized === 'hub') {
+            await this.markers.push({
+              position: marker,
+              icon: {
+                url: require('../assets/imgs/googlemap/UniiHubCenter.png'),
                 scaledSize: { width: 32, height: 32 },
               },
             })
@@ -68,11 +76,19 @@ export default {
           lng: this.items.lng,
           authorized: this.items.authorized,
         }
-        if (marker.authorized === true) {
+        if (marker.authorized === 'authorized') {
           await this.markers.push({
             position: marker,
             icon: {
               url: require('../assets/imgs/googlemap/Authorized_pin.svg'),
+              scaledSize: { width: 32, height: 32 },
+            },
+          })
+        } else if (marker.authorized === 'hub') {
+          await this.markers.push({
+            position: marker,
+            icon: {
+              url: require('../assets/imgs/googlemap/UniiHubCenter.png'),
               scaledSize: { width: 32, height: 32 },
             },
           })

@@ -76,10 +76,11 @@
               <b-input-group size="sm">
                 <b-form-select
                   id="sort-by-select"
-                  v-model="sortBy"
+                  v-model="selectedType"
                   :options="sortOptionsType"
                   :aria-describedby="ariaDescribedby"
                   class="w-75"
+                  @change="getFilteredUniisType"
                 >
                   <template #first>
                     <option value="">-- ทั้งหมด --</option>
@@ -102,10 +103,11 @@
               <b-input-group size="sm">
                 <b-form-select
                   id="sort-by-select"
-                  v-model="sortBy"
+                  v-model="selectedProvince"
                   :options="sortOptionsCity"
                   :aria-describedby="ariaDescribedby"
                   class="w-75"
+                  @change="getFilteredUniisProvince"
                 >
                   <template #first>
                     <option value="">-- ทั้งหมด --</option>
@@ -127,16 +129,21 @@
               <b-input-group size="sm">
                 <b-form-input
                   id="filter-input"
-                  v-model="filter"
+                  v-model.trim="search"
                   type="search"
                   placeholder="ค้นหา"
+                  @keyup="getUnii"
                 ></b-form-input>
 
-                <b-input-group-append>
+                <!-- <b-input-group-append>
+                  <b-button>ค้นหา</b-button>
+                </b-input-group-append>
+
+                <b-input-group-append class="mx-3">
                   <b-button :disabled="!filter" @click="filter = ''"
                     >Clear</b-button
                   >
-                </b-input-group-append>
+                </b-input-group-append> -->
               </b-input-group>
             </b-form-group>
           </b-col>
@@ -149,7 +156,56 @@
         </b-card-body>
 
         <div>
-          <b-table
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <!-- <th scope="col">#</th> -->
+                <th scope="col">ตำแหน่ง</th>
+                <th scope="col">ชื่อ</th>
+                <th scope="col">ที่อยู่</th>
+                <th scope="col">เบอร์โทรศัพท์</th>
+                <th scope="col">Authorized</th>
+                <th scope="col">รายละเอียด</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="item in uniis" :key="item.id" class="overflow-auto">
+                <!-- <th scope="row">1</th> -->
+                <td>
+                  {{ item.type }}
+                </td>
+                <td>
+                  {{ item.name }}
+                </td>
+                <td>
+                  {{ item.address }}
+                </td>
+                <td>
+                  {{ item.tel }}
+                </td>
+                <td>
+                  <b-img
+                    v-if="item.authorized === 'authorized'"
+                    center
+                    src="../../assets/imgs/authorized/Authorized.svg"
+                    alt="Center image"
+                    width="50"
+                  ></b-img>
+                  <b-img
+                    v-if="item.authorized === 'hub'"
+                    center
+                    src="../../assets/imgs/authorized/UniiHubCenter.png"
+                    alt="Center image"
+                    width="50"
+                  ></b-img>
+                </td>
+                <td>
+                  <b-link size="sm" @click="sendInfo(item)"> ดูข้อมูล </b-link>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- <b-table
             sticky-header
             hover
             :items="uniis"
@@ -171,7 +227,7 @@
             <template #cell(actions)="row">
               <b-link size="sm" @click="sendInfo(row.item)"> ดูข้อมูล </b-link>
             </template>
-          </b-table>
+          </b-table> -->
         </div>
       </b-card>
     </div>
@@ -179,25 +235,14 @@
 </template>
 
 <script>
+import Provinces from '../uniis/Province.json'
 export default {
   data() {
     return {
-      // uniitypeselected: null,
-      // uniitypeoptions: [
-      //   { value: null, text: 'ประเภททั้งหมด' },
-      //   { value: 'UMT', text: 'UMT' },
-      //   { value: 'UT', text: 'UT' },
-      //   { value: 'Authorized UNII Center', text: 'Authorized UNII Center' },
-      // ],
-      // cityselected: null,
-      // cityoptions: [
-      //   { value: null, text: 'เลือกจังหวัด' },
-      //   { value: 'BKK', text: 'BKK' },
-      //   { value: 'UT', text: 'UT' },
-      //   { value: 'Authorized UNII Center', text: 'Authorized UNII Center' },
-      // ],
       uniis: [],
+      type: '',
       uniitypes: [],
+      provinces: Provinces.result,
       fields: [
         {
           key: 'type',
@@ -236,9 +281,15 @@ export default {
       filterOn: [],
       selected: '',
       show: false,
+      selectedType: null,
+      selectedProvince: null,
+      search: '',
     }
   },
   computed: {
+    // filterUniisByType() {
+    //   return this.uniis.filter((unii) => !unii.type.indexOf(this.type))
+    // },
     sortOptionsType() {
       // Create an options list from our fields
       return this.uniitypes.map((f) => {
@@ -247,18 +298,35 @@ export default {
     },
     sortOptionsCity() {
       // Create an options list from our fields
-      return this.fields
-        .filter((f) => f.sortable)
-        .map((f) => {
-          return { text: f.label, value: f.key }
-        })
+      return this.provinces.map((f) => {
+        return { text: f.prov_name, value: f.prov_name }
+      })
     },
   },
   mounted() {
     this.getUnii()
     this.getUniiType()
   },
+  created() {
+    this.getUnii()
+  },
   methods: {
+    async getFilteredUniisType() {
+      await this.$axios
+        .$get(`/api/alluniis?type=${this.selectedType}`)
+        .then((res) => {
+          this.uniis = res.data
+        })
+    },
+
+    async getFilteredUniisProvince() {
+      await this.$axios
+        .$get(`/api/alluniis?address=${this.selectedProvince}`)
+        .then((res) => {
+          this.uniis = res.data
+        })
+    },
+
     async getUniiType() {
       await this.$axios
         .$get('/api/uniitypes')
@@ -276,8 +344,21 @@ export default {
       await this.$axios
         .$get('/api/alluniis')
         .then((res) => {
+          if (this.search) {
+            this.uniis = res.data.filter(
+              (unii) =>
+                unii.type.toLowerCase().includes(this.search.toLowerCase()) ||
+                unii.name.toLowerCase().includes(this.search.toLowerCase()) ||
+                unii.address
+                  .toLowerCase()
+                  .includes(this.search.toLowerCase()) ||
+                unii.tel.toLowerCase().includes(this.search.toLowerCase())
+            )
+          } else {
+            this.uniis = res.data
+          }
           // console.log('zz', res.data)
-          this.uniis = res.data
+          // this.uniis = res.data
           // console.log('logUnii', this.uniis)
         })
         .catch((error) => {
