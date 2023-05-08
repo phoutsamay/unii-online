@@ -5,7 +5,7 @@
         v-for="(noticeboard, index) in noticeboards"
         v-show="noticeboard.status"
         :key="index"
-        class="row"
+        class="row flex-sm-column-reverse flex-column-reverse flex-lg-row"
       >
         <div class="col-12 col-sm-12 col-md-12 col-lg-6 mt-5">
           <!-- eslint-disable-next-line vue/no-v-html -->
@@ -67,6 +67,11 @@ p {
   color: #ffffff;
   font-weight: 700;
   margin-bottom: 0;
+  font-weight: 0;
+  font-family: serif;
+}
+.col-12.col-sm-12.col-md-12.col-lg-6.text-center {
+  margin-bottom: 300px;
 }
 #noticeboard {
   background: transparent linear-gradient(180deg, #e62ae0 0%, #4a1e61 100%) 0%
