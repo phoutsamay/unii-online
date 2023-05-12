@@ -1,23 +1,14 @@
 <template>
   <div class="col mb-4">
     <div class="card h-100 shadow-sm">
-      <b-embed
-        type="iframe"
-        aspect="16by9"
-        :src="`https://www.youtube.com/embed/` + activity.video"
-        allowfullscreen
-      ></b-embed>
+
+      <img style="width: 100%; height: 25%" alt="" class="image-style" :src="`${activity?.cover?.original}`" />
       <div class="card-body">
         <h5 class="card-title">{{ activity.title }}</h5>
-        <small class="text-muted">Last updated 3 mins ago</small>
+        <small class="text-muted">{{ activity.content }}</small>
         <!-- eslint-disable-next-line vue/no-v-html -->
-        <p class="card-text" v-html="activity.description">
-          <!-- {{ activity.description }} -->
-        </p>
-        <NuxtLink
-          :to="{ name: 'blogs-id', params: { id: activity._id } }"
-          class="stretched-link"
-        ></NuxtLink>
+        <NuxtLink :to="{ name: 'news-id', params: { id: activity.id } }" class="stretched-link" target="_blank">
+        </NuxtLink>
         <!-- <a href="#" class="stretched-link"></a> -->
       </div>
     </div>
@@ -38,9 +29,11 @@ export default {
   border-radius: 5px;
   border: none;
 }
+
 .card:hover {
   transform: scale(1.025);
 }
+
 .card-title {
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -48,11 +41,16 @@ export default {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 .card-text {
   display: -webkit-box;
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.image-style {
+  object-fit: cover;
 }
 </style>

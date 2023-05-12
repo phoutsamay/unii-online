@@ -1,22 +1,27 @@
 <template>
   <div class="container">
-    <no-ssr>
-      <b-card class="my-5">
-        <b-card-title>{{ activity.data.title }}</b-card-title>
-        <small class="text-muted">Last updated 3 mins ago</small>
-        <b-card-body>
-          <b-embed
+    <!-- <no-ssr> -->
+    <b-card class="my-5">
+      <img style="width: 100%; height: 100%" alt="" class="image-style pb-5"
+          :src="`${activity?.news?.cover?.original}`" />
+      <b-card-title>{{ activity?.news?.title }}</b-card-title>
+      <!-- <p>{{ dayjs(activity.news.updated_at).formart("DDDD MMM YYYY") }}</p> -->
+      <!-- <p>{{ dayjs(activity.news.updated_at).format("DD MMM YYYY") }}</p> -->
+      <!-- <p>{{ activity.news.updated_at }}</p> -->
+      <small class="text-muted">{{ activity?.news?.content }}</small>
+      <b-card-body>
+        <!-- <b-embed
             v-if="activity.data.video"
             type="iframe"
             aspect="16by9"
             :src="`https://www.youtube.com/embed/${activity.data.video}`"
             allowfullscreen
-          ></b-embed
-        ></b-card-body>
-        <!-- eslint-disable-next-line vue/no-v-html -->
-        <b-card-text v-html="activity.data.description"> </b-card-text>
-      </b-card>
-    </no-ssr>
+          ></b-embed -->
+      </b-card-body>
+      <!-- eslint-disable-next-line vue/no-v-html -->
+      <!-- <b-card-text v-html="activity.data.description"> </b-card-text> -->
+    </b-card>
+    <!-- </no-ssr> -->
 
     <!-- <div class="card">
       <h2>{{ activitys.title }}</h2>
@@ -61,10 +66,19 @@
 
 <script>
 export default {
+  loading: true,
   async asyncData({ params, $axios }) {
-    const activity = await $axios.$get(`/api/activity/${params.id}`)
+    const activity = await $axios.$get(`https://global-api.frontend.iinuhcet.com/v1/news/view/${params.id}`)
     return { activity }
   },
+
+  // methods: {
+  //   async asyncData ({ params, $axios }){
+  //     const activity = await $axios.$get(`https://global-api.frontend.iinuhcet.com/v1/news/view/${params.id}`)
+  //     return { activity }
+  //   }
+  // }
+
   // mounted() {
   //   this.getActivity()
   // },

@@ -19,6 +19,7 @@
               <nav class="mb-3">
                 <b-navbar-nav vertical>
                   <b-nav-item href="/">หน้าแรก</b-nav-item>
+                  <b-nav-item href="/news/news">ข่าว</b-nav-item>
                   <b-nav-item href="#service">บริการของเรา</b-nav-item>
                   <b-nav-item href="#about">เกี่ยวกับเรา</b-nav-item>
                   <b-nav-item href="#video">วีดีโอ</b-nav-item>
@@ -42,6 +43,7 @@
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav class="mx-auto topnav">
             <b-nav-item class="px-2" href="/">หน้าแรก</b-nav-item>
+            <b-nav-item class="px-2" href="/news/news">ข่าว</b-nav-item>
             <b-nav-item class="px-2" href="#service">บริการของเรา</b-nav-item>
             <b-nav-item class="px-2" href="#about">เกี่ยวกับเรา</b-nav-item>
             <b-nav-item class="px-2" href="#video">วีดีโอ</b-nav-item>
