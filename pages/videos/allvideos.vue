@@ -24,7 +24,7 @@ export default {
   methods: {
     async getVideo() {
       await this.$axios
-        .$get('/api/videos')
+        .$get('/api/videos?limit=50')
         .then((res) => {
           // console.log('zz', res.data)
           this.videos = res.data
